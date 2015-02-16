@@ -1,0 +1,244 @@
+@import "960_24_col.less";
+@headerNavGrid: 16;
+@searchGrid: @totalGridSize - @headerNavGrid ;
+header {
+    overflow: visible;
+    color: white;
+    z-index: 5;
+    h1 {
+        padding-top: 30px;
+        text-shadow: 0 -1px 0 @headerTitleShadow;
+        font-size: 30px;
+        .grid(15);
+        font-family: 'Merriweather';
+        a {
+            color: white;
+            
+        }
+    }
+    
+    nav {
+        .grid(@headerNavGrid);
+        overflow: visible;
+        float: left;
+        margin-top: 5px;
+        height: 59px;;
+        line-height: 58px;
+        ul{
+             overflow: visible !important; 
+        }
+        li {
+            float: left;
+            margin-right: 25px;
+        }
+        a {
+            font-size: 16px;
+            color: white;
+            text-shadow: 0 1px 0 @headerLinkShadow;
+            padding: 4px;
+            -webkit-transition: background .5s;
+            -moz-transition: background .5s;
+            -o-transition: background .5s;
+            transition: background .5s;
+        &:hover,& .selected {
+            background: @headerBtnSelectBkgrnd;
+            color: @headerBtnSelectTextColr;
+            text-decoration: none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid @headerButtonSelectBrdr;
+            margin-right: -2px;
+            text-shadow: 0 1px 0 @headerLinkShadow;
+            -webkit-transition: background .5s;
+            -moz-transition: background .5s;
+            -o-transition: background .5s;
+            transition: background .5s;
+        }
+        }
+    }
+    form.search {
+        .grid(@searchGrid);
+        margin-top: 20px;
+        p {
+            text-transform: capitalize;
+            text-shadow: 0 -1px 0 black;
+            margin-bottom: 0;
+            position: relative;
+        }
+        input[type=text] {
+            margin-right: 0;
+        }
+        button{
+            margin: 0px;
+            padding: 2px 7px;
+        }
+    }
+    input.search {
+        &:hover, &:focus{
+            background:    @headerSearchTopGradient;
+        }
+        background: @headerSearchTopGradient;
+        background: -webkit-gradient(linear,left top,left bottom,from(@headerSearchTopGradient),to(@headerSearchBtmGradient));
+        background: -moz-linear-gradient(top,@headerSearchTopGradient,@headerSearchBtmGradient);
+        background: linear-gradient(top,@headerSearchTopGradient,@headerSearchBtmGradient);
+        padding: 5px 20px;
+        border: 1px solid @headerSearchBorder;
+        color: white;
+        margin-left: 5px;
+        text-transform: none;
+    }
+    .subset {
+        position: relative;
+        .grid(15);
+        ul:nth-child(2){
+        background: @headerDivider no-repeat 0 10px;
+        }
+        padding: 20px 0;
+        ul{
+         float: right;
+         background: @headerDivider no-repeat 0px -10px;
+         
+         &#headSocial{
+             margin-right: 10px; margin-left: 10px; 
+             img {
+                float: right;
+                padding: 0px 3px;
+                height: 20px;
+                -webkit-transition: -webkit-border-radius .2s;
+                -moz-transition: -moz-border-radius .2s;
+                transition: border-radius .2s;
+                &:hover{
+                    -webkit-border-radius: 13px;
+                -moz-border-radius: 13px;
+                border-radius: 13px;
+                height: 30px;
+                .shadow(0 0 0 1px, white);
+                }
+            }
+         }
+        }
+        .account{
+            li{
+            margin-left: 10px;
+            padding: 0px 5px;
+            }
+        }
+    }
+    ::-webkit-input-placeholder{color: @headerSearchPlaceholder;} :-moz-placehoder{color: @headerSearchPlaceholder;} ::-moz-placehoder{color: @headerSearchPlaceholder;} :-ms-placeholder{color: @headerSearchPlaceholder;}
+}
+#searchbar{
+ float: right;   
+}
+.has_a_dropdown{
+    position: relative;
+    overflow: visible;
+    .dropdown{
+        background: @menuDropdownBackground; 
+        display: none;
+        color: white;
+        text-shadow: 0 -1px 0 #000;
+        position: absolute;
+        min-width: 150px;
+        padding: 2px;
+        width: auto;
+        a:hover{
+            margin-right: 0;
+            transition: none;
+        }
+        .rounded;
+        border: thick solid @menuDropdownBorder;
+    }
+    &:hover .dropdown {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+}
+#menu{
+ li {
+    display: inline-block;
+    text-transform: capitalize;
+    vertical-align: center;
+    font-size: 20px;
+    .uAlias{
+    text-transform: capitalize;
+    }
+    a{
+     color: white;   
+    }
+}   
+}
+#menu{
+     h1{
+         .grid(15);
+     }
+     menu{
+         .grid(9);
+        float: right;   
+     }
+}
+#socialMedia{
+    background: @socialMediaRibbon;
+    background: @mainHeaderBackground @mainHeaderUrl repeat-x;
+    .shadow(0px -8px 5px 2px, @socialMediaRibbonShadow);
+    padding: 10px 10px 0px 10px ;
+    height: 80px;
+    //border-left: thick solid @socialMediaRibbonBorder;
+    //border-right: thick solid @socialMediaRibbonBorder;
+    position: absolute;
+    left: 750px;
+    width: 45px;
+    z-index: 10;
+        margin-left: auto;
+    margin-right: auto;
+    img{
+        margin-left: auto;
+    margin-right: auto;
+    display: block;
+    -webkit-transition: height .2s;
+        -moz-transition: height .2s;
+        transition: height .2s;
+          height: 25px;
+        &:hover{
+            height: 35px;
+            -webkit-transition: height .2s;
+            -moz-transition: height .2s;
+            transition: height .2s;
+            
+        }
+    }
+}
+.main{
+    &.wrap{
+        &.header{
+            background: @mainHeaderBackground @mainHeaderUrl repeat-x;  
+            position: relative;
+            left:0; height: 99px;
+            right: 0;
+            border-bottom: thick solid @headerBorder;
+            z-index: 5; 
+            .shadow(0px 8px 5px -5px, @mainHeaderShadow);
+        }
+        &.tmp_wht{
+            background: @actualBannerBackground ;  
+            position: relative;
+            left:0; height: 30px;
+            right: 0;   
+        }
+        &.nav{
+            background: @navBackground;  
+            position: relative;
+            overflow: visible;
+            left:0; height: 59px; 
+            @navShadowVar: 0px 8px 5px -5px @navShadow, 0px -5px 5px -5px @mainHeaderShadow; 
+            .shadow(@navShadowVar);
+            right: 0;
+            //height: 100px;
+            //border-bottom: thick solid #372a24;
+            border-bottom: thick solid @navBorder;
+            border-top: thin solid @navBorder;
+            z-index: 4;
+        }
+    }
+}

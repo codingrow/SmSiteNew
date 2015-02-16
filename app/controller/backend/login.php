@@ -1,0 +1,32 @@
+<?php
+use Model\Password;
+use Model\User;
+use Sm\Core\Abstraction\IoC;
+use Sm\Storage\Session;
+$func = function($args) {
+    $problem_arr = [];
+    $user_id = 0;
+    $user = null;
+    if (!isset($args['user_identifier'])) {
+        $problem_arr['user'] = 'Please enter a username';
+    }else{
+        $user_identifier = $args['user_identifier'];
+        $user = User::find($user_identifier);
+        $user_id = $user->getId();
+        if (!$user_id) {
+            $problem_arr['user_password'] = 'username and password do not match';
+        }
+    }
+    if (!isset($args['password'])) {
+        $problem_arr['password'] = 'Please enter a password';
+    }else{
+        $password = $args['password'];
+        if (!Password::verify($user_id, $password)) {
+            $problem_arr['user_password'] = 'username and password do not match';
+        };
+    }
+    if(!empty($problem_arr)) return $problem_arr;
+    IoC::$session->start();
+    IoC::$session->set('user', $user);
+    return true;
+};

@@ -1,0 +1,169 @@
+@gridWidth: 36px;
+@margin: 3.5px;
+@bodyWidth: 1290px;
+@totalGridSize: 30;
+body {
+  min-width: @bodyWidth;
+}
+.createGridClasses(1,@num,@t1) {
+    @grid: ~"@{t1}, .grid_@{num}";
+}
+.createGridClasses(@index, @interval, @t1: '') when (@index > 1) {
+    @num: (@index * @interval);
+    @t2: "@{t1}, .grid_@{num}";
+    .createGridClasses((@index - 1),@interval,@t2);
+}.createGridClasses(@index, @interval){
+    @num: (@index * @interval);
+    @t2: ".grid_@{num}";
+    .createGridClasses((@index - 1),@interval,@t2); 
+}
+.createPushPullClasses(1,@num,@t1) {
+    @pushpull: ~"@{t1}, .push_@{num}, .pull_@{num}";
+}
+.createPushPullClasses(@index, @interval, @t1: '') when (@index > 1) {
+    @num: (@index * @interval);
+    @t2: "@{t1}, .push_@{num}, .pull_@{num}";
+    .createPushPullClasses((@index - 1),@interval,@t2);
+}
+.createPushPullClasses(@index, @interval){
+    @num: (@index * @interval);
+    @t2: ".push_@{num}, .pull_@{num}";
+    .createPushPullClasses((@index - 1),@interval,@t2);
+}
+@{grid} {   
+    display:inline;  float:left;  margin-left: @margin;  margin-right:@margin;
+}
+@{pushpull} { 
+    position:relative;
+}
+.generate-grid(@n, @i: 1) when (@i =< @n) {
+  .grid_@{i} {
+        width: (@i  *@gridWidth) + (2 * @margin * (@i - 1));
+  }
+  .generate-grid(@n, (@i + 1));
+}
+.generate-prefix(@n, @i: 1) when (@i =< @n) {
+  .prefix_@{i} {
+    padding-left: (@gridWidth + (2*@margin))*(@i);
+  }
+  .generate-prefix(@n, (@i + 1));
+}
+.generate-suffix(@n, @i: 1) when (@i =< @n) {
+  .suffix_@{i} {
+    padding-right: (@gridWidth + (2*@margin))*(@i);
+  }
+  .generate-suffix(@n, (@i + 1));
+}
+.generate-push(@n, @i: 1) when (@i =< @n) {
+  .push_@{i} {
+    left: (@gridWidth + (2*@margin))*(@i);
+  }
+  .generate-push(@n, (@i + 1));
+}
+.generate-pull(@n, @i: 1) when (@i =< @n) {
+  .pull_@{i} {
+    left: -(@gridWidth + (2*@margin))*(@i);
+  }
+  .generate-pull(@n, (@i + 1));
+}
+
+.container_30 {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: @bodyWidth;
+  .generate-grid(@totalGridSize);
+  .generate-prefix(@totalGridSize - 1);
+  .generate-suffix(@totalGridSize - 1);
+  .generate-push(@totalGridSize - 1);
+  .generate-pull(@totalGridSize - 1);
+}
+.autopad_container{
+  padding-left: auto;
+  padding-right: auto;
+  position: relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: @bodyWidth;
+  .generate-grid(@totalGridSize);
+  .generate-prefix(@totalGridSize - 1);
+  .generate-suffix(@totalGridSize - 1);
+  .generate-push(@totalGridSize - 1);
+  .generate-pull(@totalGridSize - 1);   
+}
+.createGridClasses(@totalGridSize, 1);
+.createPushPullClasses(@totalGridSize - 1, 1);
+
+.grid(@i, @mrgin: @margin){
+      display:inline;
+      float:left;
+      margin-left: @mrgin;
+      margin-right:@mrgin;
+      width: (@i  *@gridWidth) + (2 * @margin * (@i - 1));
+}
+.max_grid(@i, @mrgin: @margin){
+      display:inline;
+      float:left;
+      margin-left: @mrgin;
+      margin-right:@mrgin;
+      max-width: (@i  *@gridWidth) + (2 * @margin * (@i - 1));
+}
+.antigrid(@i, @mrgin: @margin){
+      display:inline;
+      float:right;
+      margin-left: @mrgin;
+      margin-right:@mrgin;
+      width: (@i  *@gridWidth) + (2 * @margin * (@i - 1));
+}
+.push(@i){
+    position:relative; 
+    left: (@gridWidth + (2*@margin))*(@i);
+}
+.pull(@i){
+    position:relative; 
+    left: -(@gridWidth + (2*@margin))*(@i);
+}
+.antipush(@i){
+    position:relative; 
+    right: (@gridWidth + (2*@margin))*(@i);
+}
+.antipull(@i){
+    position:relative; 
+    right: -(@gridWidth + (2*@margin))*(@i);
+}
+.prefix(@i){
+    padding-left: (@gridWidth + (2*@margin))*(@i);
+}
+.suffix(@i){
+    padding-right: (@gridWidth + (2*@margin))*(@i);
+}
+.alpha {
+  margin-left:0;
+}
+.omega {
+  margin-right:0;
+}
+.clear {
+  clear:both;
+  display:block;
+  overflow:hidden;
+  visibility:hidden;
+  width:0;
+  height:0;
+}
+.clearfix {
+  zoom:1;
+    &:before, &:after {
+      content:'\0020';
+      display:block;
+      overflow:hidden;
+      visibility:hidden;
+      width:0;
+      height:0;
+    }
+    &:after {
+      clear:both;
+    }
+}

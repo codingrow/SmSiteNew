@@ -1,0 +1,196 @@
+@import "theme.less";
+@font: 'Arvo', serif;
+//@font: 'Ubuntu', sans-serif;
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-family: @font;
+  //  color: yellow;
+    vertical-align: baseline;
+    background: transparent;
+}
+table{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+tr{
+    &:nth-child(odd){
+        background: @trBackground1;   
+    }
+     &:nth-child(even){
+        background: @trBackground2;   
+    }
+    &.title{
+        background: @trBackgroundTitle;
+        color: white;
+    }
+    &.link{
+        &:hover{
+            background: @trBackgroundHover;   
+        }
+    }
+}
+body {
+    line-height: 1;
+    font: 15px/1.5 'Arvo', 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;
+    background: @mainBackgroundVar;
+    background: @mainBackgroundVar;
+    //background-image: url(../css/img/zenbg-1.png), url(../css/img/zenbg-2.png);
+    //background-repeat: repeat-x, repeat;
+}
+ol,ul {
+    list-style: none;
+}
+blockquote,q {
+    quotes: none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+    content: '';
+    content: none;
+}
+:focus {
+    outline: 0;
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a:focus {
+    outline: 1px dotted;
+}
+hr {
+    border: 0 #ccc solid;
+    border-top-width: 1px;
+    clear: both;
+    height: 0;
+}
+/**********************************************************/
+/**************         H Tags              ***************/
+/**********************************************************/
+h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+h3 {
+    color: @h3;
+    text-shadow: 0 -1px 0 @h3Shadow;
+    font-size: 21px;
+    line-height: 21px;
+    font-family: 'Merriweather';
+}
+h4 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+h5 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+h6 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    a {
+        font-weight: bold;
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Arvo', serif;
+    text-transform: capitalize;
+    font-weight: normal;
+    //color: yellow;
+}
+/**********************************************************/
+/**************         List Tags           ***************/
+/**********************************************************/
+ol {
+    list-style: decimal;
+}
+ul {
+    list-style: disc;
+    overflow: hidden;
+}
+li {
+    margin-left: 30px;
+    margin-left: 0;
+    list-style: none;
+}
+//p, ul,h1,h2,h3,h4,h5,h6,
+dl,hr,ol,pre,table,address,fieldset {
+    margin-bottom: 20px;
+}
+section,header,footer,aside,article,nav {
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: @linkColor;
+}
+a:hover {
+    text-decoration: underline;
+}
+p {
+    font-size: 17px;
+    line-height: 26px;
+}
+/**********************************************************/
+/**************  Form Elements and Input    ***************/
+/**********************************************************/
+button,input,textarea {
+    text-align: left;
+    font-family: 'Arvo', serif;
+}
+input[type=text], textarea{
+ cursor: text;   
+}
+input[type=text] {
+    width: 117px;
+    margin-right: 10px;
+}
+button,.button {
+    border: thin solid darken(@buttonBackground, 10%);
+    color: @buttonTextColor;
+    font-size: 16px;
+    cursor: pointer;
+    background: @buttonBackground @urlButton repeat;
+    text-shadow: 0 -1px 0 @buttonTextShadow;
+    padding: 10px 20px;
+    margin-right: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+input,textarea {
+    background: @inputBackground;
+    border: 1px solid @inputBorder;
+    padding: 10px;
+    color: @inputColor;
+    margin-bottom: 15px;
+}
+::-webkit-input-placeholder{color: @inputPlaceholder;} :-moz-placehoder{color: @inputPlaceholder;} ::-moz-placehoder{color: @inputPlaceholder;} :-ms-placeholder{color: @inputPlaceholder;  }
+textarea,#timeScale {
+    width: 270px;
+}
+textarea {
+    height: 130px;
+}
+input:hover,textarea:hover,button:hover,input:focus,textarea:focus,button:focus {
+    .shadow(0 0 5px, @formElementFocus);
+    background: @inputHoverBackground;
+}
+button:hover,.button:hover {
+    background: @buttonHoverBackground;
+}

@@ -1,0 +1,234 @@
+.listedThing{
+    background: @listedThing;
+    &Tooltip{
+        .transition(@trans);
+        .rounded;
+        @trans: width .2s, height .5s;
+        border: thin solid darken(@listedThing, 5%);
+        background: rgba(red(@tooltipBackground), green(@tooltipBackground), blue(@tooltipBackground), .95);
+        height: 5px;
+        width: 5px;
+        position: absolute;
+        visibility: hidden;
+        ul{ margin: 0;}
+        li{
+            a{
+                display: block;
+            }
+            @tooltipBackground: lighten(@listedThing, 5%);
+            @tooltipLiBack: rgba(red(@tooltipBackground), green(@tooltipBackground), blue(@tooltipBackground), .6);
+            display: block;
+            background: lighten(@tooltipLiBack, 10%);
+            text-align: center;
+            padding: 10px;
+            &:first-child{
+                .rounded;   
+            }
+            &:hover{
+                background: @tooltipLiBack;
+                cursor:pointer;   
+            }
+        }
+        &Holder{
+            background: lighten(@listedThing, 15%);   
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            float: left;    
+            &:hover{
+                .listedThingTooltip{
+                    @trans: width .2s, height .5s;
+                    .transition(@trans);
+                    visibility: visible;
+                    width: 200px;
+                    height: auto;
+                 }
+            }
+        }
+    }
+    &.head{
+        margin: 0;
+        button{
+         padding: 5px;
+         width: auto;
+         margin-left: 20px;
+        }
+        input.search{
+            background: lighten( @listedThing, 30%);
+            padding: 5px 5px;
+            width: 65%;
+            margin-bottom: 0;
+            .rounded;
+            &:hover, &:focus{
+                 background: lighten( @listedThing, 40%);
+                .shadow(inset 0px 0px 2px 0px, darken(@listedThing, 2%));
+            }
+        }
+        li{
+         height: auto;   
+        }
+    }
+    .title{
+        color: white;
+        background: darken(@listedThing, 20%);
+        min-height: auto;
+        height:auto;
+        &:hover{
+            background: darken(@listedThing, 20%);
+        }
+    }
+    ul&{
+         width: 100%;
+         position:relative ;
+         overflow: auto ;
+         overflow-y: visible;
+         max-height: 700px;
+         .detail{
+            margin-left: 5px;
+            color: gray;
+         }
+         .content{
+                padding: 2px 5px 0px 5px;
+                margin-left: 16px; 
+                display: block;
+                background: rgba(red(white), green(white), blue(white), .8);
+                border: thin solid darken(@listedThing, 5%);
+                h6{
+                    margin-bottom: 2px; 
+                    font-size: 13px;
+                    border-bottom: thin solid @listedThing
+                }
+                p{
+                    font-size: 11px;   
+                }
+            }
+         a{
+            text-decoration: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+         & > li{
+            padding: 5px;
+            border-bottom: thin solid lighten(@listedThing, 5%);
+            background: @listedThing;
+            height: auto;
+        }
+    }
+}
+#secondary {
+    .grid(@sidebarSize);
+    //.push(1);
+    section {
+        margin-bottom: @margin * 4;
+    }
+    .flow{
+        img {
+            float: left;
+            margin-bottom: 20px;
+            border: 5px solid @asideImgBorder;
+        }
+    }
+}
+.devBox{
+    background: #ccc;
+    pre{
+    color: black;
+    font-size: .85em;
+    }
+}
+.formElement{
+    label{
+        float: left;   
+    }
+    input{
+        float: right;   
+    }
+}
+.tabs {
+    background: @asideTabBackground;
+    background: -webkit-gradient(linear,left top,left bottom,from(@asideTabBackground),to(@asideTabBackgroundGradient));
+    background: -moz-linear-gradient(top,@asideTabBackground,@asideTabBackgroundGradient);
+    background: linear-gradient(top,@asideTabBackground,@asideTabBackgroundGradient);
+    //overflow: hidden;
+    section&{padding-bottom: 10px;}
+    ul {
+        padding: 10px 10px 10px;
+        margin-bottom: 0;
+        border-top: 1px solid @asideTabUpperBorder;
+    }
+    a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.smTab{
+    //section&{padding-bottom: 10px;}
+}
+.smTabHead{
+    .selected{
+        background: @asideTabBackground;
+    }
+    :hover{
+        background: @asideTabheadingsHover;
+        position: relative;
+    }
+    display: block;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-bottom: 1px solid @asideTabHeadingBorder;
+    background: @tabHeadingBackground;
+    li {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        padding: 10px;
+    }
+    a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.smTabTabs{
+    & > ul {
+        li {
+            display: block;
+            border-bottom: 1px solid @asideTabLowerListBorder;
+            border-top: 1px solid @asideTabUpperListBorder;
+            padding: 10px;
+            color: white;
+            .clearfix;
+            button{
+               // margin-bottom: 10px;   
+            }
+            &:hover {
+                //cursor: pointer;
+                background: @asideTabHover;
+            }
+            &:first-child {
+                border-top: none;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        &:not(:first-child) {
+            display: none;
+        }
+    }
+}
+#sponsors {
+    li:nth-child(even) {
+        float: right;
+    }
+    li:nth-child(odd) {
+        float: left;
+    }
+    img{
+     width: 175px;   
+    }
+}

@@ -1,0 +1,82 @@
+
+#banner-wrap {
+    clear: both;
+    background: @actualBannerBackground;
+    background: @bannerBackgroundUrl;
+    padding-bottom: 15px;
+    border-bottom: 3px solid @bannerBorder;
+    padding-top: 15px;
+    z-index: -999;
+    height: auto;
+    overflow: hidden;
+    .shadow(inset 0px 8px 50px, @bannerShadow);
+    
+    .breadcrumbs {
+        background: @breadcrumb;
+        background: -moz-linear-gradient(top,@breadcrumbGradientDark,@breadcrumbGradientLight);
+        line-height: 43px;
+        position: relative;
+        z-index: 2;
+        top: -4px;
+        padding: 0 40px;
+        color: white;
+        text-shadow: 0 -1px 0 @breadcrumbTextShadow;
+        a {
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .main.banner {
+        background: @bannerBoxBackground;
+        background: @bannerBoxBackgroundUrl;
+        padding: 30px 40px 30px;
+        color: white;
+        position: relative;
+        z-index: 3;
+        p{line-height: 1.6;}
+        //smaller text (2pt?) more spacing   //be concise!!!   consider a bulleted list(mayb not with actual bullets)
+        .first, .second{
+            max-width: 150px;  
+        }
+        h2 {
+            color: @bannerTitleColor;
+            text-shadow: 0 -1px 0 @bannerTitleShadow;
+            line-height: 20px;
+            font-family: 'Merriweather';
+        }
+        &.title{
+            h2 {
+                color: @bannerTitleColor;
+                text-shadow: 0 -1px 0 @bannerTitleShadow;
+                padding: 5px;
+                font-size: 50px;
+                font-family: 'Merriweather';
+            }
+        }
+    }
+    .images {
+        position: absolute;
+        right: 40px;
+        top: 24px;
+        img:first-child {
+            position: relative;
+            left: 100px;
+            top: 60px;
+        }
+        img {
+            .shadow(0 10px 15px -7px, @bannerFeaturedShadow);
+        }
+    }
+}
+
+#banner h2,#banner p {
+    padding-right: 400px;
+}
+#banner input,#banner button {
+    margin-right: 20px;
+}
+#banner-wrap button,#banner-wrap .button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}

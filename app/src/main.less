@@ -1,0 +1,277 @@
+@import "theme.less";
+@articleGridSize: 20;
+@sidebarSize: @totalGridSize - @articleGridSize;
+@halfSize: (@articleGridSize - 1) / 2;
+@groupContainerSize: 5.5;
+@groupImgSize: 2;
+@contentShadowVar: 0px 0px 7px 0px @contentShadow;
+.container{
+    .container_30;   
+}
+.module{
+    clear: both;.rounded(2px);
+    .shadow(@contentShadowVar);  
+    &.flow{
+        //.shadow(none);
+    }
+    &.aboutBox{
+        float: left;
+        clear: none;
+        min-width: 49%;
+        li{
+            clear: both;   
+        }
+        .icon{
+            max-width: 35px;
+            clear: none;
+            float: left;
+        }
+        .text{
+            clear: none;
+            float: left;
+            margin-left: 10px;
+        }
+    }
+    article{
+        width: 95%;   
+    }
+    &.accompany{
+        float: right;
+        clear: right;
+        min-width: 49%;
+        table{
+            width: 100%;   
+        }
+    }
+    clear: both;
+    margin-bottom: @margin * 4;
+}
+article {
+    padding-bottom: 5px;
+    margin-bottom: @margin * 2;
+    border-bottom: 1px solid lighten(@contentText, 20%);
+    color: @mainContent;
+    &:last-of-type{
+        border-bottom: none; 
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .image{
+        .grid(@articleGridSize - 1);   
+        border: 2px solid @pictureBorder;
+        height: 100px;
+        overflow: hidden; 
+        img{
+            width: 100%;
+            top: -350px;
+            position: relative;
+        }
+    }
+    h2 {
+        font-weight: normal;
+        p{
+            //text-transform: none;  
+        }
+        a:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    h6{
+        color: @mainContentH6;
+        font-size: 13px;
+        a{
+            color: @mainContentH6;
+            font-size: 13px;
+            font-weight: normal;
+        }
+    }
+    p{
+        font-size: 17px;
+        line-height: 35px;
+    }
+    .grid(@articleGridSize - 1);
+    .push(.25);
+}
+.uProf{
+    margin-right: auto;
+    margin-left: auto;
+    &Multi{  
+    }
+    &Holder{
+        &:hover{
+            background: rgba(red(white), green(white), blue(white), .6);
+            .shadow(inset 0px 0px 3px 0px, darken(@contBack, 0%));
+            .transition(all .5s);
+        }
+        .transition(all .25s);
+        padding: 10px 6px 10px;
+	    float: left;
+	    .rounded;
+	    &.regular{
+	        font-size: .8em;   
+	    }
+	    font-size: .9em;
+	    text-align: center;
+    }
+	&.hotshot{
+    	max-width: 150px;
+    	max-height: 110px;
+	}
+	&.regular{
+	   max-width: 100px;
+	}
+    &.edit{
+        width: 90px;
+        opacity: .2;   
+    }
+    &.main{
+        max-width: 200px;   
+    }
+}
+.profilePic{
+    &Holder{
+        max-width: 200px;
+        padding:0;
+    }
+    max-width: 200px;   
+}
+.groupContainer{
+    word-wrap: break-word;
+    margin-bottom: @margin*2;
+    height: 100px;
+    background: teal;
+    overflow: hidden;
+    .grid(@groupContainerSize);
+    &:hover{
+        .shadow(0px 0px 1px 1px, @groupShadow);
+        background: darken(teal, 5%);   
+   }
+    .img{
+        .grid(@groupImgSize);
+        height: 100%;
+        overflow: hidden;
+        img{
+            height: 100%;
+        }
+    }
+    .text{
+        .grid(@groupContainerSize - @groupImgSize - .25);   
+        height: 100%;
+        color: white;
+        margin: 5px;
+        .detail{
+            float: right;
+        }
+        h2{
+            font-size: 18px;
+            line-height: 21px;
+        }
+        p{
+            line-height: 11px;
+            font-size: 11px; 
+            padding: 0;
+            &.detail{font-size: 10px;    color: LightGray;}
+        }
+    }
+    &Link{
+        .overlay{
+            position: absolute;
+            background: white;
+            height: 100px;
+            width: 79px;
+            opacity: 0;
+        }
+        &:hover{
+            .overlay{
+                opacity: .2;
+            }
+        }
+    }
+}
+.primary{
+    background: @contentBackground;
+    padding: @margin*2 0px;
+}
+.rowspan{
+    vertical-align: middle;
+    padding: 0;
+}
+.mainDescriptionHolder{
+    background: rgba(red(white), green(white), blue(white), .6);
+    .rounded;
+    float: left;
+    clear: both;
+    margin: 20px 0px 0px;
+    padding: 5px;
+    .profilePicHolder{
+        float: left;
+        margin-right: 10px;
+    }
+    
+    .description{
+            float: right;
+        ul{
+            float: left;   
+        }
+        p&{
+            clear: both;
+            border-left: thick solid lighten(@contentText, 30%);
+            padding-right: 10px;
+            margin-bottom: 20px;
+            .max_grid(@articleGridSize - 1);
+        }
+    }
+}
+.mainHeader{
+    .container{
+        .autopad_container;
+        .clearfix;
+    }
+    .title{
+        .shadow(0px 0px 7px 0px, lighten(black, 15%));
+        display:inline;
+        float:left;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        h2{font-size: 50px;width: 100%;}
+        background: rgba(red(white), green(white), blue(white), .6);
+    }
+}
+#primary{
+    .grid(@articleGridSize);
+}
+#main {
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+    input{
+        background: @contentInputBkgrnd;
+        color: @contentInputColor;
+        &:hover, &:focus{
+            background: @contentInputBkgrndHilite;
+        }
+    }
+    td{
+        padding: 5px 20px;
+        border-collapse: collapse;
+        border: thin solid @tdBorder;
+        word-wrap: normal;
+    }
+    p {
+        a {
+            color: @mainContentLinkColor;
+            text-decoration: none;
+            &:hover{
+                border-bottom: 1px  @mainContentLinkColor dotted;
+            }
+        }
+    }
+}
+
+.mainBackground(@main; @color1; @color2; @stop1; @stop2; @stop3){
+    background: -webkit-gradient(linear,left top,right top,color-stop(@stop1,@color1),color-stop(@stop2,@color2), color-stop(@stop3,@main),to(@main));
+    background: -moz-linear-gradient(left,@color1 @stop1,@color2 @stop2, @main @stop3,@main);
+    background: linear-gradient(left,@color1 @stop1,@color2 @stop2,@main @stop3,@main);
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - smsite@localhost" uuid="3aee7bc4-a926-42a0-ab72-4aff1a7c84b2">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - smsitenew@localhost" uuid="281d62ea-dace-4b83-b37a-f5fcd6a4d0e0">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

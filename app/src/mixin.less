@@ -1,0 +1,59 @@
+.transparent{
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */   
+}
+.shadow(@stuff, @shadow: #fff) when (@shadow = false){}
+.shadow(@stuff, @shadow: #fff) when (default()){
+    -webkit-box-shadow: @stuff @shadow;
+    -moz-box-shadow: @stuff @shadow;
+    box-shadow: @stuff @shadow;
+}
+.shadow(@stuff){
+    -webkit-box-shadow: @stuff;
+    -moz-box-shadow: @stuff;
+    box-shadow: @stuff;
+}
+.transition(@thing){
+    -webkit-transition: @thing;
+    -moz-transition: @thing;
+    -o-transition: @thing;
+    transition: @thing;   
+}
+.blue{
+    background: blue;   
+}
+.link{
+    cursor: pointer;   
+}
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.detail{
+    float: right;
+    font-style: italic;
+    font-size: .75em;
+}
+.description{
+    font-style: italic;   
+}
+.noselect{
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;   
+}
+.sticky{
+    position: absolute;
+}
+@roundedRadius: 5px;
+.rounded {
+    -moz-border-radius: @roundedRadius;
+    -webkit-border-radius: @roundedRadius;
+    border-radius: @roundedRadius;
+}
+.rounded(@radius){
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;    
+}
+//open up text more
+//experiment with a sans-serif font for the web

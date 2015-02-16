@@ -1,0 +1,91 @@
+#footer-wrap {
+    background: @footerBackground;
+    background: @footerBackgroundUrl;
+    overflow: hidden;
+    border-top: 1px solid @footerBorder;
+    footer {
+        padding: 50px 0;
+        color: white;
+        overflow: hidden;
+    }
+}
+#footer-wrap::before {
+    content: '';
+    border-top: 1px solid @footerBeforeBorder;
+    width: 100%;
+    position: absolute;
+}
+footer {
+    button {
+        float: right;
+    }
+    h3{
+        color: @footerh3Color;   
+    }
+    nav {
+        float: right;
+        li {
+            float: left;
+        }
+        a {
+            color: white;
+        }
+        li:before {
+            content: '|';
+            padding: 5px;
+        }
+        li:first-child::before {
+            content: ' ';
+        }
+    }
+    textarea{
+            resize: vertical;
+            min-height: 100px;
+        }
+}
+#recentProjects {
+    img{
+     width: 125px;   
+    }
+    li {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid @recentProjectsBkgrnd; 
+        height: 100px;
+            overflow: hidden; 
+        padding: 3px 3px 0 3px;
+        background: @recentProjectsBkgrnd;
+    }
+    li:hover {
+        background: @recentProjectsBkgrndHover;
+        outline: 1px solid @recentProjectsOutlineHover;
+    }
+    button {
+        margin-right: 40px;
+    }
+}
+footer p span,#twitter a {
+    display: block;
+    color: @footerLinkText;
+    font-style: italic;
+}
+#twitter {
+    a {
+        display: inline;
+    }
+}
+#siteInfo {
+    background: @siteInfoBackground;
+    background: @siteInfoBackgroundUrl;
+    height: 60px;
+    line-height: 50px;
+    color: white;
+    overflow: hidden;
+    text-shadow: 0 1px 0 @siteInfoTextShadow;
+    p {
+        float: left;
+        line-height: 50px;
+        text-shadow: 0 -1px 0 @siteInfoTextShadow;
+    }
+}

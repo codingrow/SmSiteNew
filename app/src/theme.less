@@ -1,0 +1,154 @@
+@h4: #3b2d27;                       //*DarkBrown*/
+@h3: #3da2b4;                       //*BLUE*/            //deep purple? orange? all on the same intensity
+@h2: darken(#f8eedf, 9%);           //*Tan Main*/
+@h2: lighten(#94bc63, 20%);         //*Tan Main*/
+@h1: #5D917D;                       //*Teal*/
+@bannerBackground: #bba583;         //*background*/
+@contentText: darken(#a4afb7, 45%); //*BLUISH*/
+@inputBorder: #d9d9d9;
+@asideTabCommentsH6: #ededed;
+//9999FF
+
+//Browns{
+	@headerLinkShadow:			darken(@h4, 10%);
+	@tabHeadingBackground: 		@h4;
+	@navBackground: 			@h4;
+	@navBorder: 				darken(@navBackground, 7%);
+/**/@footerBorder: 				@h4;
+	@footerBeforeBorder: 		lighten(@h4, 40%); 
+	@footerBackground: 			@navBackground;
+/**/@bannerBoxBackground: 		@navBackground;
+	@bannerTitleShadow:			@headerLinkShadow;
+/**/@menuDropdownBorder: 		@navBorder;
+	@menuDropdownBackground: 	darken(@navBackground, 2%);
+	@headerBtnSelectTextColr:	@buttonTextColor;
+	@buttonTextColor: 			lighten(@h4, 55%);
+	@contentInputColor: 		@h4;
+	@inputColor: 				darken(@h4, 10%); 
+	@inputPlaceholder: 			darken(@h4, 70%);
+	@headerSearchPlaceholder: 	darken(@h4, 30%); 
+	@mainHeaderShadow: 			@navBorder;
+//}
+//Blues{
+	@linkColor: 				@contentText;
+	@mainContent: 				@contentText;
+	@mainContentLinkColor: 		darken(@h3, 16%);
+	@contentInputBkgrnd: 	    lighten(@h3, 52%);
+/**/@breadcrumb: 				darken(@h3, 10%); 
+	@breadcrumbTextShadow: 		darken(@h3, 15%);  
+	@breadcrumbGradientDark: 	darken(@h3, 10%); 
+	@breadcrumbGradientLight: 	darken(@h3, 5%); 
+	@headerSearchTopGradient: 	darken(@h3, 10%); ; 
+	@headerSearchBtmGradient:	darken(@h3, 5%); ; 
+/**/@asideTabBackground: 		darken(@h3, 10%);
+	@asideTabheadingsHover: 	darken(@asideTabBackground, 17%);
+	@asideTabHeadingBorder: 	darken(@h3, 20%);
+	@asideTabBackgroundGradient:@h3; 
+	@asideTabHover: 			darken(@h3, 15%);	        //the non-header tabs
+	@asideTabUpperListBorder: 	lighten(@h3, 5%);
+	@asideTabLowerListBorder: 	darken(@h3, 15%);	        //the non-header tab border onbottom
+	@asideTabUpperBorder: 		@asideTabUpperListBorder;	//the non-header tab border ontop
+/**/@headerSearchBorder: 		lighten(@h3, 5%); 
+	@formElementFocus: 			darken(@h3, 10%); 
+	@bannerFeaturedShadow: 		darken(@h3, 15%); 
+	@bannerTitleColor: 			@h3;
+	@siteInfoTextShadow: 		darken(@h3, 20%); 
+	@footerLinkText: 			darken(@h3, 10%); 
+	@siteInfoBackground: 		darken(@h3, 5%);
+	@inputHoverBackground: 		lighten(@h3, 15%); 
+//}
+//Teal{
+	@h1ComplimentDark: 			desaturate(darken(@h1, 15%), 30%);
+	@h1ComplimentDark: 			desaturate(darken(@h1, 15%), 20%);
+	@mainContentH6: 			desaturate(darken(@h1, 10%), 15%);
+/**/@mainHeaderBackground: 		@h1;
+	@headerTitleShadow: 		desaturate(darken(@h1, 15%), 30%); 
+	@headerBtnSelectBkgrnd: 	darken(@h1, 5%); 
+	@headerBorder: 				desaturate(darken(@h1, 15%), 20%);
+	@headerButtonSelectBrdr:    lighten(@h1, 7%); 
+	@pictureBorder: 			desaturate(darken(@h1, 0%), 20%);
+/**/@socialMediaRibbon: 		@h1;
+	@socialMediaRibbonShadow: 	darken(@socialMediaRibbon, 10%);
+	@socialMediaRibbonBorder: 	desaturate(darken(@h1, 15%), 20%);
+/**/@buttonBackground: 			@h1; 
+	@buttonHoverBackground: 	desaturate(darken(@h1, 15%), 0%); 
+	@buttonShadow: 				@h1; 
+	@buttonTextShadow: 			darken(@h1, 5%);
+/**/@recentProjectsBkgrnd: 		desaturate(darken(@h1, 5%), 15%);
+	@recentProjectsBkgrndHover: darken(@recentProjectsBkgrnd, 15%); 
+	@recentProjectsOutlineHover:desaturate(darken(@h1, 0%), 0%);
+/**/@listedThing: 				@h1;
+	@tooltipBackground: 		lighten(@listedThing, 25%);
+	@asideImgBorder: 			desaturate(darken(@h1, 5%), 15%);
+/**/@trBackgroundTitle: 		darken(@h1, 17%);
+	@trBackground2: 			lighten(@h1, 28%);
+	@trBackground1: 			lighten(@h1, 40%);
+	@trBackgroundHover: 		lighten(@h1, 10%);
+	@tdBorder: 					darken(@h1, 15%);
+    //@inputColor: 				darken(@h1, 30%); 
+    //@buttonShadow: 				#d09944; 
+    //@buttonHoverBackgroundUrl: 	@urlButton;
+//}
+//Tans{ //mix softer gray with background
+	@h2ComplimentDark: 			desaturate(darken(@h2, 20%), 20%);
+/**/@navShadow: 				darken(@bannerBackground, 20%); 
+	@navShadow: 				darken(#854585, 40%);
+/**/@actualBannerBackground: 	@bannerBackground;
+	@bannerShadow: 				@navShadow; 
+	@bannerShadow : 			false;
+	@bannerBorder: 				desaturate(darken(mix(@h2ComplimentDark, @h1ComplimentDark, 95%), 10%), 10%);
+/**/@mainBackground: 			mix(desaturate(darken(@h2, 20%), 10%), #4A766E, 95%); 
+	@contentShadow: 			desaturate(darken(@mainBackground, 15%), 5%);
+	//@contentShadow: 			none;
+	@contentInputBkgrndHilite:  darken(@contentInputBkgrnd, 2%);
+	@contBack: 					lighten(@h2, 2.5%);
+	@contentBackground: 		@h2;
+	@contentBorder: 			darken(@contBack, 20%);
+/**/@groupShadow: 				desaturate(darken(@mainBackground, 5%), 5%);
+	@inputBackground: 			@h2;
+	@h3Shadow: 					darken(mix(@h2ComplimentDark, @h1ComplimentDark, 95%), 30%);
+	@footerh3Color: 			lighten(mix(@bannerBackground, @h3), 10%);
+	//{
+    	//@contentBackground: 		none;
+    	//@actualBannerBackground:  none;
+    	//@navShadow:               desaturate(darken(@mainBackground, 5%), 5%); 
+        //@bannerBorder: 			none;
+    	//@mainBackground: 			mix(desaturate(darken(@h1, 20%), 10%), #4A766E, 95%); 
+    	//@contentShadow: 			black;
+    	//@contentBackground: 		rgba(red(@contBack), green(@contBack), blue(@contBack), .8);
+	//}
+//}
+
+//Imports{
+@import "960_24_col.less";
+@import "mixin.less";
+@import "html.less";
+@import "header.less";
+@import "banner.less";
+@import "aside.less";
+@import "footer.less";
+@import "main.less";
+//}
+//Urls{
+    @footerBackgroundUrl: 		url(../../public/img/stripe_2.png);
+    @bannerBoxBackgroundUrl: 	@footerBackgroundUrl;
+    @siteInfoBackgroundUrl: 	url(../../public/img/footerSmallBg.jpg);
+    @mainHeaderUrl: 			url(../../public/img/bgTop.jpg);  //Try Using a striped background to =go with the banner
+    @urlButton: 				'';//url(../css/img/buttonBg.png);
+    @headerDivider: 			url(../../public/img/header-divider.png);
+    @searchIconUrl: 			url(../../public/img/searchIcon.png);
+    @bannerBackgroundUrl: 		'';//url(../css/img/polka_1.png);
+    @mainBackgroundVar: 		@mainBackground;
+    //@mainBackgroundVar: 		@mainBackground url(https:\/\/abs.twimg.com/a/1418162186/img/t1/front_page/exp_wc2014_gen_timtrueman.jpg);
+//}
+//Other Colors{
+    //@h4: #F56D34;             /*DarkBrown*/ 
+    //@h3: #F56D34;             /*BLUE*/
+    //@h2: darken(white, 30%);  /*Tan Main*/  
+    //@h1: #F56D34;             /*Teal*/
+    //@bannerBackground: desaturate(darken(#f8eedf, 30%), 35%);
+    //@contentText: darken(#a4afb7, 45%); /*BLUISH*/
+//}
+//Empty Urls{
+    //@footerBackgroundUrl: ; @siteInfoBackgroundUrl: ;@mainHeaderUrl: ;@urlButton: ;@bannerBackgroundUrl:  ; @headerDivider:  ;
+//}

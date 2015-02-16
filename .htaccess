@@ -1,0 +1,6 @@
+RewriteEngine On
+
+ # Directs all EE web requests through the site index file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /SmSiteNew/index.php/$1 [L]
