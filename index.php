@@ -56,8 +56,7 @@ $routing =
     ['/logout',             'user@logout',  []],
     ['/user/view/{view}',   'user@view',    ['{view}'=>'[A-z]+']],
     ['/me',                 'user@me',      []],
-    ['/msg/{message}',      'response@controller',  ['{message}'=>'[\d]+']],
-    ['/',                   'Base@index',   []]
+    ['/msg/{message}',      'response@controller',  ['{message}'=>'[\d]+']], ['/', 'Base@index', []], ['/test/{_method}', 'test@index', []]
 ];
 foreach ($routing as $route) {
     Sm\Core\Abstraction\IoC::$route->add_route($route[0],$route[1],$route[2]);

@@ -28,7 +28,7 @@ use Sm\html\HTML;
 <body>
     <section class="testNotReal clearfix">
         <div class="container clearfix">
-            <div class="testTitle clearfix">
+            <div class="testTitle clearfix" style="height:100%; width:100%;">
                 {{nest_body}}
             </div>
         </div>
