@@ -5,169 +5,14 @@
     <option name="CUSTOM_SCOPE_NAME" value="Current File" />
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/public/js/photoswipe_main_dissect_DONOTUSE.js" line="963" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/public/js/photoswipe.js" line="728" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/public/js/photoswipe.js" line="138" mnemonic="2" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="97c4ef93-0a33-4a0b-b3c7-8c4b7c80da4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/S2Low.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Spread2Banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Spread2Final.tif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Spread7.tif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Spread7Banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Spread7Low.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bannerBg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bannerInnerBg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bannerInnerBg1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bgTop.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bgTop1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bgTop2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blogImage1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blogImage2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/buttonBg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/buttonBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/photoswipe/default-skin/default-skin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icons/dribble.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/dropdown.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icons/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icons/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/featuredImage1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/featuredImage2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icons/flickr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footerSmallBg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/graphicRiver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/header-divider.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/pattern-2qxi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/plusGray.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/polka_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/photoswipe/default-skin/preloader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/recentProject1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/recentProject2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/recentProject3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/recentProject4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/searchIcon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/steve_buscemi_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/steve_buscemi_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/steve_buscemi_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/steve_buscemi_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/steve_buscemi_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/steve_buscemi_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/stripe_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/stripe_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/stripe_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/stripe_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/themeforest.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icons/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/whoWeAre.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/wood2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/wood2.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/960_24_col.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/App.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Autoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/AutoloadInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Backend.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/BagAbstraction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/BaseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Development/Benchmark.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Storage/Cache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Security/Clean.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Database/PDO/Connection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Controller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/File/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/File/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/FileInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/File/Filebag.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Group.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/html/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/IoC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/MapModelAbstraction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/ModelAbstraction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/ModelInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Password.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/Plugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Response.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Samuel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Database/Schema.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Storage/Session.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/SessionInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/SmSiteNew.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Database/PDO/Sql.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Abstraction/SqlInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Database/SqlModel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/URI.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/UserGroupMap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/UserImageMap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/Util.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sm/Core/View.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/aside.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/banner.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/photoswipe/default-skin/default-skin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/photoswipe/default-skin/default-skin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/backend/file_upload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/footer.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/header.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/user/home.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/home.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/user/home.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/html.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/backend/image_feed.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/include.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/lessc/lessc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/backend/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/user/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/mixin.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/photoswipe/photoswipe-ui-default.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/photoswipe/photoswipe.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/photoswipe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/photoswipe/photoswipe.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/photoswipe_main_dissect_DONOTUSE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/publicController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/responseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/user/signup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/user/signup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/template/std.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/template/std_header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/response/stub.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/sass/test.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/sass/test.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/test.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/sass/test.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/userController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/backend/user_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vagrant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/backend/verify_user_signup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/user/view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="97c4ef93-0a33-4a0b-b3c7-8c4b7c80da4f" name="Default" comment="&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/test/google_maps.php" />
+      <change type="DELETED" beforePath="C:\wamp\www\SmSiteNew\public\js\photoswipe.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\SmSiteNew\public\js\photoswipe_main_dissect_DONOTUSE.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/Plugin.js" afterPath="$PROJECT_DIR$/public/js/Plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/user/home.php" afterPath="$PROJECT_DIR$/app/view/user/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmSiteNew.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -198,59 +43,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="photoswipe_main_dissect_DONOTUSE.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/photoswipe_main_dissect_DONOTUSE.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2837" max-vertical-offset="45696">
-              <caret line="688" column="41" selection-start-line="688" selection-start-column="41" selection-end-line="688" selection-end-column="41" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#1216#1278#0" expanded="false" />
-                <element signature="e#1325#1522#0" expanded="false" />
-                <element signature="e#1559#1717#0" expanded="false" />
-                <element signature="e#1772#1846#0" expanded="false" />
-                <element signature="e#1897#2092#0" expanded="false" />
-                <element signature="e#2140#2306#0" expanded="false" />
-                <element signature="e#2354#2474#0" expanded="false" />
-                <element signature="e#2540#2824#0" expanded="false" />
-                <element signature="e#2879#3112#0" expanded="false" />
-                <element signature="e#3169#3497#0" expanded="false" />
-                <element signature="e#3519#4681#0" expanded="false" />
-                <element signature="e#4695#5007#0" expanded="false" />
-                <element signature="e#5047#10017#0" expanded="false" />
-                <element signature="e#10154#11329#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photoswipe.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/photoswipe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="29121">
-              <caret line="181" column="17" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="22.692308" vertical-offset="658" max-vertical-offset="1870">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="952">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#6#21#0#PHP" expanded="true" />
+                <element signature="n#script#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plugin.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="google_maps.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/view/test/google_maps.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.61445785" vertical-offset="0" max-vertical-offset="664">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#66#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plugin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/Plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3" vertical-offset="3967" max-vertical-offset="5542">
-              <caret line="267" column="51" selection-start-line="267" selection-start-column="51" selection-end-line="267" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2167" max-vertical-offset="5474">
+              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -267,8 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Sm/html/Link.php" />
-        <option value="$PROJECT_DIR$/app/controller/BaseController.php" />
         <option value="$PROJECT_DIR$/Sm/Security/Clean.php" />
         <option value="$PROJECT_DIR$/Sm/Core/Benchmark.php" />
         <option value="$PROJECT_DIR$/Sm/Core/Route.php" />
@@ -315,9 +135,11 @@
         <option value="$PROJECT_DIR$/public/js/user/home.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/js/photoswipe_main_dissect_DONOTUSE.js" />
+        <option value="$PROJECT_DIR$/public/js/Plugin.js" />
+        <option value="c78d24f0/scratch" />
         <option value="$PROJECT_DIR$/public/js/photoswipe.js" />
         <option value="$PROJECT_DIR$/app/view/user/home.php" />
-        <option value="$PROJECT_DIR$/public/js/Plugin.js" />
+        <option value="$PROJECT_DIR$/app/view/test/google_maps.php" />
       </list>
     </option>
   </component>
@@ -389,6 +211,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -442,24 +267,6 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -476,6 +283,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="photoswipe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmSiteNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmSiteNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmSiteNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmSiteNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,20 +360,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="configurable.group.null" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
@@ -539,6 +383,7 @@
     <property name="recentsLimit" value="5" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="LayoutCode.rearrangeEntriesJavaScript 1.5" value="false" />
+    <property name="com.intellij.ide.scratch.ScratchpadManager" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -641,28 +486,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.70244217" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70244217" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20244215" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25642672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969153" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29755783" sideWeight="0.4993046" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3708226" sideWeight="0.4993046" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22236504" sideWeight="0.5006954" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32267037" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286908" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23631841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39800996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -699,9 +545,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -722,10 +572,24 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Sm/Core/File/Filebag.php">
+    <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="272">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1921">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#21#0#PHP" expanded="true" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/Plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2167" max-vertical-offset="5474">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33290324" vertical-offset="6746" max-vertical-offset="15946">
           <caret line="412" column="19" selection-start-line="412" selection-start-column="19" selection-end-line="412" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,54 +922,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/photoswipe_main_dissect_DONOTUSE.js">
+    <entry file="file://$PROJECT_DIR$/public/js/Plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2837" max-vertical-offset="45696">
-          <caret line="688" column="41" selection-start-line="688" selection-start-column="41" selection-end-line="688" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2167" max-vertical-offset="5474">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1216#1278#0" expanded="false" />
-            <element signature="e#1325#1522#0" expanded="false" />
-            <element signature="e#1559#1717#0" expanded="false" />
-            <element signature="e#1772#1846#0" expanded="false" />
-            <element signature="e#1897#2092#0" expanded="false" />
-            <element signature="e#2140#2306#0" expanded="false" />
-            <element signature="e#2354#2474#0" expanded="false" />
-            <element signature="e#2540#2824#0" expanded="false" />
-            <element signature="e#2879#3112#0" expanded="false" />
-            <element signature="e#3169#3497#0" expanded="false" />
-            <element signature="e#3519#4681#0" expanded="false" />
-            <element signature="e#4695#5007#0" expanded="false" />
-            <element signature="e#5047#10017#0" expanded="false" />
-            <element signature="e#10154#11329#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="22.692308" vertical-offset="658" max-vertical-offset="1870">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="952">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#6#21#0#PHP" expanded="true" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/photoswipe.js">
+    <entry file="file://$PROJECT_DIR$/app/view/test/google_maps.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="29121">
-          <caret line="181" column="17" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/Plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3" vertical-offset="3967" max-vertical-offset="5542">
-          <caret line="267" column="51" selection-start-line="267" selection-start-column="51" selection-end-line="267" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.61445785" vertical-offset="0" max-vertical-offset="664">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#6#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

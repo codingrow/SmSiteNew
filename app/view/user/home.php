@@ -3,12 +3,13 @@ use Model\User;
 use Sm\Core\Abstraction\IoC;
 ?>
 <?= Sm\html\HTML::inc_js('Plugin')?>
+
 <script>
     //var sam = new SmPhotoSwipe();
 
         function animate(opts) {
 
-            var start = new Date
+            var start = new Date;
 
             var id = setInterval(function() {
                 var timePassed = new Date - start;
@@ -42,7 +43,7 @@ use Sm\Core\Abstraction\IoC;
                     }else if( newWidth >= element.parentNode.offsetWidth - 10 ) {
                         this.delta = function(p){
                             return Math.pow(p, 2) * ((10 + 1) * p - 10)
-                        }
+                        };
                         this.duration *= 1/2;
                         return;
                     }
@@ -62,6 +63,9 @@ use Sm\Core\Abstraction\IoC;
             })*/
         })
 </script>
+<?php
+domxml_new_doc("1.0");
+?>
 <style>
     #test{
     width: 200px; height: 200px; background: url('http://localhost/SmSiteNew/p/img/pic/user/Samgineer/uKAIy-Xjb67wZ7H8msIvu.png');

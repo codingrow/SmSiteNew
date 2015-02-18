@@ -24,7 +24,8 @@
 })(window || this, function (root) {
 
     'use strict';
-    var SmPhotoswipe = function (tmp) {
+
+    return function (tmp) {
         var plugin = this;
         //
         // Variables
@@ -39,7 +40,7 @@
         Point.prototype.y = 0;
 
         var SquareBound = function () {
-        }
+        };
         SquareBound.prototype.lft_bound = 0;
         SquareBound.prototype.rgt_bound = 0;
         SquareBound.prototype.top_bound = 0;
@@ -54,12 +55,13 @@
         Item.prototype._length = 0;
         Item.prototype._height = 0;
         Item.prototype._element = null;
-        Item.prototype._class = 'element'
+        Item.prototype._class = 'element';
         Item.prototype._builder = function () {
-        }
+        };
 
 
-        var Tray = function () {        };
+        var Tray = function () {
+        };
         Tray.prototype.list = [];
         Tray.prototype.getItem = function (index) {
             return this.list[index] || false;
@@ -69,21 +71,21 @@
          * @param direction 0 means we move the first to last, 1 means we move the last to first.
          * @returns {*} The element that has been cycled
          */
-        Tray.prototype.rotate = function(direction){
+        Tray.prototype.rotate = function (direction) {
             //todo check to see if the array is empty
             //todo implement this somewhere else to make it accessible to other arrays
-            direction = (typeof direction !== 'undefined')  ?direction : 1;
+            direction = (typeof direction !== 'undefined') ? direction : 1;
             var element;
-            if(direction == 1){
+            if (direction == 1) {
                 element = this.list.pop();
                 this.list.unshift(element);
-            }else if (direction == 0){
+            } else if (direction == 0) {
                 element = this.list.unshift();
                 this.list.push(element);
             }
             return element;
         };
-        Tray.prototype.queue = []
+        Tray.prototype.queue = [];
         Tray.prototype.push = function (item) {
             this.list.push(item);
         };
@@ -126,7 +128,7 @@
                         console.log('true');
                         framework.features.request_animation_frame = function (thing) {
                             window.requestAnimationFrame(thing);
-                        }
+                        };
                         if (!window.cancelAnimationFrame) {
                             window.cancelAnimationFrame = function (id) {
                                 clearTimeout(id)
@@ -252,7 +254,7 @@
             default_settings: {
                 callbackBefore: function () {
                 },
-                callbackAfter:  function () {
+                callbackAfter: function () {
                 }
             },
             gallery: {
@@ -260,12 +262,12 @@
                  * List of items that the user has selected, maybe stored in a tray or array
                  * @type {Tray|null|Array}
                  */
-                selected_items : null,
+                selected_items: null,
                 theater_view: {
                     /**
                      * An array of built elements that are likely to come before or after an element
                      */
-                    pre_queue : [], post_queue : []
+                    pre_queue: [], post_queue: []
                 }
             }
         };
@@ -311,11 +313,5 @@
             });
         })
     };
-
-    //
-    // Public APIs
-    //
-
-    return SmPhotoswipe;
 
 });
