@@ -58,13 +58,33 @@
         Item.prototype._class = 'element';
         Item.prototype._builder = function () {
         };
+        Item.prototype.build = function () {
+            this._builder();
+        };
+        Item.prototype._beeper = function () {
+        };
+        Item.prototype.beep = function () {
 
+        };
 
         var Tray = function () {
         };
         Tray.prototype.list = [];
+        Tray.prototype.container = [];
+        /**
+         * Return the item at a given index
+         * @param index
+         * @returns {*|boolean}
+         */
         Tray.prototype.getItem = function (index) {
-            return this.list[index] || false;
+            return this.container[index] || false;
+        };
+        /**
+         * Return the index of the current item.
+         * @returns {*}
+         */
+        Tray.prototype.getCurrentIndex = function () {
+            return this.list[0];
         };
         /**
          * Move the first or last indexed list item to the opposite position in the list.
@@ -75,19 +95,19 @@
             //todo check to see if the array is empty
             //todo implement this somewhere else to make it accessible to other arrays
             direction = (typeof direction !== 'undefined') ? direction : 1;
-            var element;
+            var index;
             if (direction == 1) {
-                element = this.list.pop();
-                this.list.unshift(element);
+                index = this.list.pop();
+                this.list.unshift(index);
             } else if (direction == 0) {
-                element = this.list.unshift();
-                this.list.push(element);
+                index = this.list.unshift();
+                this.list.push(index);
             }
-            return element;
+            return index;
         };
-        Tray.prototype.queue = [];
         Tray.prototype.push = function (item) {
-            this.list.push(item);
+            this.container.push(item);
+            this.list.push(this.container.length - 1);
         };
         var framework = {
             ANIMATION_MANUAL_STOP: 0,
@@ -123,7 +143,10 @@
                  * Initialize the features object
                  */
                 init: function () {
+                    //The user's supposed browser vendor
                     var vendor = framework.features._get_vendor();
+
+                    // Just some compatibility stuff regarding requestAnimationFrame and the like
                     if (window.requestAnimationFrame) {
                         console.log('true');
                         framework.features.request_animation_frame = function (thing) {
@@ -135,13 +158,15 @@
                             };
                         }
                         framework.features.cancel_animation_frame = window.cancelAnimationFrame;
-                    } else if (vendor && !framework.features.request_animation_frame) {
+                    }
+                    else if (vendor && !framework.features.request_animation_frame) {
                         framework.features.request_animation_frame = window[vendor + 'RequestAnimationFrame'];
                         if (framework.features.request_animation_frame) {
                             framework.features.cancel_animation_frame = window[vendor + 'CancelAnimationFrame'] ||
                             window[vendor + 'CancelRequestAnimationFrame'];
                         }
-                    } else {
+                    }
+                    else {
                         framework.features.request_animation_frame = function (fn) {
                             var current_time = new Date().getTime();
                             var timeToCall = Math.max(0, 16 - (current_time - lastTime));
@@ -155,7 +180,7 @@
                             clearTimeout(id);
                         };
                     }
-                    console.log(framework, plugin);
+
                     framework.is_init = true;
                 }
             },
@@ -258,6 +283,7 @@
                 }
             },
             gallery: {
+                Tray: new Tray(),
                 /**
                  * List of items that the user has selected, maybe stored in a tray or array
                  * @type {Tray|null|Array}

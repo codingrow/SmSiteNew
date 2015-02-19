@@ -18,6 +18,7 @@ require __DIR__.'/Sm/Core/Autoload.php';
 require __DIR__.'/Sm/Core/Abstraction/IoC.php';
 
 define('BASE_PATH', __DIR__.'/');
+define('SCRIPT_PATH', BASE_PATH . 'app/scripts/');
 define('USER_PATH', dirname(__DIR__).'/SmSiteNewUser/');
 define('VIEW_PATH', __DIR__.'/app/view/');
 define('MAIN_URL',  'http://localhost/SmSiteNew/');

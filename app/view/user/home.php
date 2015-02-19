@@ -64,7 +64,9 @@ use Sm\Core\Abstraction\IoC;
         })
 </script>
 <?php
-domxml_new_doc("1.0");
+$sam = null;
+passthru(SCRIPT_PATH . 'run_test.bat', $sam);
+//var_dump($sam);
 ?>
 <style>
     #test{
