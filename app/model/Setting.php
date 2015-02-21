@@ -14,13 +14,22 @@ use Sm\Database\SqlModel;
 class Setting extends ModelAbstraction implements ModelInterface {
     static $table_name = 'settings';
     static $string_key = 'name';
-    protected $setting;
+    protected $_value;
+    public $user_context;
 
-    static function add($user_id, $password, $salt = null) {
-        $password = password_hash($password, PASSWORD_BCRYPT);
-        return SqlModel::query_table(static::$table_name, function (SqlModel $t) use ($user_id, $password) {
-            #$t->where('user_id = '.$user_id);
-            $t->insert(['password', 'user_id'], [$password, $user_id]);
+    public function setValue($value) {
+        $this->_value = $value;
+        return $this;
+    }
+
+    public function setSetting($value) {
+        $this->_setting = $value;
+        return $this;
+    }
+
+    static function add($setting_name, $password) {
+        return SqlModel::query_table(static::$table_name, function (SqlModel $t) use ($setting_name, $password) {
+            $t->insert(['name', 'user_id'], [$setting_name, $user_id]);
         }, 'id');
     }
 }

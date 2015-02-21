@@ -239,7 +239,15 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
     public function findSettingArr() {
         $map = new UserSettingMap('user', 'setting');
 
-        $this->settings = $map->map($this->id);
+        $settings = $map->map($this->id);
+        foreach ($settings as $key => $value) {
+            /**
+             * @var \Model\Setting $value
+             */
+            $value->setValue($value->user_context['value']);
+            unset($value->user_context);
+        }
+        $this->settings_arr = $settings;
         return $this;
     }
 
