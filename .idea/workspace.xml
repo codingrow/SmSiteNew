@@ -10,13 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c4ef93-0a33-4a0b-b3c7-8c4b7c80da4f" name="Default" comment="Have my std's">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/user/admin_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/template/std_tcc_header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/template/std_tcc_main.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\SmSiteNew\app\view\template\std_tcc.php" afterPath="$PROJECT_DIR$/app/view/template/std_tcc_2_1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sm/Core/App.php" afterPath="$PROJECT_DIR$/Sm/Core/App.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/BaseController.php" afterPath="$PROJECT_DIR$/app/controller/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/user/home.php" afterPath="$PROJECT_DIR$/app/view/user/home.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/user/old_home.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/backend/view_emps.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/test/google_maps.php" afterPath="$PROJECT_DIR$/app/view/test/google_maps.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/userController.php" afterPath="$PROJECT_DIR$/app/controller/userController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -52,14 +48,9 @@
       <file leaf-file-name="std_tcc_2_1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_2_1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6333333" vertical-offset="446" max-vertical-offset="2907">
+            <state vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="2907">
               <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding>
-                <marker date="1424485340768" expanded="true" signature="1462:1713" placeholder="..." />
-                <marker date="1424485340768" expanded="true" signature="1495:1644" placeholder="..." />
-                <marker date="1424485340768" expanded="true" signature="1838:1993" placeholder="..." />
-                <marker date="1424485340768" expanded="true" signature="1871:1958" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,7 +58,7 @@
       <file leaf-file-name="App.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sm/Core/App.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.05" vertical-offset="146" max-vertical-offset="1003">
+            <state vertical-scroll-proportion="0.0" vertical-offset="146" max-vertical-offset="1003">
               <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
               <folding />
             </state>
@@ -77,18 +68,18 @@
       <file leaf-file-name="std_tcc_main.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538" vertical-offset="255" max-vertical-offset="4590">
+            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="4879">
               <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/userController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="612" max-vertical-offset="2023">
-              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.20632531" vertical-offset="662" max-vertical-offset="2210">
+              <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -107,7 +98,7 @@
       <file leaf-file-name="BaseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/BaseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6666665" vertical-offset="0" max-vertical-offset="646">
+            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="646">
               <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
@@ -117,7 +108,7 @@
       <file leaf-file-name="std_tcc_header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="408">
+            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="408">
               <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
               <folding />
             </state>
@@ -127,28 +118,28 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="378">
+            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="306">
               <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_view.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/view/user/admin_view.php">
+      <file leaf-file-name="view_emps.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controller/backend/view_emps.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03815937" vertical-offset="0" max-vertical-offset="891">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="425">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/html5up-halcyonic/index.html">
+      <file leaf-file-name="admin_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/user/admin_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="4845">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="278" selection-end-column="11" />
+            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="170">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -163,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/model/UserImageMap.php" />
         <option value="$PROJECT_DIR$/app/view/home.php" />
         <option value="$PROJECT_DIR$/app/view/template/std_header.php" />
         <option value="$PROJECT_DIR$/Sm/Core/Abstraction/MapModelAbstraction.php" />
@@ -212,8 +202,9 @@
         <option value="$PROJECT_DIR$/Sm/Core/App.php" />
         <option value="$PROJECT_DIR$/app/view/template/std_tcc_header.php" />
         <option value="$PROJECT_DIR$/app/view/user/home.php" />
-        <option value="$PROJECT_DIR$/app/controller/userController.php" />
         <option value="$PROJECT_DIR$/app/view/user/admin_view.php" />
+        <option value="$PROJECT_DIR$/app/controller/backend/view_emps.php" />
+        <option value="$PROJECT_DIR$/app/controller/userController.php" />
       </list>
     </option>
   </component>
@@ -229,10 +220,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1864" />
-    <option name="height" value="1098" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -285,9 +276,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -606,7 +594,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmSiteNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmSiteNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
       </pane>
     </panes>
   </component>
@@ -626,7 +639,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="list.type.of.created.stylesheet" value="LESS" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/App.php&#10;ind&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;std&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std.php&#10;inde&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;home&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;redir&#9;null&#9;null&#10;me&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;ucon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;sign&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/public/js/user/signup.js&#10;imag&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Image.php&#10;hom&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;sam&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/.idea/dictionaries/Samuel.xml&#10;pcon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;usercon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;vi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/View.php&#10;view&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/view.php&#10;user.p&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;gro&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Group.php&#10;back&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Backend.php&#10;stdh&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;sth&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;mapm&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/MapModelAbstraction.php&#10;uscon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;user&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;fil&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/File/File.php&#10;mod&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/ModelAbstraction.php&#10;uri&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/URI.php&#10;in&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;boot&#9;null&#9;null&#10;us&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;file_u&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/file_upload.php&#10;stdhe&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;sess&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Storage/Session.php&#10;pub&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;bas&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;route&#9;null&#9;null&#10;uti&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;fi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/File/File.php&#10;ba&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;cle&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Security/Clean.php&#10;verusi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;ut&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;Map&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Database/MapModel.php&#10;v&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;them&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/public/css/theme.css&#10;sh&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;vus&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;usC&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;st&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std.php" />
+    <property name="SearchEverywhereHistoryKey" value="user&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;app&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/App.php&#10;ind&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;std&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std.php&#10;inde&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;home&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;redir&#9;null&#9;null&#10;me&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;ucon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;sign&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/public/js/user/signup.js&#10;imag&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Image.php&#10;hom&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;sam&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/.idea/dictionaries/Samuel.xml&#10;pcon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;usercon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;vi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/View.php&#10;view&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/view.php&#10;user.p&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;gro&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Group.php&#10;back&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Backend.php&#10;stdh&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;sth&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;mapm&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/MapModelAbstraction.php&#10;uscon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;fil&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/File/File.php&#10;mod&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/ModelAbstraction.php&#10;uri&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/URI.php&#10;in&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;boot&#9;null&#9;null&#10;us&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;file_u&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/file_upload.php&#10;stdhe&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;sess&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Storage/Session.php&#10;pub&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;bas&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;route&#9;null&#9;null&#10;uti&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;fi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/File/File.php&#10;ba&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;cle&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Security/Clean.php&#10;verusi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;ut&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;Map&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Database/MapModel.php&#10;v&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;them&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/public/css/theme.css&#10;sh&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;vus&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;usC&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;st&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std.php" />
     <property name="TODO_SCOPE" value="Open Files" />
     <property name="recentsLimit" value="5" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -658,20 +671,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -681,6 +691,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -777,7 +790,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1864" height="1098" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -787,20 +800,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25642672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969153" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20155902" sideWeight="0.4993046" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437019" sideWeight="0.4993046" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22236504" sideWeight="0.5006954" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32267037" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23537605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23537605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39800996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39800996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -821,9 +834,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3907455" sideWeight="0.4993046" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39800996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39800996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -994,12 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="5406">
           <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#4949#5534#0" expanded="false" />
-            <element signature="e#5619#6044#0" expanded="false" />
-            <element signature="e#6070#6802#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,7 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1064,9 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="680">
           <caret line="28" column="49" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1123,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1335578" vertical-offset="0" max-vertical-offset="891">
           <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,7 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="904">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1149,7 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.044594593" vertical-offset="0" max-vertical-offset="740">
           <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,17 +1187,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/html5up-halcyonic/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="4845">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="278" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6666665" vertical-offset="0" max-vertical-offset="646">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="646">
           <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding />
         </state>
@@ -1205,7 +1197,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="255" max-vertical-offset="4590">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="4879">
           <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding />
         </state>
@@ -1213,7 +1205,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sm/Core/App.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.05" vertical-offset="146" max-vertical-offset="1003">
+        <state vertical-scroll-proportion="0.0" vertical-offset="146" max-vertical-offset="1003">
           <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
           <folding />
         </state>
@@ -1221,28 +1213,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_2_1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6333333" vertical-offset="446" max-vertical-offset="2907">
+        <state vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="2907">
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <marker date="1424485340768" expanded="true" signature="1462:1713" placeholder="..." />
-            <marker date="1424485340768" expanded="true" signature="1495:1644" placeholder="..." />
-            <marker date="1424485340768" expanded="true" signature="1838:1993" placeholder="..." />
-            <marker date="1424485340768" expanded="true" signature="1871:1958" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="408">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="408">
           <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/user/admin_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="170">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/backend/view_emps.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="425">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="378">
+        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="306">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding />
         </state>
@@ -1250,16 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/userController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="612" max-vertical-offset="2023">
-          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/user/admin_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03815937" vertical-offset="0" max-vertical-offset="891">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.20632531" vertical-offset="662" max-vertical-offset="2210">
+          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
           <folding />
         </state>
       </provider>

@@ -49,6 +49,17 @@ class userController extends BaseController {
         return null;
     }
 
+    public function _admin_view() {
+        IoC::$filter->std($_POST);
+        $result = IoC::$backend->run('view_emps');
+        if (is_array($result)) {
+            IoC::$response->header('content-type', 'application/json');
+            return json_encode($result);
+        } else {
+            return '1';
+            #IoC::$response->redirect(IoC::$uri->url('home'));
+        }
+    }
     public function admin_view() {
         $view = &IoC::$view;
         $this->set_template();
