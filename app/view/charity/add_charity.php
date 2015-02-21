@@ -34,6 +34,6 @@
         <input type="text" id="phone_number" name="phone_number" title="Phone Number"/>
         <span class="Name error"></span>
     </label>
-
+    <button>Create charity</button>
 
 </form>

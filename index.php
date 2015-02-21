@@ -51,7 +51,7 @@ App::boot();
 
 
 App::add_hook('pre_controller', function(){});
-$routing = [['/p/{_method}/{file}', 'public@@css', ['{file}' => '[a-zA-Z0-9_.-]+']], ['/user/{_method}', 'user@index', []], ['/base/{_method}', 'Base@index', []], ['/employees/{_method}', 'employees@index', []], ['/logout', 'user@logout', []], ['/user/view/{view}', 'user@view', ['{view}' => '[A-z]+']], ['/me', 'user@me', []], ['/msg/{message}/{code}', 'response@controller', ['{message}' => '[\d]+']], ['/home', 'Base@index', []], ['/test/{_method}', 'test@index', []]
+$routing = [['/p/{_method}/{file}', 'public@@css', ['{file}' => '[a-zA-Z0-9_.-]+']], ['/user/{_method}', 'user@index', []], ['/manage/{_method}', 'manage@index', []], ['/base/{_method}', 'Base@index', []], ['/employees/{_method}', 'employees@index', []], ['/logout', 'user@logout', []], ['/user/view/{view}', 'user@view', ['{view}' => '[A-z]+']], ['/me', 'user@me', []], ['/msg/{message}/{code}', 'response@controller', ['{message}' => '[\d]+']], ['/home', 'Base@index', []], ['/test/{_method}', 'test@index', []]
 ];
 foreach ($routing as $route) {
     Sm\Core\Abstraction\IoC::$route->add_route($route[0],$route[1],$route[2]);

@@ -12,9 +12,14 @@ if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
     IoC::$response->redirect('user/login');
 }
 ?>
+<?php
+var_dump(IoC::$session->get('group'))
+?>
 <?php if ($user->getType() == 1): ?>
 <div class="greeting">
     <h2>Welcome <?= $user->getUsername() ?>!</h2>
+
+
 </div>
 
 <?php else: ?>

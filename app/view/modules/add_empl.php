@@ -16,7 +16,7 @@ $func = function ($args) {
     $tax_code = isset($args['tax_code']) ? $args['tax_code'] : null;
     $phone_number = isset($args['phone_number']) ? $args['phone_number'] : null;
     if ($name != null):
-        $user_settings = ['name' => $name, 'address' => $address, 'contact_name' => $contact_name, 'tax_code' => $tax_code, 'type' => 1, 'phone_number' => $phone_number];
+        $user_settings = ['name' => $name, 'address' => $address, 'contact_name' => $contact_name, 'tax_code' => $tax_code, 'type' => 2, 'phone_number' => $phone_number];
         $user = new User();
         $user->set($user_settings)->create();
         var_dump($user);

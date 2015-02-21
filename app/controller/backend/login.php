@@ -6,6 +6,7 @@ use Sm\Storage\Session;
 $func = function($args) {
     $problem_arr = [];
     $user_id = 0;
+    /** @var User $user */
     $user = null;
     if (!isset($args['user_identifier'])) {
         $problem_arr['user'] = 'Please enter a username';
@@ -26,7 +27,14 @@ $func = function($args) {
         };
     }
     if(!empty($problem_arr)) return $problem_arr;
+
     IoC::$session->start();
+    $user->findGroups();
+    if ($groups_arr = $user->getGroups()) {
+        $group = array_shift($groups_arr);
+        IoC::$session->set('group', $group);
+
+    }
     IoC::$session->set('user', $user);
     return true;
 };
