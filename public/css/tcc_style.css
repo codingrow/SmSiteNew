@@ -12,6 +12,7 @@
     border-collapse: collapse;
     border: thin solid #474f51;
     border-right: thin solid #474f51;
+    text-decoration: none;
 }
 
 .table_headers > td {

@@ -1,7 +1,7 @@
 <?php
 use Sm\Core\Abstraction\IoC;
 
-$employees = [["username" => "Kneehar", "first_name" => "Nihar", "last_name" => "Sheth", "email" => "niharrsheth@gmail.com"], ["username" => "Fredward", "first_name" => "Fred", "last_name" => "Edwardson", "email" => "fredward@gmail.com"]];
+$employees = [["name" => "KneeChar", "contact" => "Nihar", "amount_donated" => "Sheth"], ["name" => "Fredward", "contact" => "Fred", "amount_donated" => "Edwardson"]];
 /** @var \Model\User $user */
 if ($user = IoC::$session->get('user')) {
     $groups_arr = $user->findGroups();
@@ -20,14 +20,13 @@ if ($user = IoC::$session->get('user')) {
     <?php foreach ($employees as $key => $value): ?>
 
         <tr>
-            <td><?= $value["username"] ?></td>
-            <td><?= $value["first_name"] ?></td>
-            <td><?= $value["last_name"] ?></td>
-            <td><?= $value["email"] ?></td>
+            <td><?= $value["name"] ?></td>
+            <td><?= $value["contact"] ?></td>
+            <td><?= $value["amount_donated"] ?></td>
             <td><a href="">View</a></td>
             <td><a href="">Edit</a></td>
         </tr>
 
     <?php endforeach ?>
 </table>
-<button>Add Employee</button>
+<button>Add Charity</button
