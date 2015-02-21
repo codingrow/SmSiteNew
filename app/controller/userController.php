@@ -43,7 +43,7 @@ class userController extends BaseController {
 
     public function _charity_vote() {
         IoC::$filter->std($_POST);
-        $result = IoC::$backend->run('vote_charity');
+        $result = IoC::$backend->run('vote_charity', [$_POST]);
         if (is_array($result)) {
             IoC::$response->header('content-type', 'application/json');
             return json_encode($result);

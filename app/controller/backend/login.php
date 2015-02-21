@@ -33,7 +33,6 @@ $func = function($args) {
     if ($groups_arr = $user->getGroups()) {
         $group = array_shift($groups_arr);
         IoC::$session->set('group', $group);
-
     }
     IoC::$session->set('user', $user);
     return true;

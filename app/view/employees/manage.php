@@ -30,4 +30,4 @@ if ($user = IoC::$session->get('user')) {
 
     <?php endforeach ?>
 </table>
-<button>Add Employee</button>
+<a href="<?= MAIN_URL ?>employees/add">Add an employee</a>

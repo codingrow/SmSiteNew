@@ -46,7 +46,7 @@ class Group extends ModelAbstraction implements ModelInterface{
     protected $founder_id = 0;
     /** @var User[] External */
     public $users = [];
-
+    protected $groups;
     //todo make this protected
     /** @var  Entity */
     public $entity;
@@ -61,6 +61,15 @@ class Group extends ModelAbstraction implements ModelInterface{
      *
      */
     public function __construct() {    }
+
+    /**
+     * @return mixed
+     */
+    public function getGroups() {
+        return $this->groups;
+    }
+
+
 
     /** Set the $this->users variable to be an array of User objects
      * @return $this
@@ -85,7 +94,7 @@ class Group extends ModelAbstraction implements ModelInterface{
      * @return $this
      */
     public function findGroups() {
-        $map = new GroupGroupMap('primary_group', 'secondary_group');
+        $map = new GroupGroupMap('secondary_group', 'primary_group');
         $sam = $map->map($this->id);
         $this->groups = $sam;
         return $this;

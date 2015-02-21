@@ -16,7 +16,7 @@ class GroupEntityMap extends \Sm\Core\Abstraction\MapModelAbstraction implements
     protected $user_id = 0;
     protected $group_id = 0;
     protected $_search_from = '';
-    static protected $_maps = ['entity_id' => 'Model\Entity', 'setting_id' => 'Model\Setting'];
+    static protected $_maps = ['entity_id' => 'Model\Entity', 'group_id' => 'Model\Group'];
 
     static function addRow($group_id, $entity_id) {
         return SqlModel::query_table(static::$table_name, function (SqlModel $t) use ($group_id, $entity_id) {

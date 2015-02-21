@@ -63,11 +63,36 @@ $group_entity_map->addRow(2,1);*/
     $t->id('secondary_group_id');
 });
 Sql::query($qry_o);*/
-
+/*
 $g_g_map = new GroupGroupMap();
 $g_g_map->addRow(2, 1);
 
 $g = Group::find(2);
 $g->findEntity();
 $g->findGroups();
-var_dump($g);
+var_dump($g);*/
+
+/*$qry_o = Schema::create('transactions', function (Schema $t) {
+    $t->create_std();
+    $t->integer('donated_amount');
+    $t->id('group_id');
+});*/
+
+/*$qry_o = Schema::create('group_transaction_map', function (Schema $t) {
+    $t->create_std();
+    $t->id('transaction_id');
+    $t->id('group_id');
+});
+Sql::query($qry_o);*/
+
+$user = IoC::$session->get('user');
+$user->findGroups();
+if ($groups_arr = $user->getGroups()) {
+    $group = array_shift($groups_arr);
+    IoC::$session->set('group', $group);
+}
+
+/** @var Group $group */
+$group = IoC::$session->get('group');
+$group->findGroups();
+var_dump($group->getGroups());

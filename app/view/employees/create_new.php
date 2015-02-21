@@ -9,7 +9,7 @@
 
     <label for="password">
         Password:
-        <input type="password" id="password" name="password"/>
+        <input type="text" id="password" name="password"/>
         <span class="password error"></span>
     </label>
 
