@@ -26,7 +26,7 @@ class BaseController extends Controller{
         $view = &IoC::$view;
         $view->setViewData(['title'=>'Home']);
         if (IoC::$session->get("user") !== false) {
-            $this->set_template("std_tcc_2_1s");
+            $this->set_template("std_tcc_2_1");
 
             $view->create('user/home', [], 'home_page');
         } else {

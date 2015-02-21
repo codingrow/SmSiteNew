@@ -46,6 +46,10 @@ class Group extends ModelAbstraction implements ModelInterface{
     protected $founder_id = 0;
     /** @var User[] External */
     public $users = [];
+
+    //todo make this protected
+    /** @var  Entity */
+    public $entity;
     /**
      * @param mixed $description
      */
@@ -102,5 +106,55 @@ class Group extends ModelAbstraction implements ModelInterface{
         $map = new UserGroupMap('group', 'user');
         $map->addRow($user_id, $this->id, $role_id);
     }
+
+    /**
+     * @return string
+     */
+    public function getDescription() {
+        return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName() {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAlias() {
+        return $this->alias;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId() {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreationDt() {
+        return $this->creation_dt;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUpdateDt() {
+        return $this->update_dt;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFounderId() {
+        return $this->founder_id;
+    }
+
 
 }

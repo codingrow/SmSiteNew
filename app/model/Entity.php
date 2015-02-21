@@ -19,6 +19,48 @@ class Entity extends ModelAbstraction implements ModelInterface {
     protected $url;
     public $group_context;
 
+    /**
+     * @return mixed
+     */
+    public function getAddress() {
+        return $this->address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMission() {
+        return $this->mission;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription() {
+        return $this->description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUrl() {
+        return $this->url;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreationDt() {
+        return $this->creation_dt;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUpdateDt() {
+        return $this->update_dt;
+    }
+
     public function setValue($value) {
         $this->_value = $value;
         return $this;
