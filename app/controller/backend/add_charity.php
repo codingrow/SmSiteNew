@@ -17,11 +17,11 @@ $func = function ($args) {
     $address = isset($args['address']) ? $args['address'] : null;
     $phone_number = isset($args['phone_number']) ? $args['phone_number'] : null;
     $tax_code = isset($args['tax_code']) ? $args['tax_code'] : null;
-    $last_name = isset($args['last_name']) ? $args['last_name'] : null;
     $url = isset($args['url']) ? $args['url'] : null;
-
     $contact_name = isset($args['contact_name']) ? $args['contact_name'] : null;
     $description = isset($args['description']) ? $args['description'] : null;
+
+
     if ($name != null):
         /** @var Group $session_group */
         $session_group = IoC::$session->get('group');
@@ -31,7 +31,7 @@ $func = function ($args) {
         }
         $time = new DateTime();
         $time->getTimestamp();
-        $user_settings = ['name' => $name, 'description' => $description, 'type' => 2, 'alias' => $name . $time->getTimestamp()];
+        $user_settings = ['name' => $name, 'description' => $description, 'type' => 2, 'alias' => str_replace(' ', '_', $name)];
         $group = new Group();
         $group->set($user_settings)->create();
 
@@ -51,9 +51,7 @@ $func = function ($args) {
         $g_g_map->addRow($group_id, $session_group->getId());
         $group->findEntity();
         //var_dump($group);
-
     endif;
-
     var_dump($args);
     return true;
 };
