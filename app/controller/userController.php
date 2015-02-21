@@ -48,7 +48,9 @@ class userController extends BaseController {
         }
         $view->setViewData(['title' => 'Welcome, ' . $user->getUsername(), 'secondary_title' => 'My Profile']);
         $view->create('user/home', [], 'me');
+        $view->create('modules/poll', [], 'poll');
         $view->nest_view_named('template', 'me', 'body');
+        $view->nest_view_named('template', 'poll', 'sidebar');
         return null;
     }
 
@@ -60,6 +62,16 @@ class userController extends BaseController {
         $view->nest_view_named('template', 'view', 'body');
         return null;
     }
+
+    public function data_view() {
+        $view = &IoC::$view;
+        $this->set_template();
+        $view->setViewData(['title' => 'View current data informaiton', 'secondary_title' => 'My Profile']);
+        $view->create('admin/data_view', [], 'data_view');
+        $view->nest_view_named('template', 'data_view', 'body');
+        return null;
+    }
+
 
     public function _admin_view() {
         IoC::$filter->std($_POST);
