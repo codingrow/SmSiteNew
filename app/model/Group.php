@@ -67,6 +67,26 @@ class Group extends ModelAbstraction implements ModelInterface{
         return $this;
     }
 
+    /** Set the $this->users variable to be an array of User objects
+     * @return $this
+     */
+    public function findEntity() {
+        $map = new GroupEntityMap('group', 'entity');
+        $sam = $map->map($this->id);
+        $this->entity = array_shift($sam);
+        return $this;
+    }
+
+    /** Set the $this->users variable to be an array of User objects
+     * @return $this
+     */
+    public function findGroups() {
+        $map = new GroupGroupMap('primary_group', 'secondary_group');
+        $sam = $map->map($this->id);
+        $this->groups = $sam;
+        return $this;
+    }
+
     /** Remove a user from the groups
      * @return $this
      */

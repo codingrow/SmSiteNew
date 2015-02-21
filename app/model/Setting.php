@@ -15,6 +15,7 @@ class Setting extends ModelAbstraction implements ModelInterface {
     static $table_name = 'settings';
     static $string_key = 'name';
     protected $_value;
+    protected $name;
     public $user_context;
 
     public function setValue($value) {
@@ -27,9 +28,9 @@ class Setting extends ModelAbstraction implements ModelInterface {
         return $this;
     }
 
-    static function add($setting_name, $password) {
-        return SqlModel::query_table(static::$table_name, function (SqlModel $t) use ($setting_name, $password) {
-            $t->insert(['name', 'user_id'], [$setting_name, $user_id]);
+    static function add($setting_name) {
+        return SqlModel::query_table(static::$table_name, function (SqlModel $t) use ($setting_name) {
+            $t->insert(['name'], [$setting_name]);
         }, 'id');
     }
 }
