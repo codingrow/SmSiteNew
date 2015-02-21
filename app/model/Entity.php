@@ -16,6 +16,30 @@ class Entity extends ModelAbstraction implements ModelInterface {
     protected $address;
     protected $mission;
     protected $description;
+    protected $primary_contact;
+    protected $tax_code;
+    protected $phone_number;
+
+    /**
+     * @return mixed
+     */
+    public function getPrimaryContact() {
+        return $this->primary_contact;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTaxCode() {
+        return $this->tax_code;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoneNumber() {
+        return $this->phone_number;
+    }
     protected $url;
     public $group_context;
 

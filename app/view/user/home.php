@@ -12,9 +12,6 @@ if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
     IoC::$response->redirect('user/login');
 }
 ?>
-<?php
-var_dump(IoC::$session->get('group'))
-?>
 <?php if ($user->getType() == 1): ?>
 <div class="greeting">
     <h2>Welcome <?= $user->getUsername() ?>!</h2>
@@ -32,7 +29,7 @@ var_dump(IoC::$session->get('group'))
             Cast your vote to choose which charity we'll donate to next.
         </p>
 
-        <form action="charity_vote.php" method="post" class="charity_vote_form">
+        <form action="<?= MAIN_URL ?>charity_vote" method="post" class="charity_vote_form">
             <?php foreach ($char_names as $key => $value): ?>
                 <input type="radio" name="charity" value="<?= $key ?>" id="char_<?= $value ?>">
                 <label for="char_<?= $value ?>"><?= $value ?></label><br/>

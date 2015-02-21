@@ -5,14 +5,9 @@ $charity_info = ["name" => "myCharity", "description" => "We are a company dedic
 ?>
 
 <div class="charity_info">
-    <h2><a href="<?= $charity->entity->getUrl() ?>"><?= $charity_info['name'] ?></a></h2>
-
-    <div><em><?= $charity_info['description'] ?></em></div>
-    <br/>
-
-    To learn more, direct your browser to <a href="<?= $charity_info["url"] ?>"></a> <br/>
+    To learn more, direct your browser to <a href="<?= $charity->entity->getUrl() ?>"></a> <br/>
     <?= $charity->entity->getAddress() ?> <br/>
-    Or contact <?= $charity_info["primary_contact"] ?> at <?= $charity_info["phone_number"] ?> <br/>
+    Or contact <?= $charity->entity->getPrimaryContact() ?> at <?= $charity->entity->getPhoneNumber() ?> <br/>
     Tax Code: <?= $charity_info["tax_code"] ?> <br/>
 
 </div>

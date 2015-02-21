@@ -41,6 +41,17 @@ class userController extends BaseController {
         return "Cannot View User";
     }
 
+    public function _charity_vote() {
+        IoC::$filter->std($_POST);
+        $result = IoC::$backend->run('vote_charity');
+        if (is_array($result)) {
+            IoC::$response->header('content-type', 'application/json');
+            return json_encode($result);
+        } else {
+            return '1';
+            #IoC::$response->redirect(IoC::$uri->url('home'));
+        }
+    }
     public function me() {
         $view = &IoC::$view;
         $this->set_template();
