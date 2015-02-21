@@ -19,13 +19,10 @@ use Sm\html\HTML;
     <script src="<?= MAIN_URL ?>p/js/skel-layers.min.js"></script>
     <script src="<?= MAIN_URL ?>p/js/init.js"></script>
 
-    <noscript>
         <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/skel.css"/>
         <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style.css"/>
-        <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style-desktop.css"/>
-    </noscript>
-    0
-    <?= HTML::inc_js('jquery-1.11.1') ?>
+    <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style_one.css"/>
+    <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style_desktop.css"/>
     <title>{{title}}</title>
 </head>
 <body class="subpage">
