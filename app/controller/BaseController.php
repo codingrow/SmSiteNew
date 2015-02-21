@@ -24,14 +24,18 @@ class BaseController extends Controller{
     }
     function index(){
         $view = &IoC::$view;
-        $this->set_template("std_tcc_main");
         $view->setViewData(['title'=>'Home']);
-        if (IoC::$session->get("user")) {
-            $view->create('me', [], 'home');
+        if (IoC::$session->get("user") !== false) {
+            $this->set_template("std_tcc_2_1");
+
+            $view->create('user/home', [], 'home_page');
         } else {
-            $view->create('home', [], 'home');
+            $this->set_template("std_tcc_main");
+
+            $view->create('home', [], 'home_page');
+            $view->create('user/home', [], 'home_page');
         }
-        $view->nest_view_named('template', 'home', 'body');
+        $view->nest_view_named('template', 'home_page', 'body');
     }
 
     public function _file_upload() {

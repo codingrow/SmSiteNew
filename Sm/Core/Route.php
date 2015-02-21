@@ -30,6 +30,13 @@ class Route {
     static $args        = [];
     static $requested_uri = '';
 
+    /**
+     * @return array
+     */
+    public static function getRoutes() {
+        return self::$routes;
+    }
+
     /** Give a nickname to a route.
      * Unimplemented because it would only lead to static pages with the way I have it now,
      * and it isn't worth the thought yet
