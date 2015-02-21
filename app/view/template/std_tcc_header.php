@@ -1,5 +1,8 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
 
+/** @var User $user */
+$user = IoC::$session->get('user');
+
 <header id="header" class="container">
     <div class="row">
         <div class="12u">
@@ -13,7 +16,13 @@
                 <a href="threecolumn.html">Three Column</a>
                 <a href="<?= MAIN_URL ?>me/">Two Column #1</a>
                 <a href="twocolumn2.html">Two Column #2</a>
-                <a href="onecolumn.html">One Column</a>
+                <?php if (!$user): ?>
+                    <a href="<?= MAIN_URL ?>user/signup/">Sign Up</a>
+                    <a href="<?= MAIN_URL ?>user/login/" id="loginButton">Log In</a>
+                <?php else: ?>
+                    <a href="<?= MAIN_URL ?>logout/" id="logoutButton">Log Out</a>
+                <?php endif; ?>
+
             </nav>
 
         </div>

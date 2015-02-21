@@ -43,7 +43,10 @@ class userController extends BaseController {
     public function me() {
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => 'Me', 'secondary_title' => 'My Profile']);
+        if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
+            IoC::$response->redirect(IoC::$uri->url('login'));
+        }
+        $view->setViewData(['title' => 'Welcome, ' . $user->getUsername(), 'secondary_title' => 'My Profile']);
         $view->create('user/home', [], 'me');
         $view->nest_view_named('template', 'me', 'body');
         return null;
