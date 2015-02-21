@@ -24,6 +24,7 @@ $user = \Sm\Core\Abstraction\IoC::$session->get('user');
                     <a href="<?= MAIN_URL ?>home/"> Welcome, <?= $user->getUsername() ?></a>
                     <?php if ($user->getType() == 1): ?>
                         <a href="<?= MAIN_URL ?>employees/manage/">Manage Employees</a>
+                        <a href="<?= MAIN_URL ?>charities/manage/">Manage Charities</a>
                     <?php endif; ?>
                     <a href="<?= MAIN_URL ?>logout/" id="logoutButton">Log Out</a>
                 <?php endif; ?>

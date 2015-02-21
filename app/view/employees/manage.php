@@ -8,3 +8,4 @@ if ($user = IoC::$session->get('user')) {
     var_dump($current_group);
 }
 ?>
+lsfhuiadhufi

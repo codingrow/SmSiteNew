@@ -12,9 +12,9 @@ class employeesController extends BaseController {
     public function manage() {
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => 'Manage Employees']);
+        $view->setViewData(['title' => 'General Test of settings', 'secondary_title' => 'My Profile']);
         $view->create('employees/manage', [], 'manage');
-        $view->nest_view_named('template', 'manage  ', 'body');
+        $view->nest_view_named('template', 'manage', 'body');
     }
 
     public function add() {
