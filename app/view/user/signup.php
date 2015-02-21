@@ -49,7 +49,13 @@
                 </label>
 
                 <br/>
+                <label for="primary_email">
+                    Email Address:
+                    <input type="text" id="primary_email" name="primary_email"/>
+                    <span class="primary_email error"></span>
+                </label>
 
+                <br/>
                 <button type="submit">Submit</button>
             </form>
         </article>

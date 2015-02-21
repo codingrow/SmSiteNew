@@ -50,8 +50,7 @@ $func = function ($args) {
     $user_settings =
         [
             'username'  =>  $user_identifier,
-            'first_name'=>  $first_name,
-            'last_name' =>  $last_name, 'primary_email' => $primary_email
+            'first_name'=>  $first_name, 'last_name' => $last_name, 'primary_email' => $primary_email, 'type' => 1
         ];
     $user->set($user_settings)->create();
     $user_id =$user->getId();
