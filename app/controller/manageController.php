@@ -12,7 +12,7 @@ class manageController extends BaseController {
     public function manage() {
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => 'General Test of settings', 'secondary_title' => 'My Profile']);
+        $view->setViewData(['title' => 'Manage employees', 'secondary_title' => 'My Profile']);
         $view->create('employees/manage', [], 'manage');
         $view->nest_view_named('template', 'manage', 'body');
     }
@@ -20,7 +20,7 @@ class manageController extends BaseController {
     public function add_charity() {
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => 'General Test of settings', 'secondary_title' => 'Charities']);
+        $view->setViewData(['title' => 'Add charity', 'secondary_title' => 'Charities']);
         $view->create('charity/add_charity', [], 'Charities');
         $view->nest_view_named('template', 'Charities', 'body');
     }
