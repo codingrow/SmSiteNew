@@ -17,7 +17,16 @@ class employeesController extends BaseController {
         $view->nest_view_named('template', 'manage', 'body');
     }
 
-    public function add() {
+    public function _add_html() {
+        $view = &IoC::$view;
+
+        $view->setViewData(['title' => 'Add Employee', 'secondary_title' => 'My Profile']);
+        $view->create('modules/add_empl', [], 'manage');
+        $view->set('manage');
+    }
+
+
+    public function _add() {
         $sam = $_POST;
         IoC::$filter->std($sam);
         $result = IoC::$backend->run('add_employee', [$_POST]);
