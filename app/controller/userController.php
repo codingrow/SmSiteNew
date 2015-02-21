@@ -65,7 +65,7 @@ class userController extends BaseController {
     public function charities() {
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => 'General Test of settings', 'secondary_title' => 'Charities']);
+        $view->setViewData(['title' => 'Charity List', 'secondary_title' => 'Charities']);
         $view->create('charity/charities', [], 'Charities');
         $view->nest_view_named('template', 'Charities', 'body');
     }
