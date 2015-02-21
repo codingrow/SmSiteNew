@@ -52,6 +52,15 @@ class userController extends BaseController {
         return null;
     }
 
+    public function gen_test() {
+        $view = &IoC::$view;
+        $this->set_template();
+        $view->setViewData(['title' => 'General Test of settings', 'secondary_title' => 'My Profile']);
+        $view->create('user/test_delete_soon', [], 'view');
+        $view->nest_view_named('template', 'view', 'body');
+        return null;
+    }
+
     public function _admin_view() {
         IoC::$filter->std($_POST);
         $result = IoC::$backend->run('view_emps');

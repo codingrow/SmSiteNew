@@ -7,7 +7,6 @@
 
 namespace Sm\Database\PDO;
 
-
 use Sm\Core\Abstraction\SqlInterface;
 
 class Sql implements SqlInterface{

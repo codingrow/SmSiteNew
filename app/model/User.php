@@ -52,6 +52,11 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
      * @var Image
      */
     public $image           = '';
+
+    /**
+     * @var array $settings_arr an array of the user's settings
+     */
+    public $settings_arr = [];
     /**
      * @var array
      */
@@ -230,6 +235,14 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
     public function getId() {
         return $this->id;
     }
+
+    public function findSettingArr() {
+        $map = new UserSettingMap('user', 'setting');
+
+        $this->settings = $map->map($this->id);
+        return $this;
+    }
+
     public static function make_directories($username) {
         mkdir(USER_PATH.'user/'.$username.'/files/'.'img'   , 0777, true);
         mkdir(USER_PATH.'user/'.$username.'/files/'.'css'   , 0777, true);

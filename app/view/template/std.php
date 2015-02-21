@@ -16,7 +16,6 @@ use Sm\html\HTML;
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-                                                                          0
     <?= HTML::inc_js('jquery-1.11.1')?>
     <title>{{title}}</title>
 </head>
