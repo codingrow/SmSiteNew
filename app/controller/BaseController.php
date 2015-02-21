@@ -26,6 +26,11 @@ class BaseController extends Controller{
         $view = &IoC::$view;
         $this->set_template("std_tcc_main");
         $view->setViewData(['title'=>'Home']);
+        if (IoC::$session->get("user")) {
+            $view->create('me', [], 'home');
+        } else {
+            $view->create('home', [], 'home');
+        }
         $view->nest_view_named('template', 'home', 'body');
     }
 

@@ -12,3 +12,37 @@
     border-collapse: collapse;
     border: thin solid #474f51;
 }
+
+.loginbutton {
+    top: 0;
+    height: 39px;
+    width: 70px;
+    color: #474f51;
+    background-color: white;
+    border: thin #474f51 solid;
+}
+
+.login_elements {
+    width: 100%;
+    margin: 20px 10px;
+}
+
+.login_elements label {
+    margin: 20px;
+    min-width: 102px;
+}
+
+.login_elements input {
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.error {
+    color: #aa0000;
+    font-size: 24px;
+}
+
+#main_content {
+    font-size: 28px;
+    font-family: Merriweather;
+}
