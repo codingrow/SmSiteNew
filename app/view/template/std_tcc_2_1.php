@@ -47,6 +47,34 @@ $char_names = ["Char-one", "C2", "Charity 3", "Ch4"];
                             <h3>{{secondary_title}}</h3>
                         </header>
                         {{nest_body}}
+                        <div>
+                            <header>
+                                <h2>Vote for the next charity</h2>
+                            </header>
+                            <p>
+                                Cast your vote to choose which charity we'll donate to next.
+                            </p>
+                            <!--                        <ul class="link-list">-->
+                            <!--                            <li><a href="#">Sed dolore viverra</a></li>-->
+                            <!--                            <li><a href="#">Ligula non varius</a></li>-->
+                            <!--                            <li><a href="#">Dis parturient montes</a></li>-->
+                            <!--                            <li><a href="#">Nascetur ridiculus</a></li>-->
+                            <!--                        </ul>-->
+                            <form action="charity_vote.php" method="post" class="charity_vote_form">
+                                <!--                            <select name="charity_choice">-->
+                                <!--                                <option value="charity_one">Charity One</option>-->
+                                <!--                                <option value="charity_two">Charity Two</option>-->
+                                <!--                                <option value="charity_three">Charity Three</option>-->
+                                <!--                                <option value="charity_four">Charity Four</option>-->
+                                <!--                            </select>-->
+                                <?php foreach ($char_names as $key => $value): ?>
+                                    <input type="radio" name="charity" value="<?= $key ?>" id="char_<?= $value ?>">
+                                    <label for="char_<?= $value ?>"><?= $value ?></label><br/>
+                                <?php endforeach ?>
+                                <input type="submit" value="Vote!"/>
+
+                            </form>
+                        </div>
                     </section>
 
                 </div>
@@ -71,33 +99,34 @@ $char_names = ["Char-one", "C2", "Charity 3", "Ch4"];
                         <!--                        </ul>-->
                     </section>
 
-                    <section>
-                        <header>
-                            <h2>Vote for the next charity</h2>
-                        </header>
-                        <p>
-                            Cast your vote to choose which charity we'll donate to next.
-                        </p>
-                        <!--                        <ul class="link-list">-->
-                        <!--                            <li><a href="#">Sed dolore viverra</a></li>-->
-                        <!--                            <li><a href="#">Ligula non varius</a></li>-->
-                        <!--                            <li><a href="#">Dis parturient montes</a></li>-->
-                        <!--                            <li><a href="#">Nascetur ridiculus</a></li>-->
-                        <!--                        </ul>-->
-                        <form action="charity_vote.php" method="post" class="charity_vote_form">
-                            <!--                            <select name="charity_choice">-->
-                            <!--                                <option value="charity_one">Charity One</option>-->
-                            <!--                                <option value="charity_two">Charity Two</option>-->
-                            <!--                                <option value="charity_three">Charity Three</option>-->
-                            <!--                                <option value="charity_four">Charity Four</option>-->
-                            <!--                            </select>-->
-                            <?php foreach ($char_names as $key => $value): ?>
-                                <input type="radio" name="charity" value="<?= $key ?>"><?= $value ?><br/>
-                            <?php endforeach ?>
-                            <input type="submit" value="Vote!"/>
-
-                        </form>
-                    </section>
+                    <!--                    <section>-->
+                    <!--                        <header>-->
+                    <!--                            <h2>Vote for the next charity</h2>-->
+                    <!--                        </header>-->
+                    <!--                        <p>-->
+                    <!--                            Cast your vote to choose which charity we'll donate to next.-->
+                    <!--                        </p>-->
+                    <!--                        <!--                        <ul class="link-list">-->
+                    <!--                        <!--                            <li><a href="#">Sed dolore viverra</a></li>-->
+                    <!--                        <!--                            <li><a href="#">Ligula non varius</a></li>-->
+                    <!--                        <!--                            <li><a href="#">Dis parturient montes</a></li>-->
+                    <!--                        <!--                            <li><a href="#">Nascetur ridiculus</a></li>-->
+                    <!--                        <!--                        </ul>-->
+                    <!--                        <form action="charity_vote.php" method="post" class="charity_vote_form">-->
+                    <!--                            <!--                            <select name="charity_choice">-->
+                    <!--                            <!--                                <option value="charity_one">Charity One</option>-->
+                    <!--                            <!--                                <option value="charity_two">Charity Two</option>-->
+                    <!--                            <!--                                <option value="charity_three">Charity Three</option>-->
+                    <!--                            <!--                                <option value="charity_four">Charity Four</option>-->
+                    <!--                            <!--                            </select>-->
+                    <!--                            --><?php //foreach ($char_names as $key => $value): ?>
+                    <!--                                <input type="radio" name="charity" value="-->
+                    <? //= $key ?><!--">--><? //= $value ?><!--<br/>-->
+                    <!--                            --><?php //endforeach ?>
+                    <!--                            <input type="submit" value="Vote!"/>-->
+                    <!---->
+                    <!--                        </form>-->
+                    <!--                    </section>-->
 
                 </div>
             </div>
@@ -120,7 +149,7 @@ $char_names = ["Char-one", "C2", "Charity 3", "Ch4"];
                             <div class="3u">
                                 <ul class="link-list last-child">
                                     <li><a href="<?= MAIN_URL ?>home">Home</a></li>
-                                    <li><a href="#">Sed mattis quis rutrum</a></li>
+                                    <li><a href="mailto:blackrock-il@westmonroepartners.com">Contact Us</a></li>
                                     <li><a href="#">Accumsan suspendisse</a></li>
                                     <li><a href="#">Eu varius vitae magna</a></li>
                                 </ul>
@@ -142,13 +171,13 @@ $char_names = ["Char-one", "C2", "Charity 3", "Ch4"];
 
                 <!-- Blurb -->
                 <section>
-                    <h2>An Informative Text Blurb</h2>
+                    <h2>Why we donate</h2>
 
                     <p>
-                        Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu
-                        varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi,
-                        dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh
-                        lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+                        We here at Blackrock feel it is our duty as a business and a member of the community to
+                        contribute to the success of our world's charities.
+                        Every week, we encourage our employees to provide donations for the charity, as well as to vote
+                        for next week's charity.
                     </p>
                 </section>
 
