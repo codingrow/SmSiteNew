@@ -6,7 +6,7 @@
  */
 ?>
 <?= Sm\html\HTML::inc_js('user/signup')?>
-<section id="main" class="main container">
+<div id="main" class="main container">
     <div id="primary" class="clearfix">
         <article>
             <form id="userSubmitForm" action="<?= MAIN_URL . 'user/_signup' ?>" method="post">
@@ -56,8 +56,8 @@
                 </label>
 
                 <br/>
-                <button type="submit">Submit</button>
+                <button type="submit" class="signup_button">Submit</button>
             </form>
         </article>
     </div>
-</section>
+</div>
