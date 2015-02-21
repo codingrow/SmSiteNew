@@ -7,6 +7,7 @@
 
 namespace Controller;
 
+use Model\Group;
 use Model\User;
 use Sm\Core\Abstraction\IoC;
 use Sm\Core\Response;
@@ -54,12 +55,16 @@ class userController extends BaseController {
         return null;
     }
 
-    public function charity_view() {
-        $view = &IoC::$view;
-        $this->set_template();
-        $view->setViewData(['title' => 'Charity View', 'secondary_title' => 'Charities']);
-        $view->create('charity/charity_view', [], 'charity_view');
-        $view->nest_view_named('template', 'charity_view', 'body');
+    public function charity_view($charity_alias = 2) {
+        $charity = Group::find($charity_alias);
+        if ($charity) {
+            $charity->findEntity();
+            $view = &IoC::$view;
+            $this->set_template();
+            $view->setViewData(['title' => 'Charity View', 'secondary_title' => 'Charities']);
+            $view->create('charity/charity_view', ['charity' => $charity], 'charity_view');
+            $view->nest_view_named('template', 'charity_view', 'body');
+        }
     }
 
     public function charities() {
