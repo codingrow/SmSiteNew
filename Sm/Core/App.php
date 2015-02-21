@@ -51,6 +51,7 @@ class App {
         }
         IoC::$benchmark->mark('end');
         $result = str_replace('{elapsed_time}', IoC::$benchmark->elapsed_time('start', 'end'), $result);
+        $result = str_replace('{{secondary_title}}', "", $result);
         Response::get_headers();
         echo $result;
         return true;

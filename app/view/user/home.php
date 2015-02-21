@@ -1,13 +1,4 @@
 <?php
-$nihar = [6, 7, 8, 9];
+$result = \Sm\Core\Abstraction\IoC::
+
 ?>
-
-<select name="hours_clocked" id="hours_clocked">
-    <?php
-    foreach ($nihar as $value):
-
-        ?>
-        <option value="<?= $value ?>"><?= $value ?></option>
-
-    <?php endforeach ?>
-</select>

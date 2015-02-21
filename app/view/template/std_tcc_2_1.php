@@ -19,8 +19,9 @@ use Sm\html\HTML;
     <script src="<?= MAIN_URL ?>p/js/skel-layers.min.js"></script>
     <script src="<?= MAIN_URL ?>p/js/init.js"></script>
 
-        <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/skel.css"/>
-        <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style.css"/>
+    <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/skel.css"/>
+    <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/tcc_style.css"/>
+    <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style.css"/>
     <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style_one.css"/>
     <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style_desktop.css"/>
     <title>{{title}}</title>
@@ -45,7 +46,7 @@ use Sm\html\HTML;
                         <header>
                             <h2> {{title}} </h2>
 
-                            <h3>A generic two column layout</h3>
+                            <h3>{{secondary_title}}</h3>
                         </header>
                         {{nest_body}}
                     </section>

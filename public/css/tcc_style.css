@@ -1,0 +1,14 @@
+.tcc_view_table {
+    border: thick solid #474f51;
+    width: 100%;
+    font-size: 25px;
+    font-family: 'Arvo', serif;
+}
+
+.tcc_view_table tr > td {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-collapse: collapse;
+    border: thin solid #474f51;
+}

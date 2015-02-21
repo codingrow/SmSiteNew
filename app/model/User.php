@@ -174,6 +174,62 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
     public function getUsername() {
         return $this->username;
     }
+
+    /**
+     * @return string
+     */
+    public function getFirstName() {
+        return $this->first_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName() {
+        return $this->last_name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType() {
+        return $this->type;
+    }
+
+    /**
+     * @return Image
+     */
+    public function getImage() {
+        return $this->image;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGroupContext() {
+        return $this->group_context;
+    }
+
+    /**
+     * @return Group[]
+     */
+    public function getGroups() {
+        return $this->groups;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProfileImageId() {
+        return $this->profile_image_id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId() {
+        return $this->id;
+    }
     public static function make_directories($username) {
         mkdir(USER_PATH.'user/'.$username.'/files/'.'img'   , 0777, true);
         mkdir(USER_PATH.'user/'.$username.'/files/'.'css'   , 0777, true);

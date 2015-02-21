@@ -43,7 +43,7 @@ class userController extends BaseController {
     public function me() {
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => 'Me']);
+        $view->setViewData(['title' => 'Me', 'secondary_title' => 'My Profile']);
         $view->create('user/home', [], 'me');
         $view->nest_view_named('template', 'me', 'body');
         return null;
