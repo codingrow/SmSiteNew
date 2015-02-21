@@ -12,7 +12,7 @@ $user = \Sm\Core\Abstraction\IoC::$session->get('user');
         <div class="12u">
 
             <!-- Logo -->
-            <h1><a href="#" id="logo">Fred.</a></h1>
+            <h1><a href="#" id="logo">Blackrock Charity Services</a></h1>
 
             <!-- Nav -->
             <nav id="nav">
@@ -22,7 +22,7 @@ $user = \Sm\Core\Abstraction\IoC::$session->get('user');
                     <a href="<?= MAIN_URL ?>user/signup/">Sign Up</a>
                     <a href="<?= MAIN_URL ?>user/login/" id="loginButton">Log In</a>
                 <?php else: ?>
-                    <a href="<?= MAIN_URL ?>me/"> Welcome, <?= $user->getUsername() ?></a>
+                    <a href="#"> Welcome, <?= $user->getUsername() ?></a>
                     <a href="<?= MAIN_URL ?>logout/" id="logoutButton">Log Out</a>
                 <?php endif; ?>
 

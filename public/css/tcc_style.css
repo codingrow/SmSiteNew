@@ -50,3 +50,35 @@
 .charity_vote_form input {
 
 }
+
+.charname {
+    font-size: 24px;
+}
+
+.charname a {
+    text-decoration: none;
+}
+
+.past_donations_table {
+    border: thin #474f51 solid;
+    width: 100%;
+    font-size: 28px;
+}
+
+.past_donations_table tr {
+    border-collapse: collapse;
+    margin: 5px;
+}
+
+.past_donations_table tr td {
+    border-collapse: collapse;
+    padding: 10px;
+    border: thin solid #474f51;
+}
+
+.table_title {
+    border: thick #474f51 solid;
+    border-bottom: hidden;
+    text-align: center;
+    font-size: 40px;
+}

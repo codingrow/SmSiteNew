@@ -1,5 +1,5 @@
 <?php
-
+$char_names = ["Char-one", "C2", "Charity 3", "Ch4"];
 ?>
 <!DOCTYPE HTML>
 <html lang="en" class="no-js">
@@ -55,18 +55,49 @@
                     <!-- Sidebar -->
                     <section>
                         <header>
-                            <h2>Magna Phasellus</h2>
+                            <h2>Current Charity</h2>
                         </header>
-                        <ul class="link-list">
-                            <li><a href="#">Sed dolore viverra</a></li>
-                            <li><a href="#">Ligula non varius</a></li>
-                            <li><a href="#">Nec sociis natoque</a></li>
-                            <li><a href="#">Penatibus et magnis</a></li>
-                            <li><a href="#">Dis parturient montes</a></li>
-                            <li><a href="#">Nascetur ridiculus</a></li>
-                        </ul>
+                        <p>We're currently donating to:
+
+                        <div class="charname"><a href="#">Charity name</a></div>
+                        </p>
+                        <!--                        <ul class="link-list">-->
+                        <!--                            <li><a href="#">Sed dolore viverra</a></li>-->
+                        <!--                            <li><a href="#">Ligula non varius</a></li>-->
+                        <!--                            <li><a href="#">Nec sociis natoque</a></li>-->
+                        <!--                            <li><a href="#">Penatibus et magnis</a></li>-->
+                        <!--                            <li><a href="#">Dis parturient montes</a></li>-->
+                        <!--                            <li><a href="#">Nascetur ridiculus</a></li>-->
+                        <!--                        </ul>-->
                     </section>
-                    {{nest_sidebar}}
+
+                    <section>
+                        <header>
+                            <h2>Vote for the next charity</h2>
+                        </header>
+                        <p>
+                            Cast your vote to choose which charity we'll donate to next.
+                        </p>
+                        <!--                        <ul class="link-list">-->
+                        <!--                            <li><a href="#">Sed dolore viverra</a></li>-->
+                        <!--                            <li><a href="#">Ligula non varius</a></li>-->
+                        <!--                            <li><a href="#">Dis parturient montes</a></li>-->
+                        <!--                            <li><a href="#">Nascetur ridiculus</a></li>-->
+                        <!--                        </ul>-->
+                        <form action="charity_vote.php" method="post" class="charity_vote_form">
+                            <!--                            <select name="charity_choice">-->
+                            <!--                                <option value="charity_one">Charity One</option>-->
+                            <!--                                <option value="charity_two">Charity Two</option>-->
+                            <!--                                <option value="charity_three">Charity Three</option>-->
+                            <!--                                <option value="charity_four">Charity Four</option>-->
+                            <!--                            </select>-->
+                            <?php foreach ($char_names as $key => $value): ?>
+                                <input type="radio" name="charity" value="<?= $key ?>"><?= $value ?><br/>
+                            <?php endforeach ?>
+                            <input type="submit" value="Vote!"/>
+
+                        </form>
+                    </section>
 
                 </div>
             </div>
