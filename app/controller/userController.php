@@ -46,9 +46,9 @@ class userController extends BaseController {
         if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
             IoC::$response->redirect(IoC::$uri->url('login'));
         }
-        $view->setViewData(['title' => 'Welcome, ' . $user->getUsername(), 'secondary_title' => 'My Profile']);
+        $view_1 = $view->create('modules/poll', [], 'poll');
+        $view->setViewData(['title' => 'Welcome, ' . $user->getUsername(), 'secondary_title' => 'My Profile', '{{nest_sidebar}}' => $view_1->get_content()]);
         $view->create('user/home', [], 'me');
-        $view->create('modules/poll', [], 'poll');
         $view->nest_view_named('template', 'me', 'body');
         $view->nest_view_named('template', 'poll', 'sidebar');
         return null;
