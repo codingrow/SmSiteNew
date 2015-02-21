@@ -21,7 +21,6 @@ class responseController extends BaseController{
     }
 
     public function code404($message = '404', $page = null) {
-        var_dump(IoC::$route->getRoutes());
         if ($page) {
             $page = '[' . $page . ']';
         }
