@@ -41,6 +41,8 @@ $func = function ($args) {
     if(!isset($args['last_name']) || trim($args['last_name']) == '') $problem_arr['last_name'] = 'Please enter a last name';
     else $last_name = $args['last_name'];
 
+    $primary_email = isset($args['primary_email']) ? $args['primary_email'] : null;
+
     if (!empty($problem_arr)) {
         return $problem_arr;
     }
@@ -49,7 +51,7 @@ $func = function ($args) {
         [
             'username'  =>  $user_identifier,
             'first_name'=>  $first_name,
-            'last_name' =>  $last_name,
+            'last_name' =>  $last_name, 'primary_email' => $primary_email
         ];
     $user->set($user_settings)->create();
     $user_id =$user->getId();

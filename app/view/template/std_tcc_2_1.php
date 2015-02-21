@@ -1,5 +1,4 @@
 <?php
-use Sm\html\HTML;
 
 ?>
 <!DOCTYPE HTML>
@@ -19,7 +18,6 @@ use Sm\html\HTML;
     <script src="<?= MAIN_URL ?>p/js/skel-layers.min.js"></script>
     <script src="<?= MAIN_URL ?>p/js/init.js"></script>
 
-    <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/skel.css"/>
     <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/tcc_style.css"/>
     <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style.css"/>
     <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style_one.css"/>
@@ -104,23 +102,7 @@ use Sm\html\HTML;
                         <div class="row">
                             <div class="3u">
                                 <ul class="link-list last-child">
-                                    <li><a href="<?= MAIN_URL ?>home">home</a></li>
-                                    <li><a href="#">Sed mattis quis rutrum</a></li>
-                                    <li><a href="#">Accumsan suspendisse</a></li>
-                                    <li><a href="#">Eu varius vitae magna</a></li>
-                                </ul>
-                            </div>
-                            <div class="3u">
-                                <ul class="link-list last-child">
-                                    <li><a href="#">Neque amet dapibus</a></li>
-                                    <li><a href="#">Sed mattis quis rutrum</a></li>
-                                    <li><a href="#">Accumsan suspendisse</a></li>
-                                    <li><a href="#">Eu varius vitae magna</a></li>
-                                </ul>
-                            </div>
-                            <div class="3u">
-                                <ul class="link-list last-child">
-                                    <li><a href="#">Neque amet dapibus</a></li>
+                                    <li><a href="<?= MAIN_URL ?>home">Home</a></li>
                                     <li><a href="#">Sed mattis quis rutrum</a></li>
                                     <li><a href="#">Accumsan suspendisse</a></li>
                                     <li><a href="#">Eu varius vitae magna</a></li>
@@ -157,11 +139,11 @@ use Sm\html\HTML;
         </div>
     </footer>
 </div>
-
-<!-- Copyright -->
+<!--
+ Copyright
 <div id="copyright">
     &copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
-</div>
+</div>-->
 
 </body>
 </html>

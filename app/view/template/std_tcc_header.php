@@ -16,15 +16,13 @@ $user = \Sm\Core\Abstraction\IoC::$session->get('user');
 
             <!-- Nav -->
             <nav id="nav">
-                <a href="<?= MAIN_URL ?>home/">Homepage</a>
-                <a href="threecolumn.html">Three Column</a>
-                <a href="<?= MAIN_URL ?>me/">Two Column #1</a>
+                <a href="<?= MAIN_URL ?>home/">Home</a>
                 <!-- <a href="twocolumn2.html">Two Column #2</a> -->
                 <?php if (!$user): ?>
                     <a href="<?= MAIN_URL ?>user/signup/">Sign Up</a>
                     <a href="<?= MAIN_URL ?>user/login/" id="loginButton">Log In</a>
                 <?php else: ?>
-                    <a href="#"> Welcome, <?= $user->getUsername() ?></a>
+                    <a href="<?= MAIN_URL ?>me/"> Welcome, <?= $user->getUsername() ?></a>
                     <a href="<?= MAIN_URL ?>logout/" id="logoutButton">Log Out</a>
                 <?php endif; ?>
 

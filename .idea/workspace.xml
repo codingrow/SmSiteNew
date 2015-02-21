@@ -10,12 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c4ef93-0a33-4a0b-b3c7-8c4b7c80da4f" name="Default" comment="Have my std's">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Setting.php" afterPath="$PROJECT_DIR$/app/model/Setting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SmSiteNew.iml" afterPath="$PROJECT_DIR$/.idea/SmSiteNew.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/User.php" afterPath="$PROJECT_DIR$/app/model/User.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/GroupSettingMap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/backend/group_creation.php" />
+      <change type="DELETED" beforePath="C:\wamp\www\SmSiteNew\public\css\skel.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/test/google_maps.php" afterPath="$PROJECT_DIR$/app/view/test/google_maps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/user/home.php" afterPath="$PROJECT_DIR$/app/view/user/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/template/std_tcc_2_1.php" afterPath="$PROJECT_DIR$/app/view/template/std_tcc_2_1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/template/std_tcc_header.php" afterPath="$PROJECT_DIR$/app/view/template/std_tcc_header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/user/test_delete_soon.php" afterPath="$PROJECT_DIR$/app/view/user/test_delete_soon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/backend/verify_user_signup.php" afterPath="$PROJECT_DIR$/app/controller/backend/verify_user_signup.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmSiteNew.iws" />
@@ -67,11 +70,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="std_tcc_main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="31.384615" vertical-offset="1343" max-vertical-offset="4879">
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="std_tcc_2_1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_2_1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2924">
-              <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+            <state vertical-scroll-proportion="32.615383" vertical-offset="1188" max-vertical-offset="2618">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -80,8 +93,8 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="272">
-              <caret line="4" column="5" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
+            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="306">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -120,18 +133,18 @@
       <file leaf-file-name="std_tcc_header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="680">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="646">
+              <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_delete_soon.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_delete_soon.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/user/test_delete_soon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20451128" vertical-offset="0" max-vertical-offset="665">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="272">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -163,8 +176,8 @@
       <file leaf-file-name="Setting.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/Setting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="646">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state vertical-scroll-proportion="-19.692308" vertical-offset="15" max-vertical-offset="680">
+              <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
               <folding>
                 <element signature="e#6#66#0#PHP" expanded="true" />
                 <element signature="e#86#127#0#PHP" expanded="true" />
@@ -216,17 +229,27 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.444445" vertical-offset="4047" max-vertical-offset="4770">
-              <caret line="248" column="9" selection-start-line="248" selection-start-column="9" selection-end-line="248" selection-end-column="9" />
+            <state vertical-scroll-proportion="-24.777779" vertical-offset="2535" max-vertical-offset="4770">
+              <caret line="178" column="12" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="12" />
               <folding>
                 <element signature="e#6#65#0#PHP" expanded="true" />
                 <element signature="e#84#112#0#PHP" expanded="true" />
-                <marker date="1424497775161" expanded="true" signature="2354:2664" placeholder="SELECT DISTI..users..." />
-                <marker date="1424497775161" expanded="true" signature="2354:3358" placeholder="SELECT DISTI..." />
-                <marker date="1424497775161" expanded="true" signature="2693:2970" placeholder="SELECT u.id,..users..." />
-                <marker date="1424497775161" expanded="true" signature="3004:3358" placeholder="SELECT u3.id..users..." />
-                <marker date="1424497775161" expanded="true" signature="3158:3277" placeholder="SELECT * FRO..user_setting_map..." />
+                <marker date="1424497835156" expanded="true" signature="2354:2664" placeholder="SELECT DISTI..users..." />
+                <marker date="1424497835156" expanded="true" signature="2354:3358" placeholder="SELECT DISTI..." />
+                <marker date="1424497835156" expanded="true" signature="2693:2970" placeholder="SELECT u.id,..users..." />
+                <marker date="1424497835156" expanded="true" signature="3004:3358" placeholder="SELECT u3.id..users..." />
+                <marker date="1424497835156" expanded="true" signature="3158:3277" placeholder="SELECT * FRO..user_setting_map..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupSettingMap.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/GroupSettingMap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="476">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -237,6 +260,29 @@
             <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="578">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify_user_signup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controller/backend/verify_user_signup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-30.076923" vertical-offset="0" max-vertical-offset="1105">
+              <caret line="54" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group_creation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controller/backend/group_creation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40902257" vertical-offset="153" max-vertical-offset="1258">
+              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+              <folding>
+                <element signature="e#6#65#0#PHP" expanded="true" />
+                <element signature="e#66#82#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -280,9 +326,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Sm/Core/Abstraction/ModelAbstraction.php" />
-        <option value="$PROJECT_DIR$/app/controller/backend/verify_user_signup.php" />
-        <option value="$PROJECT_DIR$/public/js/user/signup.js" />
         <option value="$PROJECT_DIR$/app/controller/publicController.php" />
         <option value="$PROJECT_DIR$/app/view/user/signup.php" />
         <option value="$PROJECT_DIR$/app/controller/backend/user_update.php" />
@@ -321,16 +364,19 @@
         <option value="$PROJECT_DIR$/app/controller/backend/view_emps.php" />
         <option value="$PROJECT_DIR$/app/view/user/admin_view.php" />
         <option value="$PROJECT_DIR$/public/css/tcc_style.css" />
-        <option value="$PROJECT_DIR$/app/view/template/std_tcc_2_1.php" />
         <option value="$PROJECT_DIR$/Sm/Core/App.php" />
-        <option value="$PROJECT_DIR$/app/view/user/home.php" />
-        <option value="$PROJECT_DIR$/app/view/template/std_tcc_header.php" />
         <option value="$PROJECT_DIR$/app/model/UserSettingMap.php" />
         <option value="$PROJECT_DIR$/Sm/Core/Abstraction/MapModelAbstraction.php" />
         <option value="$PROJECT_DIR$/app/controller/userController.php" />
-        <option value="$PROJECT_DIR$/app/view/user/test_delete_soon.php" />
         <option value="$PROJECT_DIR$/app/model/Setting.php" />
         <option value="$PROJECT_DIR$/app/model/User.php" />
+        <option value="$PROJECT_DIR$/app/view/template/std_tcc_2_1.php" />
+        <option value="$PROJECT_DIR$/app/view/template/std_tcc_header.php" />
+        <option value="$PROJECT_DIR$/app/view/user/home.php" />
+        <option value="$PROJECT_DIR$/app/view/user/test_delete_soon.php" />
+        <option value="$PROJECT_DIR$/app/model/GroupSettingMap.php" />
+        <option value="$PROJECT_DIR$/app/controller/backend/verify_user_signup.php" />
+        <option value="$PROJECT_DIR$/app/controller/backend/group_creation.php" />
       </list>
     </option>
   </component>
@@ -486,78 +532,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="File" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmSiteNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,7 +773,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="list.type.of.created.stylesheet" value="LESS" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="SearchEverywhereHistoryKey" value="Sett&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Setting.php&#10;use&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;sign&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/signup.php&#10;bas&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;userCo&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;map&#9;null&#9;null&#10;app&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/App.php&#10;user&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;ind&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;std&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std.php&#10;inde&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;home&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;redir&#9;null&#9;null&#10;me&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;ucon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;imag&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Image.php&#10;hom&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;sam&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/.idea/dictionaries/Samuel.xml&#10;pcon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;usercon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;vi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/View.php&#10;view&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/view.php&#10;user.p&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;gro&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Group.php&#10;back&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Backend.php&#10;stdh&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;sth&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;mapm&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/MapModelAbstraction.php&#10;uscon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;fil&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/File/File.php&#10;mod&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/ModelAbstraction.php&#10;uri&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/URI.php&#10;in&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;boot&#9;null&#9;null&#10;us&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;file_u&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/file_upload.php&#10;stdhe&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;sess&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Storage/Session.php&#10;pub&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;route&#9;null&#9;null&#10;uti&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;fi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/File/File.php&#10;ba&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;cle&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Security/Clean.php&#10;verusi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;ut&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;Map&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Database/MapModel.php&#10;v&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;them&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/public/css/theme.css&#10;sh&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php" />
+    <property name="SearchEverywhereHistoryKey" value="bas&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;sth&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_tcc_header.php&#10;stdtcm&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_tcc_main.php&#10;std&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_tcc_2_1.php&#10;Sett&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Setting.php&#10;use&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;sign&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/signup.php&#10;userCo&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;map&#9;null&#9;null&#10;app&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/App.php&#10;user&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;ind&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;inde&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;home&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;redir&#9;null&#9;null&#10;me&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;ucon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;imag&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Image.php&#10;hom&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/home.php&#10;sam&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/.idea/dictionaries/Samuel.xml&#10;pcon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;usercon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;vi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/View.php&#10;view&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/user/view.php&#10;user.p&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;gro&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/Group.php&#10;back&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Backend.php&#10;stdh&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;mapm&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/MapModelAbstraction.php&#10;uscon&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/userController.php&#10;fil&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/File/File.php&#10;mod&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Abstraction/ModelAbstraction.php&#10;uri&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/URI.php&#10;in&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/index.php&#10;boot&#9;null&#9;null&#10;us&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/model/User.php&#10;file_u&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/file_upload.php&#10;stdhe&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/view/template/std_header.php&#10;sess&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Storage/Session.php&#10;pub&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/publicController.php&#10;route&#9;null&#9;null&#10;uti&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;fi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/File/File.php&#10;ba&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/BaseController.php&#10;cle&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Security/Clean.php&#10;verusi&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;ut&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Core/Util.php&#10;Map&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/Sm/Database/MapModel.php&#10;v&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/app/controller/backend/verify_user_signup.php&#10;them&#9;FILE&#9;file://C:/wamp/www/SmSiteNew/public/css/theme.css" />
     <property name="TODO_SCOPE" value="Open Files" />
     <property name="recentsLimit" value="5" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -809,11 +783,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\SmSiteNew\app\model" />
       <recent name="C:\wamp\www\SmSiteNew\public\js" />
       <recent name="C:\wamp\www\SmSiteNew\public\css" />
       <recent name="C:\wamp\www\SmSiteNewUser\user\Sam\files\img" />
       <recent name="C:\wamp\www\SmSiteNew\app\src" />
-      <recent name="C:\wamp\www\SmSiteNew\public\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\SmSiteNew\packages\js" />
@@ -944,7 +918,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424495054862</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Have my std's">
+      <created>1424497841733</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1424497841733</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <option name="closeIssue" value="false" />
@@ -1064,20 +1044,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33186814" vertical-offset="17223" max-vertical-offset="81617">
-          <caret line="1022" column="0" selection-start-line="1022" selection-start-column="0" selection-end-line="1022" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/test/google_maps.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2244">
@@ -1256,22 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/skel.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7939">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.26923" vertical-offset="0" max-vertical-offset="4879">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/backend/view_emps.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15263748" vertical-offset="0" max-vertical-offset="891">
@@ -1312,22 +1262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_2_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2924">
-          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="272">
-          <caret line="4" column="5" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/template/std_header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1598">
@@ -1344,26 +1278,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="680">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/UserGroupMap.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="646">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1411,14 +1329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/backend/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sm/Core/Abstraction/MapModelAbstraction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9615384" vertical-offset="986" max-vertical-offset="1683">
@@ -1435,26 +1345,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.444445" vertical-offset="4047" max-vertical-offset="4770">
-          <caret line="248" column="9" selection-start-line="248" selection-start-column="9" selection-end-line="248" selection-end-column="9" />
-          <folding>
-            <element signature="e#6#65#0#PHP" expanded="true" />
-            <element signature="e#84#112#0#PHP" expanded="true" />
-            <marker date="1424497775161" expanded="true" signature="2354:2664" placeholder="SELECT DISTI..users..." />
-            <marker date="1424497775161" expanded="true" signature="2354:3358" placeholder="SELECT DISTI..." />
-            <marker date="1424497775161" expanded="true" signature="2693:2970" placeholder="SELECT u.id,..users..." />
-            <marker date="1424497775161" expanded="true" signature="3004:3358" placeholder="SELECT u3.id..users..." />
-            <marker date="1424497775161" expanded="true" signature="3158:3277" placeholder="SELECT * FRO..user_setting_map..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/Setting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="646">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state vertical-scroll-proportion="-19.692308" vertical-offset="15" max-vertical-offset="680">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
           <folding>
             <element signature="e#6#66#0#PHP" expanded="true" />
             <element signature="e#86#127#0#PHP" expanded="true" />
@@ -1462,11 +1356,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_2_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="32.615383" vertical-offset="1188" max-vertical-offset="2618">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="646">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="31.384615" vertical-offset="1343" max-vertical-offset="4879">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="646">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="306">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/user/test_delete_soon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20451128" vertical-offset="0" max-vertical-offset="665">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="272">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/GroupSettingMap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="476">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/backend/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/backend/verify_user_signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.076923" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="54" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.777779" vertical-offset="2535" max-vertical-offset="4770">
+          <caret line="178" column="12" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="12" />
+          <folding>
+            <element signature="e#6#65#0#PHP" expanded="true" />
+            <element signature="e#84#112#0#PHP" expanded="true" />
+            <marker date="1424497835156" expanded="true" signature="2354:2664" placeholder="SELECT DISTI..users..." />
+            <marker date="1424497835156" expanded="true" signature="2354:3358" placeholder="SELECT DISTI..." />
+            <marker date="1424497835156" expanded="true" signature="2693:2970" placeholder="SELECT u.id,..users..." />
+            <marker date="1424497835156" expanded="true" signature="3004:3358" placeholder="SELECT u3.id..users..." />
+            <marker date="1424497835156" expanded="true" signature="3158:3277" placeholder="SELECT * FRO..user_setting_map..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/backend/group_creation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40902257" vertical-offset="153" max-vertical-offset="1258">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+          <folding>
+            <element signature="e#6#65#0#PHP" expanded="true" />
+            <element signature="e#66#82#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
