@@ -11,10 +11,9 @@ if ($user = IoC::$session->get('user')) {
 
 <table class="tcc_view_table">
     <tr class="table_headers">
-        <td>Username</td>
-        <td>First Name</td>
-        <td>Last Name</td>
-        <td>Email</td>
+        <td>Name</td>
+        <td>Conact</td>
+        <td>Amount Donated</td>
         <td colspan="2">Actions</td>
     </tr>
     <?php foreach ($employees as $key => $value): ?>

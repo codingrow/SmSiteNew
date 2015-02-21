@@ -20,9 +20,9 @@ class manageController extends BaseController {
     public function add_charity() {
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => 'General Test of settings', 'secondary_title' => 'My Profile']);
-        $view->create('employees/manage', [], 'manage');
-        $view->nest_view_named('template', 'manage', 'body');
+        $view->setViewData(['title' => 'General Test of settings', 'secondary_title' => 'Charities']);
+        $view->create('charity/charities', [], 'Charities');
+        $view->nest_view_named('template', 'Charities', 'body');
     }
 
     public function _add_charity() {
