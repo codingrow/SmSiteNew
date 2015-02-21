@@ -1,7 +1,7 @@
 .tcc_view_table {
-    border: thick solid #474f51;
+    border: thin solid #474f51;
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Arvo', serif;
 }
 
@@ -11,7 +11,13 @@
     padding-right: 10px;
     border-collapse: collapse;
     border: thin solid #474f51;
+    border-right: thin solid #474f51;
 }
+
+.table_headers > td {
+    border-bottom: thin solid #474f51;
+}
+
 
 .loginbutton {
     top: 0;
