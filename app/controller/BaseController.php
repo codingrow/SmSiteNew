@@ -15,7 +15,8 @@ class BaseController extends Controller{
     static function get(){
         return new static();
     }
-    protected function set_template($template_name = 'std'){
+
+    protected function set_template($template_name = 'std_tcc') {
         $view = &IoC::$view;
         $view->create_template($template_name, 'template');
         $view->set('template');
