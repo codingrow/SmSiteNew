@@ -54,6 +54,14 @@ class userController extends BaseController {
         return null;
     }
 
+    public function charity_view() {
+        $view = &IoC::$view;
+        $this->set_template();
+        $view->setViewData(['title' => 'Charity View', 'secondary_title' => 'Charities']);
+        $view->create('charity/charity_view', [], 'charity_view');
+        $view->nest_view_named('template', 'charity_view', 'body');
+    }
+
     public function charities() {
         $view = &IoC::$view;
         $this->set_template();

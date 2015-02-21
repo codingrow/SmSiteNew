@@ -1,7 +1,7 @@
 <?php
 use Sm\Core\Abstraction\IoC;
 
-$employees = [["name" => "KneeChar", "contact" => "Nihar", "amount_donated" => "Sheth"], ["name" => "Fredward", "contact" => "Fred", "amount_donated" => "Edwardson"]];
+$charities = [["name" => "KneeChar", "contact" => "Nihar", "amount_donated" => "Sheth"], ["name" => "Fredward", "contact" => "Fred", "amount_donated" => "Edwardson"]];
 /** @var \Model\User $user */
 if ($user = IoC::$session->get('user')) {
     $groups_arr = $user->findGroups();
@@ -16,7 +16,7 @@ if ($user = IoC::$session->get('user')) {
         <td>Amount Donated</td>
         <td colspan="2">Actions</td>
     </tr>
-    <?php foreach ($employees as $key => $value): ?>
+    <?php foreach ($charities as $key => $value): ?>
 
         <tr>
             <td><?= $value["name"] ?></td>

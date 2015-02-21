@@ -10,10 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c4ef93-0a33-4a0b-b3c7-8c4b7c80da4f" name="Default" comment="Have my std's">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/charity/add_charity.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\SmSiteNew\app\view\admin\charities.php" afterPath="$PROJECT_DIR$/app/view/charity/charities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/manageController.php" afterPath="$PROJECT_DIR$/app/controller/manageController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/charity/charity_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/charity/charities.php" afterPath="$PROJECT_DIR$/app/view/charity/charities.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/userController.php" afterPath="$PROJECT_DIR$/app/controller/userController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -59,8 +57,18 @@
       <file leaf-file-name="charities.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/charity/charities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="629">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="680">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="charity_view.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/view/charity/charity_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1548975" vertical-offset="0" max-vertical-offset="878">
+              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -76,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manageController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manageController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/manageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30527496" vertical-offset="0" max-vertical-offset="891">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="629">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,8 +97,8 @@
       <file leaf-file-name="userController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/userController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.576923" vertical-offset="374" max-vertical-offset="2754">
-              <caret line="61" column="64" selection-start-line="57" selection-start-column="8" selection-end-line="61" selection-end-column="64" />
+            <state vertical-scroll-proportion="-21.576923" vertical-offset="374" max-vertical-offset="2890">
+              <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -99,8 +107,8 @@
       <file leaf-file-name="create_new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/employees/create_new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="765">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="7" />
+            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="765">
+              <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -140,16 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tcc_style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/tcc_style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="13.0" vertical-offset="680" max-vertical-offset="2040">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -159,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/photoswipe.js" />
-        <option value="$PROJECT_DIR$/app/view/template/std.php" />
         <option value="$PROJECT_DIR$/app/view/test/google_maps.php" />
         <option value="$PROJECT_DIR$/public/js/Plugin.js" />
         <option value="$PROJECT_DIR$/hello_world.php" />
@@ -207,9 +203,11 @@
         <option value="$PROJECT_DIR$/app/view/template/std_tcc_header.php" />
         <option value="$PROJECT_DIR$/app/controller/adminController.php" />
         <option value="$PROJECT_DIR$/app/view/admin/charities.php" />
-        <option value="$PROJECT_DIR$/app/controller/userController.php" />
         <option value="$PROJECT_DIR$/app/view/charity/add_charity.php" />
         <option value="$PROJECT_DIR$/app/controller/manageController.php" />
+        <option value="$PROJECT_DIR$/app/view/charity/charities.php" />
+        <option value="$PROJECT_DIR$/app/controller/userController.php" />
+        <option value="$PROJECT_DIR$/app/view/charity/charity_view.php" />
       </list>
     </option>
   </component>
@@ -1031,7 +1029,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424551929623</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Have my std's">
+      <created>1424552883848</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1424552883848</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <option name="closeIssue" value="false" />
@@ -1068,7 +1072,7 @@
       <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70244217" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20244215" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25642672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25612473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969153" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21213809" sideWeight="0.4993046" order="0" side_tool="false" content_ui="combo" />
@@ -1151,13 +1155,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Sm/Core/File/FileFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.769231" vertical-offset="169" max-vertical-offset="714">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/php/parsecsv.lib.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-157.76923" vertical-offset="15312" max-vertical-offset="19550">
@@ -1488,14 +1485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/employees/manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="663">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/modules/add_empl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="917">
@@ -1524,18 +1513,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/charity/charities.php">
+    <entry file="file://$PROJECT_DIR$/app/controller/manageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="629">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="629">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/userController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.576923" vertical-offset="374" max-vertical-offset="2890">
+          <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/employees/create_new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="7" />
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="765">
+          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/employees/manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="663">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/charity/charities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="680">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1548,18 +1561,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/userController.php">
+    <entry file="file://$PROJECT_DIR$/app/view/charity/charity_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.576923" vertical-offset="374" max-vertical-offset="2754">
-          <caret line="61" column="64" selection-start-line="57" selection-start-column="8" selection-end-line="61" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/manageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30527496" vertical-offset="0" max-vertical-offset="891">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.1548975" vertical-offset="0" max-vertical-offset="878">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
           <folding />
         </state>
       </provider>
