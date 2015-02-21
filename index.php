@@ -7,6 +7,7 @@
 
 
 use Sm\Core\App;
+use Sm\Core\File\File;
 use Sm\Database\SqlModel;
 use Sm\Storage\Session;
 use Sm\Core\Autoload;           use Sm\Core\Backend;    use Sm\Development\Benchmark;
@@ -42,6 +43,7 @@ Sm\Core\Abstraction\IoC::$benchmark = new Benchmark();
 Sm\Core\Abstraction\IoC::$filter    = new Clean();
 Sm\Core\Abstraction\IoC::$uri       = new URI();
 Sm\Core\Abstraction\IoC::$sql_model = new SqlModel();
+Sm\Core\Abstraction\IoC::$file = new File();
 
 Sm\Core\Abstraction\IoC::$benchmark->mark('start');
 
@@ -54,10 +56,7 @@ $routing =
     ['/p/{_method}/{file}', 'public@@css',  ['{file}'=>'[a-zA-Z0-9_.-]+']],
     ['/user/{_method}',     'user@index',   []],
     ['/base/{_method}',     'Base@index',   []],
-    ['/logout',             'user@logout',  []],
-    ['/user/view/{view}',   'user@view',    ['{view}'=>'[A-z]+']],
-    ['/me',                 'user@me',      []],
-    ['/msg/{message}',      'response@controller',  ['{message}'=>'[\d]+']], ['/', 'Base@index', []], ['/test/{_method}', 'test@index', []]
+    ['/logout',             'user@logout',  []], ['/user/view/{view}', 'user@view', ['{view}' => '[A-z]+']], ['/me', 'user@me', []], ['/msg/{message}/{code}', 'response@controller', ['{message}' => '[\d]+']], ['/', 'Base@index', []], ['/test/{_method}', 'test@index', []]
 ];
 foreach ($routing as $route) {
     Sm\Core\Abstraction\IoC::$route->add_route($route[0],$route[1],$route[2]);
@@ -65,7 +64,7 @@ foreach ($routing as $route) {
 Sm\Core\Abstraction\IoC::$view->create('home');
 Sm\Core\Abstraction\IoC::$route->uri_match(URI::get_uri_string());
 
-App::run();
 session_cache_limiter('none');
 header('Cache-control: max-age='.(60*60*24*365));
 header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365));
+App::run();

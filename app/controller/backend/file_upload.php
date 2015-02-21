@@ -16,6 +16,7 @@ $func = function($args){
         }
         $exception_arr = [];
         $username = $user->getUsername();
+        #User directory exists
         if(!is_dir($target_dir = USER_PATH.'user/'.$username.'/files/'))
             User::make_directories($user->getUsername());
 
@@ -24,12 +25,13 @@ $func = function($args){
 
         if(isset($args['files'])){
             foreach ($args['files'] as &$file) {
-                File::process($file);
+                IoC::$file->process($file);
             }
             IoC::$util->recursive_ksort($args['files']);
             if(empty($args['files'])){
                 $exception_arr['file'] = 'Nonexistent file';
             }
+            var_dump($args);
             foreach ($args['files'] as $key => $value) {
                 foreach ($value as $array) {
                     $folder = strpos($array['type'], 'image') === 0 ? 'img/' : (strpos($array['type'], 'text/css')===0 ? 'css/' : '');
@@ -43,6 +45,7 @@ $func = function($args){
                     }
                 }
             }
+
             if(!empty($exception_arr)){
                 return $exception_arr;
             }
@@ -51,7 +54,7 @@ $func = function($args){
             throw new Exception('No files to upload!', 2);
         }
     }catch (Exception $e){
-        return false;
+        return $e->getMessage();
     }
 
 

@@ -32,6 +32,10 @@ class IoC {
     static $route;
     /** @var  \Sm\Database\SqlModel */
     static $sql_model;
+    /** @var  \Sm\File\File */
+    static $file;
+
+
     static protected $registered_classes = [];
     static protected $registered_instances = [];
     static function register($name, $class){

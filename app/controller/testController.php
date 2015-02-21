@@ -16,4 +16,20 @@ class testController extends BaseController {
         $view->create('test/google_maps', [], 'maps');
         $view->nest_view_named('template', 'maps', 'body');
     }
+
+    public function file() {
+        $view = &IoC::$view;
+        $this->set_template();
+        $view->setViewData(['title' => 'File']);
+        $view->create('test/basic_file', [], 'file');
+        $view->nest_view_named('template', 'file', 'body');
+    }
+
+    public function _file_upload() {
+        $result = IoC::$backend->run('file_upload', ['files' => $_FILES]);
+        if ($result === true) {
+            #Response::redirect(Link::url('me'));
+        }
+        return $result;
+    }
 }

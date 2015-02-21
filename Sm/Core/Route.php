@@ -28,6 +28,7 @@ class Route {
      * @var array Arguments to be passed to the callback
      */
     static $args        = [];
+    static $requested_uri = '';
 
     /** Give a nickname to a route.
      * Unimplemented because it would only lead to static pages with the way I have it now,
@@ -44,9 +45,9 @@ class Route {
      * @param $args
      * @todo implement named routes
      */
-    static function get_route($nickname, $args){
+    static function get_route($nickname) {
         $route = static::$nickname[$nickname];
-        $args_arr = [];
+        return $route;
     }
 
     /**Add a route to the existing route array
@@ -68,7 +69,7 @@ class Route {
         foreach($uri_arr as $route) {
             if(strpos($route, '{') === 0){
                 if($route == '{_method}'){
-                    $method = $route;
+                    //$method = $route;
                 }
                 if(isset($where[$route])){
                     $tmp_chk = $where[$route];
@@ -160,6 +161,7 @@ class Route {
      * @return callable
      */
     static function uri_match($uri){
+        static::$requested_uri = $uri;
         $uri_array = is_array($uri) ? $uri : explode('/', rtrim($uri, '/'));
         if(empty($uri_array) || $uri_array[0] == ''){
             $uri_array = ['home'];
@@ -168,8 +170,9 @@ class Route {
         //Util::recursive_ksort(static::$routes);
 ##DEFAULT ROUTE DONE HERE; CONSIDER MOVING LOCATION
         $callback = function(){
-            Response::redirect(IoC::$uri->url('msg/404/'));
-            return "DEFAULT FUNCTION";};
+            IoC::$response->redirect(IoC::$uri->url('msg/404/' . static::$requested_uri));
+            return static::$requested_uri;
+        };
         $arr_search = [];
         #if there is 1<= routes that begin with the same letter as the uri in question, search through that route
 ##IF TO IMPLEMENT WILDCARD ROUTE, DO IT HERE
@@ -187,7 +190,6 @@ class Route {
                 $exp[0] = 'Controller\\'.$exp[0];
                 $exp[0] .= 'Controller';
                 $class = $exp[0];
-                $result = '';
                 if (method_exists($class, $method) && is_callable(array($class, $method))){
                     $result = call_user_func_array([new $class, $method], func_get_args());
                 }else {

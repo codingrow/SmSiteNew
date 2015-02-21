@@ -64,9 +64,11 @@ use Sm\Core\Abstraction\IoC;
         })
 </script>
 <?php
-$sam = null;
-passthru(SCRIPT_PATH . 'run_test.bat', $sam);
-//var_dump($sam);
+include BASE_PATH . 'packages/php/parsecsv.lib.php';
+$csv = new parseCSV();
+$csv->auto(BASE_PATH . 'app/test/test_login.csv');
+var_dump($csv->data);
+//passthru(SCRIPT_PATH . 'run_test.bat', $sam);
 ?>
 <style>
     #test{

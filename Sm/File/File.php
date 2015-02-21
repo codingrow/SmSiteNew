@@ -34,7 +34,7 @@ class File {
         return false;
     }
 
-    public static function process(&$file_post) {
+    public function process(&$file_post) {
         $file_ary = array();
         if (!is_array($file_post['name'])) {
             foreach ($file_post as $key => $value) {
@@ -44,8 +44,8 @@ class File {
         $file_count = count($file_post['name']);
         $file_keys  = array_keys($file_post);
         for ($i = 0; $i < $file_count; $i++) {
-            $ext = static::guess_extension($file_post['name'][$i]);
-            if (!static::verify_extension($ext, $file_post['type'][$i]) ) {
+            $ext = $this->guess_extension($file_post['name'][$i]);
+            if (!$this->verify_extension($ext, $file_post['type'][$i])) {
                 continue;
             }
             foreach ($file_keys as $key) {
