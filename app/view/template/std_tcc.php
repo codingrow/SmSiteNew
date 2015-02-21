@@ -1,37 +1,35 @@
+<?php
+use Sm\html\HTML;
+
+?>
 <!DOCTYPE HTML>
-<!--
-	Halcyonic by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en" class="no-js">
 <head>
+    <meta charset="UTF-8">
+    <script> document.documentElement.className = 'js'; </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- MAKE THE VEWPORT THING && apple_touch_icon-->
+    <link rel="shortcut icon" href="<?= MAIN_URL . 'p/img/icons/favicon.ico'; ?>">
     <title>Two Column 1 - Halcyonic by HTML5 UP</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
-    <?= \Sm\html\HTML::inc_js('jquery.min') ?>
-    <?= \Sm\html\HTML::inc_js('skel.min') ?>
-    <?= \Sm\html\HTML::inc_js('skel-layers.min') ?>
-    <?= \Sm\html\HTML::inc_js('init') ?>
+    <script src="<?= MAIN_URL ?>p/js/jquery.min.js"></script>
+    <script src="<?= MAIN_URL ?>p/js/skel.min.js"></script>
+    <script src="<?= MAIN_URL ?>p/js/skel-layers.min.js"></script>
+    <script src="<?= MAIN_URL ?>p/js/init.js"></script>
+
     <noscript>
-        <link rel="stylesheet" href="css/skel.css"/>
-        <?= \Sm\html\HTML::css('skel') ?>
-        <?= \Sm\html\HTML::css('style') ?>
-        <?= \Sm\html\HTML::css('style-desktop') ?>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/style-desktop.css"/>
+        <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/skel.css"/>
+        <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style.css"/>
+        <link rel="stylesheet" href="<?= MAIN_URL ?>p/css/style-desktop.css"/>
     </noscript>
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" href="css/ie9.css"/><![endif]-->
-    <!--[if lte IE 8]>
-    <script src="js/html5shiv.js"></script><![endif]-->
+    0
+    <?= HTML::inc_js('jquery-1.11.1') ?>
+    <title>{{title}}</title>
 </head>
 <body class="subpage">
+
 
 <!-- Header -->
 <div id="header-wrapper">

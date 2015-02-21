@@ -411,7 +411,6 @@ a.pswp__share--download:hover {
     }
     100% {
         -webkit-transform: rotate(0);
-        transform: rotate(0);
     }
 }
 
