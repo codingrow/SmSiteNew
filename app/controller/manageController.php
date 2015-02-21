@@ -36,4 +36,15 @@ class manageController extends BaseController {
         }
     }
 
+    public function _donate() {
+        $result = IoC::$backend->run('donate', $_POST);
+        if (is_array($result)) {
+            IoC::$response->header('content-type', 'application/json');
+            return json_encode($result);
+        } else {
+            return '1';
+            #IoC::$response->redirect(IoC::$uri->url('home'));
+        }
+    }
+
 }
