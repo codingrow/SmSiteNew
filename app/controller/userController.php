@@ -49,6 +49,14 @@ class userController extends BaseController {
         return null;
     }
 
+    public function admin_view() {
+        $view = &IoC::$view;
+        $this->set_template();
+        $view->setViewData(['title' => 'View employees']);
+        $view->create('user/admin_view', [], 'group');
+        $view->nest_view_named('template', 'group', 'body');
+    }
+
     public function signup() {
         $view = &IoC::$view;
         $this->set_template();

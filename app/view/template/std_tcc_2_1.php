@@ -10,7 +10,7 @@ use Sm\html\HTML;
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- MAKE THE VEWPORT THING && apple_touch_icon-->
     <link rel="shortcut icon" href="<?= MAIN_URL . 'p/img/icons/favicon.ico'; ?>">
-    <title>Two Column 1 - Halcyonic by HTML5 UP</title>
+    <title> {{title}}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
@@ -30,25 +30,7 @@ use Sm\html\HTML;
 
 <!-- Header -->
 <div id="header-wrapper">
-    <header id="header" class="container">
-        <div class="row">
-            <div class="12u">
-
-                <!-- Logo -->
-                <h1><a href="#" id="logo">Halcyonic</a></h1>
-
-                <!-- Nav -->
-                <nav id="nav">
-                    <a href="index.html">Homepage</a>
-                    <a href="threecolumn.html">Three Column</a>
-                    <a href="twocolumn1.html">Two Column #1</a>
-                    <a href="twocolumn2.html">Two Column #2</a>
-                    <a href="onecolumn.html">One Column</a>
-                </nav>
-
-            </div>
-        </div>
-    </header>
+    {{nest_header}}
 </div>
 
 <!-- Content -->

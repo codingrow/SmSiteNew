@@ -16,7 +16,7 @@ class BaseController extends Controller{
         return new static();
     }
 
-    protected function set_template($template_name = 'std_tcc') {
+    protected function set_template($template_name = 'std_tcc_2_1') {
         $view = &IoC::$view;
         $view->create_template($template_name, 'template');
         $view->set('template');
@@ -24,7 +24,7 @@ class BaseController extends Controller{
     }
     function index(){
         $view = &IoC::$view;
-        $this->set_template();
+        $this->set_template("std_tcc_main");
         $view->setViewData(['title'=>'Home']);
         $view->nest_view_named('template', 'home', 'body');
     }

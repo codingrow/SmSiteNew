@@ -39,7 +39,7 @@ class App {
                 $result = $result->get_content();
             }
             if(!IoC::$view->view_exists('header')){
-                $content = IoC::$view->create('template/std_header',[], 'header')->content;
+                $content = IoC::$view->create('template/std_tcc_header', [], 'header')->content;
                 IoC::$view->replace($result, '{{nest_header}}', $content);
             }
             $viewData = IoC::$view->getViewData();
