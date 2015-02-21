@@ -84,14 +84,14 @@ var_dump($g);*/
     $t->id('group_id');
 });
 Sql::query($qry_o);*/
-
-$user = IoC::$session->get('user');
-$user->findGroups();
-if ($groups_arr = $user->getGroups()) {
-    $group = array_shift($groups_arr);
-    IoC::$session->set('group', $group);
+if (!IoC::$session->get('group')) {
+    $user = IoC::$session->get('user');
+    $user->findGroups();
+    if ($groups_arr = $user->getGroups()) {
+        $group = array_shift($groups_arr);
+        IoC::$session->set('group', $group);
+    }
 }
-
 /** @var Group $group */
 $group = IoC::$session->get('group');
 $group->findGroups();
