@@ -10,9 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c4ef93-0a33-4a0b-b3c7-8c4b7c80da4f" name="Default" comment="Have my std's">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/user/home.php" afterPath="$PROJECT_DIR$/app/view/user/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/template/std_tcc_header.php" afterPath="$PROJECT_DIR$/app/view/template/std_tcc_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/userController.php" afterPath="$PROJECT_DIR$/app/controller/userController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmSiteNew.iws" />
@@ -77,8 +75,8 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="255">
-              <caret line="4" column="5" selection-start-line="2" selection-start-column="4" selection-end-line="4" selection-end-column="5" />
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="17" max-vertical-offset="272">
+              <caret line="5" column="1" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -107,8 +105,8 @@
       <file leaf-file-name="std_tcc_header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.057239056" vertical-offset="0" max-vertical-offset="891">
-              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.47699213" vertical-offset="0" max-vertical-offset="891">
+              <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -792,7 +790,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424491278744</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Have my std's">
+      <created>1424492298322</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1424492298322</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <option name="closeIssue" value="false" />
@@ -1280,8 +1284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/user/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="255">
-          <caret line="4" column="5" selection-start-line="2" selection-start-column="4" selection-end-line="4" selection-end-column="5" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="17" max-vertical-offset="272">
+          <caret line="5" column="1" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1296,8 +1300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/template/std_tcc_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.057239056" vertical-offset="0" max-vertical-offset="891">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.47699213" vertical-offset="0" max-vertical-offset="891">
+          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
           <folding />
         </state>
       </provider>

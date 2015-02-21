@@ -1,7 +1,11 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
 
+<?php
+use \Model\User;
+
 /** @var User $user */
-$user = IoC::$session->get('user');
+$user = \Sm\Core\Abstraction\IoC::$session->get('user');
+?>
 
 <header id="header" class="container">
     <div class="row">
@@ -15,11 +19,12 @@ $user = IoC::$session->get('user');
                 <a href="<?= MAIN_URL ?>home/">Homepage</a>
                 <a href="threecolumn.html">Three Column</a>
                 <a href="<?= MAIN_URL ?>me/">Two Column #1</a>
-                <a href="twocolumn2.html">Two Column #2</a>
+                <!-- <a href="twocolumn2.html">Two Column #2</a> -->
                 <?php if (!$user): ?>
                     <a href="<?= MAIN_URL ?>user/signup/">Sign Up</a>
                     <a href="<?= MAIN_URL ?>user/login/" id="loginButton">Log In</a>
                 <?php else: ?>
+                    <a href="#"> Welcome, <?= $user->getUsername() ?></a>
                     <a href="<?= MAIN_URL ?>logout/" id="logoutButton">Log Out</a>
                 <?php endif; ?>
 
