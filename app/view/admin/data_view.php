@@ -22,6 +22,14 @@ if ($company = $group->getGroups()) {
         }
         //var_dump($donation_array);
     }
+//    foreach ($past_donations as $key=>$value) {
+//        if (isset($hackarr[$value["name"]])) {
+//            $hackarr[$value["name"]] += $value["amount"];
+//        }
+//        else {
+//            $hackarr[] = [$value["name"] => $value["amount"]];
+//        }
+//    }
 }
 //$past_donations = [["name" => "asdf", "date" => "3/1/15", "amount" => 35], ["name" => "bobs burgers", "date" => "2/19/12", "amount" => 75], ["name" => "north korea", "date" => "13/13/13", "amount" => 4]];
 ?>
