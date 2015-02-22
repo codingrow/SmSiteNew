@@ -22,9 +22,9 @@ $group->findGroups();
 
 
 if ($g = $group->getGroups()) {
-    foreach ($g as $key => $value) {
+    foreach ($g as $key => $group_dealing_with) {
         $tmp_map = new GroupTransactionMap('group', 'transaction');
-        $f = $tmp_map->map($value->getId());
+        $donation_array = $tmp_map->map($group_dealing_with->getId());
         var_dump($f);
     }
 
