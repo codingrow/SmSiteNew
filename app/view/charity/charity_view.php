@@ -36,7 +36,8 @@ var_dump($info_arr);
 
 <div class="charity_info">
     You can visit this charity at <?= $charity->entity->getAddress() ?> <br/>
-    Or contact them <?= $charity->entity->getContactName() ?> at <?= $charity->entity->getPhoneNumber() ?> <br/>
-    Tax Code: <?= $charity_info["tax_code"] ?> <br/>
+    Or contact &nbsp;&nbsp;&nbsp;&nbsp; <?= $charity->entity->getContactName() ?>
+    at <?= $charity->entity->getPhoneNumber() ?> <br/>
+    Tax Code: <?= $charity->entity->getTaxCode() ?> <br/>
 
 </div>
