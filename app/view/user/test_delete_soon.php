@@ -1,5 +1,6 @@
 <?php
 use Model\Group;
+use Model\GroupTransactionMap;
 use Sm\Core\Abstraction\IoC;
 
 /**
@@ -20,4 +21,12 @@ $group = IoC::$session->get('group');
 $group->findGroups();
 
 
-var_dump($group->getGroups());
+if ($g = $group->getGroups()) {
+    foreach ($g as $key => $value) {
+        $tmp_map = new GroupTransactionMap('group', 'transaction');
+        $f = $tmp_map->map($value->getId());
+        var_dump($value->getId());
+    }
+
+
+}
