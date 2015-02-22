@@ -120,13 +120,16 @@ class userController extends BaseController {
         return null;
     }
 
-    public function data_view() {
-        $view = &IoC::$view;
-        $this->set_template();
-        $view->setViewData(['title' => 'View current data information', 'secondary_title' => 'My Profile']);
-        $view->create('admin/data_view', [], 'data_view');
-        $view->nest_view_named('template', 'data_view', 'body');
-        return null;
+    public function data_view($charity_alias = 2) {
+        $charity = Group::find($charity_alias);
+        if ($charity) {
+            $view = &IoC::$view;
+            $this->set_template();
+            $view->setViewData(['title' => 'View current data information', 'secondary_title' => 'My Profile']);
+            $view->create('admin/data_view', [], 'data_view');
+            $view->nest_view_named('template', 'data_view', 'body');
+            return null;
+        }
     }
 
 

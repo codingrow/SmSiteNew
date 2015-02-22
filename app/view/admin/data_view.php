@@ -1,5 +1,29 @@
 <?php
-$past_donations = [["name" => "asdf", "date" => "3/1/15", "amount" => 35], ["name" => "bobs burgers", "date" => "2/19/12", "amount" => 75], ["name" => "north korea", "date" => "13/13/13", "amount" => 4]];
+use Sm\Core\Abstraction\IoC;
+
+$group = IoC::$session->get('group');
+$group->findGroups();
+
+$past_donations = [];
+$hackarr = [];
+if ($company = $group->getGroups()) {
+    foreach ($company as $key => $group_dealing_with) {
+
+        $group_name = $group_dealing_with->getName();
+        $tmp_map = new \Model\GroupTransactionMap('group', 'transaction');
+        $donation_array = $tmp_map->map($group_dealing_with->getId());
+        if ($donation_array) {
+            foreach ($donation_array as $donate => $value) {
+                if ($value) {
+                    $transaction_date = $value->getCreationDt();
+                    $past_donations[] = ['name' => $group_name, 'date' => $transaction_date, 'amount' => $donate];
+                }
+            }
+        }
+        //var_dump($donation_array);
+    }
+}
+//$past_donations = [["name" => "asdf", "date" => "3/1/15", "amount" => 35], ["name" => "bobs burgers", "date" => "2/19/12", "amount" => 75], ["name" => "north korea", "date" => "13/13/13", "amount" => 4]];
 ?>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>

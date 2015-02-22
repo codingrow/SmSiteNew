@@ -21,7 +21,7 @@ $group = IoC::$session->get('group');
 $group->findGroups();
 if ($company = $group->getGroups()) {
     foreach ($company as $key => $group_dealing_with) {
-        $name = $group_dealing_with->getName();
+        $group_name = $group_dealing_with->getName();
         $tmp_map = new GroupTransactionMap('group', 'transaction');
         $donation_array = $tmp_map->map($group_dealing_with->getId());
         if ($donation_array) {
