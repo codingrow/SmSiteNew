@@ -92,7 +92,6 @@ if (!IoC::$session->get('group')) {
         IoC::$session->set('group', $group);
     }
 }
-/** @var Group $group */
 $group = IoC::$session->get('group');
 $group->findGroups();
 var_dump($group->getGroups());

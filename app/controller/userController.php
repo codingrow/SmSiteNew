@@ -52,6 +52,7 @@ class userController extends BaseController {
             #IoC::$response->redirect(IoC::$uri->url('home'));
         }
     }
+
     public function me() {
         $view = &IoC::$view;
         $this->set_template();
@@ -66,6 +67,18 @@ class userController extends BaseController {
         return null;
     }
 
+    public function charity_edit($charity_alias = 2) {
+        $charity = Group::find($charity_alias);
+        if ($charity) {
+            $charity->findEntity();
+            $view = &IoC::$view;
+            $this->set_template();
+            $view->setViewData(['title' => 'Edit ' . $charity->getName(), 'secondary_title' => $charity->entity->getDescription()]);
+            $view->create('charity/charity_edit', [], 'edit_charity');
+            $view->nest_view_named('template', 'edit_charity', 'body');
+        }
+    }
+
     public function charity_view($charity_alias = 2) {
         $charity = Group::find($charity_alias);
         if ($charity) {
@@ -74,6 +87,18 @@ class userController extends BaseController {
             $this->set_template();
             $view->setViewData(['title' => $charity->getName(), 'secondary_title' => $charity->entity->getDescription()]);
             $view->create('charity/charity_view', ['charity' => $charity], 'charity_view');
+            $view->nest_view_named('template', 'charity_view', 'body');
+        }
+    }
+
+    public function donate($charity_alias = 2) {
+        $charity = Group::find($charity_alias);
+        if ($charity) {
+            $charity->findEntity();
+            $view = &IoC::$view;
+            $this->set_template();
+            $view->setViewData(['title' => $charity->getName(), 'secondary_title' => $charity->entity->getDescription()]);
+            $view->create('charity/donate', ['charity' => $charity], 'charity_view');
             $view->nest_view_named('template', 'charity_view', 'body');
         }
     }

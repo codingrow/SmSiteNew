@@ -33,7 +33,7 @@ class BaseController extends Controller{
             $this->set_template("std_tcc_main");
 
             $view->create('home', [], 'home_page');
-            $view->create('user/home', [], 'home_page');
+            //$view->create('user/home', [], 'home_page');
         }
         $view->nest_view_named('template', 'home_page', 'body');
     }

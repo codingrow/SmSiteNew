@@ -1,13 +1,12 @@
 <form method="post" action="<?= MAIN_URL ?>manage/_add_charity" class="add_charity_class">
-    <label for="name">
-        Name:
-        <input type="text" id="name" name="name" title="Name"/>
+    <label for="username">
+        Username:
+        <input type="text" id="username" name="username" title="Userame"/>
         <span class="name_error"></span>
     </label> <br/>
-    <label for="description">
+    <label for="first_name">
         Description:<br/>
-        <textarea id="description" name="description" title="Description" cols="30" rows="10"></textarea>
-        <!--<input type="text" id="description" name="description" title="Description"/>-->
+        <input type="text" id="description" name="description" title="Description"/>
         <span class="description_error"></span>
     </label><br/>
     <label for="contact_name">
