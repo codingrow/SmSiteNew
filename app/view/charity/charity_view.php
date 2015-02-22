@@ -7,6 +7,11 @@ $charity_info = ["name" => "myCharity", "description" => "We are a company dedic
 <?= $charity->getName() ?> is one of the many charities we have donated to or intend to donate to in the future. We admire their goals and commitment to our community. We encourage you to
 <a href="<?= $charity->entity->getUrl() ?>">visit their webpage</a> to learn more.<br/><br/>
 
+<table>
+
+</table>
+
+
 <div class="charity_info">
     You can visit this charity at <?= $charity->entity->getAddress() ?> <br/>
     Or contact them <?= $charity->entity->getContactName() ?> at <?= $charity->entity->getPhoneNumber() ?> <br/>
