@@ -18,4 +18,6 @@ if (!IoC::$session->get('group')) {
 }
 $group = IoC::$session->get('group');
 $group->findGroups();
+
+
 var_dump($group->getGroups());

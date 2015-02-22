@@ -65,7 +65,7 @@ $func = function ($args) {
     }
 
     $g = new Group();
-    $g->set(['name' => $company_name, 'founder_id' => $user_id])->create();
+    $g->set(['name' => $company_name, 'founder_id' => $user_id, 'alias' => $company_name])->create();
     $g_id = $g->getId();
 
     $g_m = new UserGroupMap();
