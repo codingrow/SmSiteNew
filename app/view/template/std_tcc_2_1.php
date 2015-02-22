@@ -58,7 +58,7 @@
                         </header>
                         <p>We're currently donating to:
 
-                        <div class="charname"><a href="#">Charity name</a></div>
+                        <div class="charname"><a href="#">UNICEF</a></div>
                         <br/>
                         Please give all donations to the company CCO for processing.
                         </p>

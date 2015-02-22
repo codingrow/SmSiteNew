@@ -9,6 +9,13 @@
         <input type="text" id="amount" name="amount" title="Amount to donate"/>
         <span class="username error"></span>
     </label><br/>
+    <!--    <label for="date">-->
+    <!--        Date of donation:-->
+    <!--        <input type="text" id="date" name="date" title="Date" value="--><?php
+    //            $today = getdate();
+    //            echo $today["month"]."/".$today["mday"]."/".$today["year"];
+    //        ?><!--"/>-->
+    </label><br/>
 
     <button>Submit</button>
 </form>
