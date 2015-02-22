@@ -1,7 +1,29 @@
 <?php
 /** @var \Model\Group $charity */
 //var_dump($charity);
-$charity_info = ["name" => "myCharity", "description" => "We are a company dedicated to the preservation of nature, including trees, animals, bugs, and everything else.", "primary_contact" => "Jane Doe", "url" => "http://google.com", "tax_code" => "12345", "address" => "3400 Penn, Washington, D.C.", "phone_number" => "1234567899"];
+use Model\GroupTransactionMap;
+use Sm\Core\Abstraction\IoC;
+
+$group = IoC::$session->get('group');
+$group->findGroups();
+$info_arr = [];
+if ($company = $group->getGroups()) {
+    foreach ($company as $key => $group_dealing_with) {
+        $group_name = $group_dealing_with->getName();
+        $tmp_map = new GroupTransactionMap('group', 'transaction');
+        $donation_array = $tmp_map->map($group_dealing_with->getId());
+        if ($donation_array) {
+            foreach ($donation_array as $amount => $value) {
+                if ($value) {
+                    $transaction_date = $value->getCreationDt();
+                    $info_arr[] = ['amount' => $amount, 'date' => $transaction_date];
+                }
+            }
+
+        }
+    }
+}
+var_dump($info_arr);
 ?>
 
 <?= $charity->getName() ?> is one of the many charities we have donated to or intend to donate to in the future. We admire their goals and commitment to our community. We encourage you to

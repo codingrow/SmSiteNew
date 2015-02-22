@@ -18,7 +18,6 @@ $func = function ($args) {
     $user_settings = ['username' => $username, 'first_name' => $first_name, 'last_name' => $last_name, 'primary_email' => $primary_email, 'type' => 1];
     $user = new User();
     $user->set($user_settings)->create();
-        var_dump($user);
     $user_id = $user->getId();
     if (!$user_id) {
         return false;
@@ -27,6 +26,5 @@ $func = function ($args) {
     $user->make_directories($user->getUsername());
     endif;
 
-    var_dump($args);
     return true;
 };
