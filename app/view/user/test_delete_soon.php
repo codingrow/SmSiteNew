@@ -25,7 +25,7 @@ if ($g = $group->getGroups()) {
     foreach ($g as $key => $value) {
         $tmp_map = new GroupTransactionMap('group', 'transaction');
         $f = $tmp_map->map($value->getId());
-        var_dump($value->getId());
+        var_dump($f);
     }
 
 
