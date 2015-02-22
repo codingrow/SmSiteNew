@@ -252,9 +252,13 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
     }
 
     public static function make_directories($username) {
-        mkdir(USER_PATH.'user/'.$username.'/files/'.'img'   , 0777, true);
-        mkdir(USER_PATH.'user/'.$username.'/files/'.'css'   , 0777, true);
-        mkdir(USER_PATH.'user/'.$username.'/temp'           , 0777, true);
-        mkdir(USER_PATH.'user/'.$username.'/logs'           , 0777, true);
+        if(!is_dir( USER_PATH.'user/'.$username.'/files/'.'img'))
+            mkdir(  USER_PATH.'user/'.$username.'/files/'.'img'   , 0777, true);
+        if(!is_dir( USER_PATH.'user/'.$username.'/files/'.'css'))
+            mkdir(  USER_PATH.'user/'.$username.'/files/'.'css'   , 0777, true);
+        if(!is_dir( USER_PATH.'user/'.$username.'/temp'))
+            mkdir(  USER_PATH.'user/'.$username.'/temp'           , 0777, true);
+        if(!is_dir( USER_PATH.'user/'.$username.'/logs'))
+            mkdir(  USER_PATH.'user/'.$username.'/logs'           , 0777, true);
     }
 }

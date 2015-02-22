@@ -56,7 +56,10 @@ $func = function ($args) {
     $user_settings =
         [
             'username'  =>  $user_identifier,
-            'first_name'=>  $first_name, 'last_name' => $last_name, 'primary_email' => $primary_email, 'type' => 1
+            'first_name'=>  $first_name,
+            'last_name' => $last_name,
+            'primary_email' => $primary_email,
+            'type' => 1
         ];
     $user->set($user_settings)->create();
     $user_id =$user->getId();
@@ -65,7 +68,12 @@ $func = function ($args) {
     }
 
     $g = new Group();
-    $g->set(['name' => $company_name, 'founder_id' => $user_id, 'alias' => $company_name])->create();
+    $g->set(
+        [
+            'name' => $company_name,
+            'founder_id' => $user_id,
+            'alias' => $company_name
+        ])->create();
     $g_id = $g->getId();
 
     $g_m = new UserGroupMap();
