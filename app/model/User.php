@@ -39,6 +39,11 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
     /**
      * @var string
      */
+    protected $primary_email = '';
+
+    /**
+     * @var string
+     */
     protected $last_name    = '';
     /**
      * @var int
@@ -54,13 +59,17 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
     public $image           = '';
 
     /**
-     * @var array $settings_arr an array of the user's settings
+     * @var array $settings an array of the user's settings
      */
-    public $settings_arr = [];
+    protected $settings = [];
     /**
      * @var array
      */
     public $group_context = [];
+    /**
+     * @var array
+     */
+    protected $_available_users_sql = [];
     /** @var Group[] External */
     protected $groups = [];
 
@@ -105,29 +114,15 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
      */
     public function findAvailableUsers($search_terms = '') {
         $id = $this->id;
-        $query = "SELECT DISTINCT u.id, u.username, u.first_name, u.last_name
-              FROM users u
-              INNER JOIN user_user_map
-              ON u.id = user_user_map.user_id_child
-              INNER JOIN users u2
-              ON u2.id = user_user_map.user_id_parent AND u2.id = $id AND user_user_map.status = 1
-          UNION
-            SELECT u.id, u.username, u.first_name, u.last_name
-              FROM
-                users u INNER JOIN user_user_map
-                ON u.id = user_user_map.user_id_parent
-                INNER JOIN users u2
-                ON u2.id = user_user_map.user_id_child AND u2.id = $id
-          UNION
-              SELECT u3.id, u3.username, u3.first_name, u3.last_name
-              FROM users u3 , user_setting_map usm
-            WHERE (NOT EXISTS (
-                SELECT *
-                FROM  user_setting_map usm2
-                WHERE u3.id = usm2.user_id AND usm2.setting_id = 1
-            )) OR (usm.setting_id = 1 AND usm.value <>2 AND u3.id = usm.user_id)
-              ";
-        return SqlModel::query_table(static::$table_name, $query, 'all');
+        $query = "SELECT id, username, first_name, last_name, creation_dt, profile_image_id, primary_email FROM users WHERE id != $id";
+        return $this->_available_users_sql = SqlModel::query_table(static::$table_name, $query, 'all');
+    }
+
+    /**
+     * @return array
+     */
+    public function getAvailableUsersSql() {
+        return $this->_available_users_sql;
     }
 
     /** Consider making this a static function. It really depends on how this could be used...
@@ -236,7 +231,7 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
         return $this->id;
     }
 
-    public function findSettingArr() {
+    public function findSettings() {
         $map = new UserSettingMap('user', 'setting');
 
         $settings = $map->map($this->id);
@@ -247,8 +242,15 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
             $value->setValue($value->user_context['value']);
             unset($value->user_context);
         }
-        $this->settings_arr = $settings;
+        $this->settings = $settings;
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrimaryEmail() {
+        return $this->primary_email;
     }
 
     public static function make_directories($username) {

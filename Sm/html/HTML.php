@@ -58,7 +58,7 @@ class HTML {
             }
             $insides.= " {$k}=\"{$v}\"";
         }
-        $src = $url ?: RESOURCE_URL.'img/'.$file;
+        $src = $url ? $file : RESOURCE_URL . 'img/' . $file;
         $link = "<img src='{$src}' alt='{$alt}' {$insides}/>";
         return $link;
     }

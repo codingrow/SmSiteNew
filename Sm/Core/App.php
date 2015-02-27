@@ -39,8 +39,12 @@ class App {
                 $result = $result->get_content();
             }
             if(!IoC::$view->view_exists('header')){
-                $content = IoC::$view->create('template/std_tcc_header', [], 'header')->content;
+                $content = IoC::$view->create('template/std_header', [], 'header')->content;
                 IoC::$view->replace($result, '{{nest_header}}', $content);
+            }
+            if (!IoC::$view->view_exists('sidebar')) {
+                $content = IoC::$view->create('standard/sidebar', [], 'sidebar')->content;
+                IoC::$view->replace($result, '{{nest_sidebar}}', $content);
             }
             $viewData = IoC::$view->getViewData();
             $result = str_replace(array_keys($viewData),array_values($viewData), $result );
@@ -52,6 +56,7 @@ class App {
         IoC::$benchmark->mark('end');
         $result = str_replace('{elapsed_time}', IoC::$benchmark->elapsed_time('start', 'end'), $result);
         $result = str_replace('{{secondary_title}}', "", $result);
+        $result = str_replace('{{site_title}}', "SmSite", $result);
         Response::get_headers();
         echo $result;
         return true;

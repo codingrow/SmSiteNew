@@ -26,6 +26,8 @@ class URI {
         switch ($type){
             case 'js':
                 return RESOURCE_URL.'js/'.$url;
+            case 'css':
+                return RESOURCE_URL . 'css/' . $url;
             default:
             case 'std': return MAIN_URL.$url;
         }

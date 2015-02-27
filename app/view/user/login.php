@@ -1,6 +1,4 @@
 <?php
-use Sm\Storage\Session;
-use Model\Group;
 ?>
 <? //= Sm\html\HTML::inc_js('user/login')?>
 
@@ -19,21 +17,22 @@ use Model\Group;
         });
     });
 </script>
-<article>
-    <form id="login_form" action="<?= MAIN_URL . 'user/_login' ?>" method="post">
-        <div class="login_elements"><label for="user_identifier">Username:</label><input type="text" id="username"
-                                                                                         name="user_identifier"
-                                                                                         title="Username"/>
-
-            <div class="error" id="username_error"></div>
-        </div>
-        <div class="login_elements"><label for="password">Password:</label><input type="password" id="password"
-                                                                                  name="password"/>
-
-            <div class="error" id="password_error"></div>
-        </div>
-        <div class="login_elements">
+<article class=" module " id="content">
+    <header>
+        <h2 class="h title">{{title}}</h2>
+        {{secondary_title}}
+    </header>
+    <article>
+        <form id="login_form" class="full-children" action="<?= MAIN_URL . 'user/_login' ?>" method="post">
+            <label for="username">Username:
+                <div class="error" id="username_error"></div>
+                <input type="text" id="username" name="username" title="Username"/>
+            </label>
+            <label for="password">Password:
+                <div class="error" id="password_error"></div>
+                <input type="password" id="password" name="password"/>
+            </label>
             <button class="loginbutton" type="submit">Go!</button>
-        </div>
-    </form>
+        </form>
+    </article>
 </article>

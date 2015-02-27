@@ -37,18 +37,19 @@ $func = function ($args) {
         }
     }
 
-    if(!isset($args['first_name']) || trim($args['first_name']) == '') $problem_arr['first_name'] = 'Please enter a first name';
-    else $first_name = $args['first_name'];
+    if (!isset($args['first_name']) || trim($args['first_name']) == '') {
+        $problem_arr['first_name'] = 'Please enter a first name';
+    } else {
+        $first_name = $args['first_name'];
+    }
 
-    if(!isset($args['last_name']) || trim($args['last_name']) == '') $problem_arr['last_name'] = 'Please enter a last name';
-    else $last_name = $args['last_name'];
-    $company_name = '';
-    if (!isset($args['company_name']) || trim($args['company_name']) == '') {
-        $problem_arr['company_name'] = 'Please enter a company name';
-    } else $company_name = $args['company_name'];
+    if (!isset($args['last_name']) || trim($args['last_name']) == '')
+        $problem_arr['last_name'] = 'Please enter a last name'; else
+        $last_name = $args['last_name'];
+
 
     $primary_email = isset($args['primary_email']) ? $args['primary_email'] : null;
-
+    $user_type = isset($args['user_type']) ? $args['user_type'] : 1;
     if (!empty($problem_arr)) {
         return $problem_arr;
     }
@@ -66,6 +67,10 @@ $func = function ($args) {
     if(!$user_id){
         return false;
     }
+    /*$company_name = '';
+    if (!isset($args['company_name']) || trim($args['company_name']) == '') {
+        $problem_arr['company_name'] = 'Please enter a company name';
+    } else $company_name = $args['company_name'];
 
     $g = new Group();
     $g->set(
@@ -77,7 +82,7 @@ $func = function ($args) {
     $g_id = $g->getId();
 
     $g_m = new UserGroupMap();
-    $g_m->addRow($user_id, $g_id, 1);
+    $g_m->addRow($user_id, $g_id, 1);*/
 
     #@todo add some sort of verification that the password was added properly?
     Password::add($user_id, $password);

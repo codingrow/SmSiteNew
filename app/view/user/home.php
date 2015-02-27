@@ -1,9 +1,7 @@
 <?php
 use Model\User;
 use Sm\Core\Abstraction\IoC;
-
-$char_names = ["Char-one", "C2", "Charity 3", "Ch4"];
-
+use Sm\html\HTML;
 
 /**
  * @var User $user
@@ -12,31 +10,60 @@ if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
     IoC::$response->redirect('user/login');
 }
 ?>
-<?php if ($user->getType() == 1): ?>
-<div class="greeting">
-    <h2>Welcome <?= $user->getUsername() ?>!</h2>
+<article class=" module " id="content">
+    <header>
+        <h2 class="h title">{{title}}</h2>
+        {{secondary_title}}
+    </header>
+    <div id="profile-block" class="clearfix">
+        <div id="profile-pic">
+            <?= HTML::img($user->getProfile()->getUrl(), 'User Profile', [], true) ?>
+        </div>
+        <div id="profile-main-info">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><?= $user->getFirstName() . ' ' . $user->getLastName() ?></td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td><?= $user->getUsername() ?></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td class=""><?= $user->getPrimaryEmail() ?></td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td class="hardcoded">Slaminois <sub>(private)</sub></td>
+                </tr>
+            </table>
+            <div>
+                <!-- A button to edit the information in the table-->
+                <a href="#/" class="dummy">
+                    <div id="edit-main-info" class="hardcoded">
+                        edit
+                    </div>
+                </a>
+            </div>
+        </div>
 
-
-</div>
-
-<?php else: ?>
-
-    <div>
-        <header>
-            <h2>Vote for the next charity</h2>
-        </header>
-        <p>
-            Cast your vote to choose which charity we'll donate to next.
-        </p>
-
-        <form action="<?= MAIN_URL ?>charity_vote" method="post" class="charity_vote_form">
-            <?php foreach ($char_names as $key => $value): ?>
-                <input type="radio" name="charity" value="<?= $key ?>" id="char_<?= $value ?>">
-                <label for="char_<?= $value ?>"><?= $value ?></label><br/>
-            <?php endforeach ?>
-            <input type="submit" value="Vote!"/>
-
-        </form>
     </div>
+    <article>
+        {{secondary_title}}
+        <a href="">
+            <div class="tile">
+                <div class="tile-holder">
+                    <?= HTML::img('telephasic/pic04.jpg') ?>
+                </div>
+            </div>
+        </a>
+        <?php
+        $user->findAvailableUsers();
+        //var_dump($_SESSION);
+        $user->findGroups();
+        var_dump($user->getGroups());
+        ?>
 
-<?php endif; ?>
+    </article>
+</article>

@@ -16,7 +16,7 @@ class BaseController extends Controller{
         return new static();
     }
 
-    protected function set_template($template_name = 'std_tcc_2_1') {
+    protected function set_template($template_name = 'telephasic_std') {
         $view = &IoC::$view;
         $view->create_template($template_name, 'template');
         $view->set('template');
@@ -26,11 +26,11 @@ class BaseController extends Controller{
         $view = &IoC::$view;
         $view->setViewData(['title'=>'Home']);
         if (IoC::$session->get("user") !== false) {
-            $this->set_template("std_tcc_2_1");
+            $this->set_template();
 
             $view->create('user/home', [], 'home_page');
         } else {
-            $this->set_template("std_tcc_main");
+            $this->set_template();
 
             $view->create('home', [], 'home_page');
             //$view->create('user/home', [], 'home_page');

@@ -8,11 +8,11 @@ $func = function($args) {
     $user_id = 0;
     /** @var User $user */
     $user = null;
-    if (!isset($args['user_identifier'])) {
+    if (!isset($args['username'])) {
         $problem_arr['user'] = 'Please enter a username';
     }else{
-        $user_identifier = $args['user_identifier'];
-        $user = User::find($user_identifier);
+        $username = $args['username'];
+        $user = User::find($username);
         $user_id = $user->getId();
         if (!$user_id) {
             $problem_arr['user_password'] = 'username and password do not match';

@@ -19,12 +19,8 @@ class userController extends BaseController {
         /** @var User $user */
         $user = IoC::$session->get('user');
         $user = $user ?: new User();
-        $available_users = IoC::$session->get('available_user_list');
-        if (!$available_users) {
-            $user_list = [];
-            $user->storeAvailableUserList($user_list);
-            IoC::$session->set('available_user_list', $user_list);
-            $available_users = $user_list;
+        if (empty($available_users = $user->getAvailableUsersSql())) {
+            $user->findAvailableUsers();
         }
         if ($username == 'me' || ($user instanceof User and $user->getUsername() == $username)) {
             return $this->me();
@@ -40,77 +36,22 @@ class userController extends BaseController {
         }
         return "Cannot View User";
     }
-
-    public function _charity_vote() {
-        IoC::$filter->std($_POST);
-        $result = IoC::$backend->run('vote_charity', [$_POST]);
-        if (is_array($result)) {
-            IoC::$response->header('content-type', 'application/json');
-            return json_encode($result);
-        } else {
-            return '1';
-            #IoC::$response->redirect(IoC::$uri->url('home'));
-        }
-    }
-
     public function me() {
         $view = &IoC::$view;
         $this->set_template();
         if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
-            IoC::$response->redirect(IoC::$uri->url('login'));
+            IoC::$response->redirect(IoC::$uri->url('user/login'));
         }
         $view_1 = $view->create('modules/poll', [], 'poll');
         $view->setViewData(['title' => 'Welcome, ' . $user->getUsername(), 'secondary_title' => 'My Profile', '{{nest_sidebar}}' => $view_1->get_content()]);
         $view->create('user/home', [], 'me');
         $view->nest_view_named('template', 'me', 'body');
-        $view->nest_view_named('template', 'poll', 'sidebar');
         return null;
     }
 
-    public function charity_edit($charity_alias = 2) {
-        $charity = Group::find($charity_alias);
-        if ($charity) {
-            $charity->findEntity();
-            $view = &IoC::$view;
-            $this->set_template();
-            $view->setViewData(['title' => 'Edit ' . $charity->getName(), 'secondary_title' => $charity->entity->getDescription()]);
-            $view->create('charity/charity_edit', [], 'edit_charity');
-            $view->nest_view_named('template', 'edit_charity', 'body');
-        }
+    public function _create_group() {
+        return IoC::$backend->run('group_creation', $_POST);
     }
-
-    public function charity_view($charity_alias = 2) {
-        $charity = Group::find($charity_alias);
-        if ($charity) {
-            $charity->findEntity();
-            $view = &IoC::$view;
-            $this->set_template();
-            $view->setViewData(['title' => $charity->getName(), 'secondary_title' => $charity->entity->getDescription()]);
-            $view->create('charity/charity_view', ['charity' => $charity], 'charity_view');
-            $view->nest_view_named('template', 'charity_view', 'body');
-        }
-    }
-
-    public function donate($charity_alias = 2) {
-        $charity = Group::find($charity_alias);
-        if ($charity) {
-            $charity->findEntity();
-            $view = &IoC::$view;
-            $this->set_template();
-            $view->setViewData(['title' => $charity->getName(), 'secondary_title' => $charity->entity->getDescription()]);
-            $view->create('charity/donate', ['charity' => $charity], 'charity_view');
-            $view->nest_view_named('template', 'charity_view', 'body');
-        }
-    }
-
-    public function charities() {
-        $view = &IoC::$view;
-        $this->set_template();
-        $view->setViewData(['title' => 'Charity List', 'secondary_title' => 'Charities']);
-        $view->create('charity/charities', [], 'Charities');
-        $view->nest_view_named('template', 'Charities', 'body');
-    }
-
     public function gen_test() {
         $view = &IoC::$view;
         $this->set_template();
@@ -132,25 +73,6 @@ class userController extends BaseController {
         }
     }
 
-
-    public function _admin_view() {
-        IoC::$filter->std($_POST);
-        $result = IoC::$backend->run('view_emps');
-        if (is_array($result)) {
-            IoC::$response->header('content-type', 'application/json');
-            return json_encode($result);
-        } else {
-            return '1';
-            #IoC::$response->redirect(IoC::$uri->url('home'));
-        }
-    }
-    public function admin_view() {
-        $view = &IoC::$view;
-        $this->set_template();
-        $view->setViewData(['title' => 'View employees']);
-        $view->create('user/admin_view', [], 'group');
-        $view->nest_view_named('template', 'group', 'body');
-    }
 
     public function signup() {
         $view = &IoC::$view;
@@ -186,10 +108,9 @@ class userController extends BaseController {
             /** @var User $user */
             if ($user = IoC::$session->get('user')) {
                 $user->findGroups();
+                $user->findAvailableUsers();
+                $user->findSettings();
                 $user->findProfile();
-                $user_list = [];
-                $user->storeAvailableUserList($user_list);
-                IoC::$session->set('available_user_list', $user_list);
             }
             IoC::$response->redirect(IoC::$uri->url('home'));
         }
@@ -197,7 +118,13 @@ class userController extends BaseController {
     }
     public function image_feed(){
         Response::header('Content-type', 'application/json');
-        return IoC::$backend->run('image_feed');
+        return IoC::$backend->run('feed/image_feed');
+    }
+
+    //todo obfuscate a bit
+    public function _available_users_feed() {
+        Response::header('Content-type', 'application/json');
+        return IoC::$backend->run('feed/available_users_feed');
     }
     public function _create_session(){}
     public function _signup() {

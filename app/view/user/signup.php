@@ -5,69 +5,57 @@
  * Time: 2:37 PM
  */
 ?>
-<?= Sm\html\HTML::inc_js('user/signup')?>
-<div id="main" class="main container">
-    <div id="primary" class="clearfix">
-        <article>
-            <form id="userSubmitForm" action="<?= MAIN_URL . 'user/_signup' ?>" method="post">
-                <label for="username">
-                    Username:
-                    <input type="text" id="username" name="username" title="Username"/>
-                    <span class="username error"></span>
-                </label>
+<?= Sm\html\HTML::inc_js('user/signup') ?>
+<article class=" module " id="content">
+    <header>
+        <h2 class="h title">{{title}}</h2>
+        {{secondary_title}}
+    </header>
+    <article>
+        <form id="userSubmitForm" class="full-children" action="<?= MAIN_URL . 'user/_signup' ?>" method="post">
+            <label class="required" for="username">
+                Username:
+                <input class="required" type="text" id="username" name="username" title="Username" placeholder="username"/>
 
-                <br/>
+                <span class="username error"></span>
+            </label>
+            <label class="required" for="primary_email">
+                Email Address:
+                <input class="required" type="text" id="primary_email" name="primary_email" placeholder="Email Adress"/>
 
-                <label for="password">
+                <span class="primary_email error"></span>
+            </label>
+
+            <div class="half-children lr-float-children baby-row">
+                <label class="required floater" for="password">
                     Password:
-                    <input type="password" id="password" name="password"/>
+                    <input class="required" type="password" id="password" name="password" placeholder="password"/>
                     <span class="password error"></span>
                 </label>
 
-                <br/>
-
-                <label for="password_verify">
+                <label class="required floater" for="password_verify">
                     Verify Password:
-                    <input type="password" id="password_verify" name="password_verify"/>
+                    <input class="required" type="password" id="password_verify" name="password_verify" placeholder="Verify Password"/>
                     <span class="password_verify error"></span>
                 </label>
+            </div>
 
-                <br/>
 
-                <label for="first_name">
+            <div class="half-children lr-float-children baby-row">
+                <label class="floater" for="first_name">
                     First Name:
-                    <input type="text" id="first_name" name="first_name"/>
+                    <input class="required" type="text" id="first_name" name="first_name" placeholder="First Name"/>
                     <span class="first_name error"></span>
                 </label>
 
-                <br/>
-
-                <label for="last_name">
+                <label class="floater" for="last_name">
                     Last Name:
-                    <input type="text" id="last_name" name="last_name"/>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name"/>
                     <span class="last_name error"></span>
                 </label>
+            </div>
 
-                <br/>
-
-                <label for="primary_email">
-                    Email Address:
-                    <input type="text" id="primary_email" name="primary_email"/>
-                    <span class="primary_email error"></span>
-                </label>
-
-                <br/>
-
-                <label for="company_name">
-                    Company Name:
-                    <input type="text" id="company_name" name="company_name"/>
-                    <span class="company_name error"></span>
-                </label>
-
-
-                <br/>
-                <button type="submit" class="signup_button">Submit</button>
-            </form>
-        </article>
-    </div>
-</div>
+            <button type="submit" class="signup_button">Submit</button>
+        </form>
+    </article>
+</article>
