@@ -15,7 +15,7 @@ use Sm\Database\SqlModel;
  * Class User
  * @package Model
  */
-class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterface{
+class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterface {
     /**
      * @var string
      */
@@ -25,39 +25,41 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
      */
     static protected $string_key = 'username';
     /**
+     * @var Image
+     */
+    public $image;
+    /**
+     * @var array
+     */
+    public $group_context = [];
+    /**
      * @var int
      */
-    protected $id           = 0;
+    protected $id = 0;
     /**
      * @var string
      */
-    protected $username     = '';
+    protected $username = '';
     /**
      * @var string
      */
-    protected $first_name   = '';
+    protected $first_name = '';
     /**
      * @var string
      */
     protected $primary_email = '';
-
     /**
      * @var string
      */
-    protected $last_name    = '';
+    protected $last_name = '';
     /**
      * @var int
      */
-    protected $type         = 0;
+    protected $type = 0;
     /**
      * @var integer
      */
-    protected $profile_image_id           = '';
-    /**
-     * @var Image
-     */
-    public $image           = '';
-
+    protected $profile_image_id = '';
     /**
      * @var array $settings an array of the user's settings
      */
@@ -65,24 +67,35 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
     /**
      * @var array
      */
-    public $group_context = [];
-    /**
-     * @var array
-     */
     protected $_available_users_sql = [];
     /** @var Group[] External */
     protected $groups = [];
 
+    /**
+     * @param $username
+     * @return bool
+     */
+    public static function is_valid($username) {
+        if (!is_string($username) || is_numeric($username) || trim($username) == '') {
+            return false;
+        }
 
-    public function findProfile() {
-        $this->image = Image::find($this->profile_image_id);
-        $this->image->initUrl();
-        /*
-         *$map = new UserImageMap('user', 'image');
-         *$map->search_for_image_type(1);
-         *$ret = $map->map($this->id);
-         */
-        return $this;
+        return true;
+    }
+
+    public static function make_directories($username) {
+        if (!is_dir(USER_PATH . 'user/' . $username . '/files/' . 'img')) {
+            mkdir(USER_PATH . 'user/' . $username . '/files/' . 'img', 0777, true);
+        }
+        if (!is_dir(USER_PATH . 'user/' . $username . '/files/' . 'css')) {
+            mkdir(USER_PATH . 'user/' . $username . '/files/' . 'css', 0777, true);
+        }
+        if (!is_dir(USER_PATH . 'user/' . $username . '/temp')) {
+            mkdir(USER_PATH . 'user/' . $username . '/temp', 0777, true);
+        }
+        if (!is_dir(USER_PATH . 'user/' . $username . '/logs')) {
+            mkdir(USER_PATH . 'user/' . $username . '/logs', 0777, true);
+        }
     }
 
     /**
@@ -90,32 +103,23 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
      * @param bool $set
      * @return $this|Image[]|bool
      */
-    public function findImages($set = false){
+    public function findImages($set = false) {
         $map = new UserImageMap('user', 'image');
         $map_result = $map->map($this->id);
-        if($set) {
+        if ($set) {
             $this->images = $map_result;
             return $this;
-        }else{
+        } else {
             return $map_result;
         }
     }
 
     public function getProfile() {
-        if(isset($this->image))
-        return $this->image;
+        if (isset($this->image)) {
+            return $this->image;
+        }
         $this->image = new Image();
-        return false;
-    }
-    /**
-     * @param string $search_terms Users to search, possibly to be used with a LIKE query
-     * @todo ugly, slow
-     * @return mixed
-     */
-    public function findAvailableUsers($search_terms = '') {
-        $id = $this->id;
-        $query = "SELECT id, username, first_name, last_name, creation_dt, profile_image_id, primary_email FROM users WHERE id != $id";
-        return $this->_available_users_sql = SqlModel::query_table(static::$table_name, $query, 'all');
+        return $this->image;
     }
 
     /**
@@ -136,6 +140,40 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
             $user_list_receptacle[] = $value['username'];
         }
     }
+
+    /**
+     * @param string $search_terms Users to search, possibly to be used with a LIKE query
+     * @todo ugly, slow
+     * @return mixed
+     */
+    public function findAvailableUsers($search_terms = '') {
+        $id = $this->id;
+        $query = "
+            SELECT u.*
+            FROM users u
+            WHERE NOT EXISTS(
+                SELECT usm.user_id
+                FROM user_setting_map usm
+                WHERE usm.user_id = u.id AND usm.setting_id = 1)
+                  OR (EXISTS(
+                          SELECT usm.user_id
+                          FROM user_setting_map usm
+                          WHERE usm.user_id = u.id AND usm.setting_id = 1 AND usm.value = 2
+                      ) AND (EXISTS(
+                SELECT uum.id
+                FROM user_user_map uum
+                WHERE uum.user_id_child = :id AND uum.user_id_parent = u.id
+            )) OR (EXISTS(
+                SELECT uum.id
+                FROM user_user_map uum
+                WHERE uum.user_id_parent = :id AND uum.user_id_child = u.id AND uum.status = 1
+
+            )));
+        ";
+        $DBH = IoC::$connection->static_connection();
+        return $this->_available_users_sql = SqlModel::make($DBH, $query)->bind([':id' => $id])->run('all');
+    }
+
     /**
      * @return $this
      */
@@ -145,32 +183,33 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
         return $this;
     }
 
-    /**
-     * @param $username
-     * @return bool
-     */
-    public static function is_valid($username) {
-        if(!is_string($username) || is_numeric($username) || trim($username) == '')
-            return false;
-
-        return true;
-    }
-
-    public function addImage($name, $server_name, $type = SM_IMAGE_PROFILE, $path = null, $caption = '' ) {
+    public function addImage($name, $server_name, $type = SM_IMAGE_PROFILE, $path = null, $caption = '') {
         IoC::$filter->file_name($name);
         Connection::start_transaction();
-        if($path == null){
-            $path = 'user/'.$this->username;
+        if ($path == null) {
+            $path = 'user/' . $this->username;
         }
         $id = Image::addImage($name, $server_name, $path, $caption);
-        if(is_numeric($id)){
+        if (is_numeric($id)) {
             UserImageMap::addRow($this->id, $id, $type);
         }
         Connection::commit();
-        if($type == SM_IMAGE_PROFILE){
+        if ($type == SM_IMAGE_PROFILE) {
             $this->findProfile();
         }
     }
+
+    public function findProfile() {
+        $this->image = Image::find($this->profile_image_id);
+        $this->image->initUrl();
+        /*
+         *$map = new UserImageMap('user', 'image');
+         *$map->search_for_image_type(1);
+         *$ret = $map->map($this->id);
+         */
+        return $this;
+    }
+
     public function getUsername() {
         return $this->username;
     }
@@ -251,16 +290,5 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
      */
     public function getPrimaryEmail() {
         return $this->primary_email;
-    }
-
-    public static function make_directories($username) {
-        if(!is_dir( USER_PATH.'user/'.$username.'/files/'.'img'))
-            mkdir(  USER_PATH.'user/'.$username.'/files/'.'img'   , 0777, true);
-        if(!is_dir( USER_PATH.'user/'.$username.'/files/'.'css'))
-            mkdir(  USER_PATH.'user/'.$username.'/files/'.'css'   , 0777, true);
-        if(!is_dir( USER_PATH.'user/'.$username.'/temp'))
-            mkdir(  USER_PATH.'user/'.$username.'/temp'           , 0777, true);
-        if(!is_dir( USER_PATH.'user/'.$username.'/logs'))
-            mkdir(  USER_PATH.'user/'.$username.'/logs'           , 0777, true);
     }
 }

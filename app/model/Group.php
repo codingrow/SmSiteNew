@@ -80,6 +80,13 @@ class Group extends ModelAbstraction implements ModelInterface{
         return $this;
     }
 
+    /**
+     * @return User[]
+     */
+    public function getUsers() {
+        return $this->users;
+    }
+    
     /** Set the $this->users variable to be an array of User objects
      * @return $this
      */

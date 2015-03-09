@@ -168,6 +168,9 @@ class Route {
      * @return callable
      */
     static function uri_match($uri){
+        if (strpos($uri, '?') !== false) {
+            $uri = substr($uri, 0, strpos($uri, "?"));
+        }
         static::$requested_uri = $uri;
         $uri_array = is_array($uri) ? $uri : explode('/', rtrim($uri, '/'));
         if(empty($uri_array) || $uri_array[0] == ''){

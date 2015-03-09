@@ -25,6 +25,14 @@ class testController extends BaseController {
         $view->nest_view_named('template', 'file', 'body');
     }
 
+    public function dump() {
+        $view = &IoC::$view;
+        $this->set_template();
+        $view->setViewData(['title' => 'File']);
+        $view->create('test/dump', [], 'dump');
+        $view->nest_view_named('template', 'dump', 'body');
+    }
+
     public function _file_upload() {
         $result = IoC::$backend->run('file_upload', ['files' => $_FILES]);
         if ($result === true) {

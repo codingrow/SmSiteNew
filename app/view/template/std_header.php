@@ -22,28 +22,24 @@ if ($user and $user->getProfile() and $url = $user->getProfile()->getUrl()) {
         <!-- Nav -->
         <nav id="nav">
             <ul>
-                <li>
-                    <a class="item" href="">Dropdown</a>
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Magna phasellus</a></li>
-                        <li><a href="#">Etiam dolore nisl</a></li>
-                        <li>
-                            <a href="">Phasellus consequat</a>
-                            <ul>
-                                <li><a href="#">Lorem ipsum dolor</a></li>
-                                <li><a href="#">Phasellus consequat</a></li>
-                                <li><a href="#">Magna phasellus</a></li>
-                                <li><a href="#">Etiam dolore nisl</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Veroeros feugiat</a></li>
-                    </ul>
-                </li>
+
                 <?php if (!$user instanceof User): ?>
                     <li class="item"><a href="<?= MAIN_URL ?>user/signup/">Sign Up</a></li>
                     <li class="item"><a href="<?= MAIN_URL ?>user/login/" id="loginButton">Log In</a></li>
                 <?php else: ?>
+                    <li>
+                        <a class="item" href="">Links</a>
+                        <ul>
+                            <li><a href="<?= MAIN_URL . 'me/#my_groups' ?>">Groups</a>
+                                <ul>
+                                    <?php $group_arr = $user->getGroups() ?>
+                                    <?php foreach ($group_arr as $group => $group_obj) : ?>
+                                        <li><a href="<?= MAIN_URL . 'group/view/' . $group ?>"><?= $group_obj->getName() ?></a></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="item uAlias"><a href="<?= MAIN_URL ?>me/">Welcome, <span class="uAlias"><?= $user->getUsername() ?></span></a></li>
                     <li class="item logout"><a href="<?= MAIN_URL ?>logout/" id="logoutButton">Log Out</a></li>
                 <?php endif; ?>

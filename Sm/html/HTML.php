@@ -18,7 +18,7 @@ class HTML {
     }
 
     static function link($src, $type = "css", $url = false) {
-        $src = $url ?: RESOURCE_URL."{$type}/{$src}.{$type}";
+        $src = $url ? $src : RESOURCE_URL . "{$type}/{$src}.{$type}";
         $relation = "stylesheet";
         switch ($type) {
             case 'waffle':
