@@ -22,10 +22,10 @@ class responseController extends BaseController{
 
     public function code404($message = '404', $page = null) {
         if ($page) {
-            $page = '[' . $page . ']';
+            $page = MAIN_URL . $page;
         }
         $view = &IoC::$view;
-        $viewData = ['title' => '404', 'error_message' => 'The Page ' . $page . ' You Requested could not be found!'];
+        $viewData = ['title' => '404', 'error_message' => 'The Page <a href="' . $page . '">' . $page . '</a>  could not be found!'];
         $view->setViewData($viewData);
         $this->set_template();
         $view->setViewData($viewData);

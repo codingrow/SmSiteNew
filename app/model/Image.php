@@ -49,7 +49,7 @@ class Image extends ModelAbstraction implements ModelInterface{
 
     public function initUrl() {
         $directory  = isset($this->directory) ? 'p/img/pic/' . $this->directory . '/' : '';
-        $picture = isset($this->server_name) ? $this->server_name : 'p/img/whoWeAre.jpg';
+        $picture = isset($this->server_name) ? $this->server_name : 'p/img/telephasic/pic05.jpg';
         $this->_url  = IoC::$uri->url($directory . $picture);
     }
 

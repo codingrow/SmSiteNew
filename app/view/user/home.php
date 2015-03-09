@@ -47,23 +47,33 @@ if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
                 </a>
             </div>
         </div>
-
     </div>
     <article>
-        {{secondary_title}}
-        <a href="">
-            <div class="tile">
-                <div class="tile-holder">
-                    <?= HTML::img('telephasic/pic04.jpg') ?>
-                </div>
+        Groups:
+        <?php $user_groups = $user->findGroups()->getGroups(); ?>
+        <div id="my_groups" class="tile-box clearfix">
+            <?php foreach ($user_groups as $value): ?>
+                <div class="tile clearfix">
+                    <a href="<?= MAIN_URL ?>group/view/<?= $value->getAlias() ?>">
+                        <div class="tile-holder clearfix">
+                            <?= HTML::img('telephasic/pic04.jpg') ?>
+                        </div>
+                        <div class="text">
+                            <?= $value->getName() ?>
+                        </div>
+                    </a>
             </div>
-        </a>
-        <?php
-        $user->findAvailableUsers();
-        //var_dump($_SESSION);
-        $user->findGroups();
-        var_dump($user->getGroups());
-        ?>
-
+            <?php endforeach; ?>
+            <div class="tile clearfix">
+                <a href="<?= MAIN_URL ?>group/create/">
+                    <div class="tile-holder clearfix">
+                        <?= HTML::img('telephasic/pic04.jpg') ?>
+                    </div>
+                    <div class="text">
+                        ADD GROUP
+                    </div>
+                </a>
+            </div>
+        </div>
     </article>
 </article>

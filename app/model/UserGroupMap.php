@@ -28,4 +28,11 @@ class UserGroupMap extends \Sm\Core\Abstraction\MapModelAbstraction implements M
         }, 'id');
     }
 
+    static function delRow($user_id, $group_id) {
+        return SqlModel::query_table(static::$table_name, function (SqlModel $t) use ($user_id, $group_id) {
+            $t->where('user_id = ' . $user_id . ' AND group_id = ' . $group_id)->delete();
+            #todo on duplicate key... (make it so that there is only one active image profile? Do that somewhere else?)
+        });
+    }
+
 }

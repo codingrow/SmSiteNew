@@ -16,6 +16,9 @@ class BaseController extends Controller{
         return new static();
     }
 
+    public function dump_post() {
+
+    }
     protected function set_template($template_name = 'telephasic_std') {
         $view = &IoC::$view;
         $view->create_template($template_name, 'template');

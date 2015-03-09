@@ -21,7 +21,7 @@
             </label>
             <label class="required" for="primary_email">
                 Email Address:
-                <input class="required" type="text" id="primary_email" name="primary_email" placeholder="Email Adress"/>
+                <input class="required" type="text" id="primary_email" name="primary_email" placeholder="Email Address"/>
 
                 <span class="primary_email error"></span>
             </label>

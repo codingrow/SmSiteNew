@@ -73,17 +73,24 @@
     font-size: 90%;
 }
 
-#profile-main-info td:first-child {
+#group-main-info {
+    width: 100%;
+}
+
+#profile-main-info td:first-child,
+#group-main-info td:first-child {
     text-align: right;
     /*border-right: thin solid #ebebed;*/
 }
 
-#profile-main-info td {
+#profile-main-info td,
+#group-main-info td {
     padding: 5px 10px;
     border-bottom: thin solid #eeeeee;
 }
 
-#profile-main-info tr:last-child * {
+#profile-main-info tr:last-child *,
+#group-main-info tr:last-child * {
     border-bottom: none;
 }
 
@@ -99,21 +106,94 @@
     bottom: 0;
 }
 
+.edit-user {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #636b73;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#group_addition {
+    width: 300px;
+}
+
+.user-tile {
+    background: #94a3b0;
+    width: 30%;
+    float: left;
+    margin: 1%;
+    height: 89px;
+    position: relative;
+}
+
 .tile {
-    background: teal;
-    width: 20%;
-    display: inline;
-    height: 79px;
+    background: #94a3b0;
+    width: 48%;
+    min-width: 230px;
+    float: left;
+    margin: 1%;
+    height: 89px;
+}
+
+.tile:hover, .user-tile a:hover {
+    background: #a9bac9;
+}
+
+.tile a, .user-tile a {
+    height: 100%;
+    margin: 0;
+}
+
+.tile a .text {
+    height: 100%;
+    font-size: 1em;
+    float: right;
+    line-height: 1.2em;
+    width: 70%;
+    clear: none;
+    margin: .35em;
+}
+
+.user-tile a .text {
+    height: 100%;
+    font-size: 1em;
+    white-space: nowrap;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all !important;
+    line-height: 1.2em;
+    clear: none;
+    padding-left: 1em;
+    margin: .35em;
+}
+
+.user-tile .text em {
+    font-size: .75em;
+}
+
+.tile-box {
+    width: 100%;
 }
 
 .tile-holder {
     overflow: hidden;
+    background: inherit;
     height: inherit;
-    width: 50%;
+    width: 25%;
+    float: left;
 }
 
 .tile-holder img {
     height: 100%;
+}
+
+.tile-holder > div {
+    float: left;
 }
 
 /*********************************************************************************/
@@ -176,7 +256,7 @@ a {
 }
 
 a:hover {
-    color: #f35858;
+    color: #883232;
     border-bottom-color: rgba(255, 255, 255, 0);
 }
 

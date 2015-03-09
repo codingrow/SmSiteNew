@@ -34,7 +34,8 @@ class IoC {
     static $sql_model;
     /** @var  \Sm\File\File */
     static $file;
-
+    /** @var  \Sm\Database\PDO\Connection */
+    static $connection;
 
     static protected $registered_classes = [];
     static protected $registered_instances = [];

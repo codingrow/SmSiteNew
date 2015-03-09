@@ -22,12 +22,22 @@ class userController extends BaseController {
         if (empty($available_users = $user->getAvailableUsersSql())) {
             $user->findAvailableUsers();
         }
+//        var_dump($available_users);
         if ($username == 'me' || ($user instanceof User and $user->getUsername() == $username)) {
             return $this->me();
-        } elseif (in_array($username, $available_users)) {
-            $user = User::find($username);
-            $view_variables = ['user' => $user];
-            $view_data      = ['title' => $user->getUsername()];
+        }
+        $found = false;
+        foreach ($available_users as $user_arr) {
+            if (in_array($username, $user_arr)) {
+                $found = true;
+                break;
+            };
+        }
+
+        if ($found) {
+            $view_user = User::find($username);
+            $view_variables = ['view_user' => $view_user];
+            $view_data = ['title' => $view_user->getUsername()];
             $this->set_template();
             $view->setViewData($view_data);
             $view->create('user/view', $view_variables, 'view');

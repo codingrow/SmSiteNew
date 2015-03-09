@@ -91,6 +91,34 @@ class SqlModel extends Sql{
         return $class->_return($return);
     }
 
+    public static function make(\PDO $DBH, $query) {
+        $class = new static();
+        $class->set_dbh($DBH);
+        try {
+            $class->_sth = $class->_DBH->prepare($query);
+        } catch (\PDOException $e) {
+            return false;
+        }
+        return $class;
+    }
+
+    public function run($return) {
+        if (isset($this->_bind)) {
+            foreach ($this->_bind as $key => $value) {
+                $this->_sth->bindParam($key, $value);
+            }
+        }
+        try {
+            $this->_sth->execute();
+        } catch (\PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
+        }
+        return $this->_return($return);
+    }
     /**
      * Add a 'FROM' clause to the query
      * @param string $table_name the name of the table in question.
