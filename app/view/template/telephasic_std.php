@@ -9,18 +9,24 @@ use Sm\html\HTML;
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <?= HTML::css('telephasic-style') ?>
+    <?= HTML::css('sm-style') ?>
     <?= HTML::inc_js('jquery.min') ?>
-    <?= HTML::inc_js('telephasic/jquery.dropotron.min') ?>
-    <?= HTML::inc_js('telephasic/init') ?>
+    <?= HTML::inc_js('jquery.dropotron.min') ?>
+    <script>
+        (function ($) {
+            $(function () {
+                // Dropdowns.
+                $('#nav').find('> ul').dropotron({
+                    mode: 'fade',
+                    speed: 300,
+                    alignment: 'center',
+                    noOpenerFade: true
+                });
+
+            });
+        })(jQuery);
+    </script>
 </head>
-<script>
-    $(function () {
-        //$('#sidebar').hide();
-        //document.getElementById('content').style.maxWidth = '100%';
-        //document.getElementById('content').style.width = '100%';
-    })
-</script>
 <body class="right-sidebar">
 {{nest_header}}
 
@@ -32,10 +38,7 @@ use Sm\html\HTML;
             <div class="row distributed content">
                 {{nest_body}}
                 <article class="module">
-                    <a href="#" class="image featured"><?= HTML::img('telephasic/pic01.jpg', 'Banner Image', ['height' => '200px']) ?></a>
-                </article>
-                <article class="module">
-                    <a href="#" class="image featured"><?= HTML::img('telephasic/pic03.jpg', 'Banner Image', ['height' => '200px']) ?></a>
+                    <a href="#" class="image featured"><?= HTML::img('http://cdn.papermag.com/uploaded_images/ocean-frank-507ed3e6ed64b.jpg', 'Banner Image', [], true) ?></a>
                 </article>
             </div>
             <!-- Sidebar -->
@@ -45,11 +48,25 @@ use Sm\html\HTML;
     </div>
 </div>
 <div class="wrapper features dark">
+    <div class="row distributer images clearfix">
+        <section class="distributed">
+            <div class="image-wrapper">
+                <a href="#" class="image featured"><img src="https://oztoice.files.wordpress.com/2014/07/20120121-day105-211.jpg?w=467" alt="I don't even know, man"/></a>
+            </div>
+        </section>
+        <section class="distributed">
+            <div class="image-wrapper">
+                <a href="#" class="image featured"><img src="http://img.scoop.it/3_KRGsea0kkRSMkdDuVWojl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9" alt="Image? Image!"/></a>
+            </div>
+        </section>
+        <section class="distributed">
+            <div class="image-wrapper">
+                <a href="#" class="image featured"><img src="http://img.scoop.it/S2NTc6yyIMyF889-VNoP1Tl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9" alt="Yet another image? Yet another image!"/></a>
+            </div>
+        </section>
+    </div>
     <div class="row distributer">
-        <section class="feature distributed">
-            <div class="image-wrapper">
-                <a href="#" class="image featured"><?= HTML::img('telephasic/pic03.jpg') ?></a>
-            </div>
+        <section class="distributed">
             <header>
                 <h3>Dolor sit consequat magna</h3>
             </header>
@@ -59,10 +76,7 @@ use Sm\html\HTML;
                 <li><a href="#" class="button">Elevate my awareness</a></li>
             </ul>
         </section>
-        <section class="feature distributed">
-            <div class="image-wrapper">
-                <a href="#" class="image featured"><?= HTML::img('telephasic/pic04.jpg') ?></a>
-            </div>
+        <section class="distributed">
             <header>
                 <h3>Dolor sit consequat magna</h3>
             </header>
@@ -72,10 +86,7 @@ use Sm\html\HTML;
                 <li><a href="#" class="button">Elevate my awareness</a></li>
             </ul>
         </section>
-        <section class="feature distributed">
-            <div class="image-wrapper">
-                <a href="#" class="image featured"><?= HTML::img('telephasic/pic05.jpg') ?></a>
-            </div>
+        <section class="distributed">
             <header>
                 <h3>Dolor sit consequat magna</h3>
             </header>

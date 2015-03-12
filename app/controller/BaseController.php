@@ -8,26 +8,28 @@
 namespace Controller;
 
 use Sm\Core\Abstraction\IoC;
-use Sm\Core\Backend;            use Sm\Core\Controller;
-use Sm\Core\Response;
+use Sm\Core\Backend;
+use Sm\Core\Controller;
 
-class BaseController extends Controller{
-    static function get(){
+class BaseController extends Controller {
+    static function get() {
         return new static();
     }
 
     public function dump_post() {
 
     }
+
     protected function set_template($template_name = 'telephasic_std') {
         $view = &IoC::$view;
         $view->create_template($template_name, 'template');
         $view->set('template');
         return $this;
     }
-    function index(){
+
+    function index() {
         $view = &IoC::$view;
-        $view->setViewData(['title'=>'Home']);
+        $view->setViewData(['title' => 'Home']);
         if (IoC::$session->get("user") !== false) {
             $this->set_template();
 
@@ -42,8 +44,8 @@ class BaseController extends Controller{
     }
 
     public function _file_upload() {
-        $result = Backend::run('file_upload', ['files'=>$_FILES]);
-        if($result === true){
+        $result = Backend::run('file_upload', ['files' => $_FILES]);
+        if ($result === true) {
             #Response::redirect(Link::url('me'));
         }
         return $result;

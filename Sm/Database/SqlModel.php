@@ -71,7 +71,8 @@ class SqlModel extends Sql{
         try {
             $class->_sth = $class->_DBH->prepare($qry);
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            echo $e->getMessage() . '<br />';
+            echo $qry;
             return false;
         }
         if(isset($class->_bind)) {
@@ -82,10 +83,12 @@ class SqlModel extends Sql{
         try {
             $class->_sth->execute();
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            echo $e->getMessage() . '<br />';
+            echo $qry;
             return false;
         } catch(\Exception $e){
-            echo $e->getMessage();
+            echo $e->getMessage() . '<br />';
+            echo $qry;
             return false;
         }
         return $class->_return($return);

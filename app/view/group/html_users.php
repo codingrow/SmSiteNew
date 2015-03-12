@@ -17,22 +17,49 @@ if ($user != false && array_key_exists($user->getUsername(), $group_users)) {
     $role = $group_users[$user->getUsername()]->getGroupContext()['role_id'];
 }
 ?>
+
+    <script>
+        $(function () {
+            /** DELETE A MEMBER FROM THE GROUP **/
+            $('#members').on('click', '.edit-user.delete', function (e) {
+                e.preventDefault();
+                var id;
+                //member ID stored in data attribute of section that holds the tile
+                var parent_section = $(this).parents('section').get(0);
+                id = $(parent_section).data().id;
+                $.ajax({
+                    url: "<?= MAIN_URL ?>group/_del_user",
+                    data: 'user_id=' + id + '&group_id=' + '<?=$group->getId()?>',
+                    type: 'POST',
+                    complete: function (data) {
+                        var response = JSON.parse(data.responseText);
+                        if (response.text == 'true' || response.text == true) {
+                            $("#members").load("<?= MAIN_URL ?>group/_html_user/<?= $group->getAlias()?>");
+                        } else {
+                            alert(response.text)
+                        }
+                    }
+                });
+            });
+        })
+    </script>
 <?php foreach ($group_users as $user_in_group): ?>
     <section class="user-tile clearfix" data-id="<?= $user_in_group->getId() ?>">
-        <a href="<?= MAIN_URL ?>user/view/<?= $user_in_group->getUsername() ?>" class="clearfix">
-            <div class="tile-holder clearfix">
-                <img src=" <?= ($user_in_group->findProfile()->getProfile()->getUrl()) ?>"/>
-            </div>
-            <div class="text clearfix">
-                <?= $user_in_group->getFirstName() ?>&nbsp;<?= $user_in_group->getLastName() ?>
-                <br/>
-                <em><?= $user_in_group->getUsername() ?></em>
+        <div class="text clearfix">
+            <a href="<?= MAIN_URL ?>user/view/<?= $user_in_group->getUsername() ?>" class="clearfix">
+                <div class="snippet"><?= $user_in_group->getFirstName() ?>&nbsp;<?= $user_in_group->getLastName() ?></div>
+                <div class="snippet"><em><?= $user_in_group->getUsername() ?></em></div>
                 <?php if ($role == 1): ?>
-                    <div class="edit edit-user delete clearfix">
-                        Delete
+                    <div class="edit edit-user clearfix">
+                        <div class="editing-select">
+                            Select
+                        </div>
+                        <div class="editing-edit">
+                            Edit
+                        </div>
                     </div>
                 <?php endif; ?>
-            </div>
-        </a>
+            </a>
+        </div>
     </section>
 <?php endforeach; ?>

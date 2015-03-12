@@ -1,6 +1,8 @@
 <?php
 use Model\User;
 use Sm\Core\Abstraction\IoC;
+use Sm\Database\PDO\Sql;
+use Sm\Database\Schema;
 use Sm\html\HTML;
 
 /**
@@ -33,14 +35,10 @@ if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
                     <td>Email:</td>
                     <td class=""><?= $user->getPrimaryEmail() ?></td>
                 </tr>
-                <tr>
-                    <td>Location:</td>
-                    <td class="hardcoded">Slaminois <sub>(private)</sub></td>
-                </tr>
             </table>
             <div>
                 <!-- A button to edit the information in the table-->
-                <a href="#/" class="dummy">
+                <a href="<?= MAIN_URL ?>user/update" class="dummy">
                     <div id="edit-main-info" class="hardcoded">
                         edit
                     </div>

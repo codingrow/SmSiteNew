@@ -6,6 +6,10 @@
     border-bottom: thin solid #f35858 !important;
 }
 
+.hidden {
+    display: none;
+}
+
 .xdebug-var-dump {
     font-size: 9pt;
     line-height: 1.5em;
@@ -77,6 +81,10 @@
     width: 100%;
 }
 
+#group-main-info > table td:first-child {
+    width: 15%;
+}
+
 #profile-main-info td:first-child,
 #group-main-info td:first-child {
     text-align: right;
@@ -107,15 +115,37 @@
 }
 
 .edit-user {
-    width: 30px;
     height: 30px;
     font-size: 10px;
     text-align: center;
+    overflow-y: hidden;
     color: #ffffff;
     background: #636b73;
+    cursor: default;
     position: absolute;
     right: 0;
     bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.edit-user a {
+    margin: 0;
+    padding: 0;
+}
+
+.edit-user div {
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}
+
+.edit-user .edit {
+    background: blue;
+    margin: 0;
+    padding: 0;
 }
 
 #group_addition {
@@ -123,7 +153,7 @@
 }
 
 .user-tile {
-    background: #94a3b0;
+    background: #cdd2d9;
     width: 30%;
     float: left;
     margin: 1%;
@@ -132,7 +162,7 @@
 }
 
 .tile {
-    background: #94a3b0;
+    background: #cdd2d9;
     width: 48%;
     min-width: 230px;
     float: left;
@@ -155,6 +185,7 @@
     float: right;
     line-height: 1.2em;
     width: 70%;
+    font-weight: bold;
     clear: none;
     margin: .35em;
 }
@@ -170,10 +201,14 @@
     clear: none;
     padding-left: 1em;
     margin: .35em;
+    font-weight: bolder;
+
 }
 
 .user-tile .text em {
     font-size: .75em;
+    font-weight: bolder;
+
 }
 
 .tile-box {

@@ -34,7 +34,7 @@ class groupController extends BaseController {
 
         $view = &IoC::$view;
         $this->set_template();
-        $view->setViewData(['title' => $group, 'secondary_title' => $g->getDescription()]);
+        $view->setViewData(['title' => $g->getName()]);
         $view->create('group/view', $data, 'view');
         $view->create('group/view_sidebar', $data, 'sidebar');
         $view->nest_view_named('template', 'sidebar', 'sidebar');
@@ -46,6 +46,36 @@ class groupController extends BaseController {
         return IoC::$backend->run('feed/test', []);
     }
 
+    public function update($group = 0) {
+        $g = Group::find($group)->findGroups()->findEntity()->findUsers();
+        if (!$g->getId()) {
+            IoC::$response->redirect(IoC::$uri->url('home'));
+        }
+        $founder = User::find($g->getFounderId());
+        /** @var User $user */
+        $user = IoC::$session->get('user');
+        $group_users = $g->getUsers();
+        $role = 2;
+        if ($user != false && array_key_exists($user->getUsername(), $group_users)) {
+            $role = $group_users[$user->getUsername()]->getGroupContext()['role_id'];
+        }
+
+        $data = ['group' => $g, 'user' => $user, 'founder' => $founder, 'role' => $role, 'group_users' => $group_users];
+
+
+        $view = &IoC::$view;
+        $this->set_template();
+        $view->setViewData(['title' => 'Update ' . $g->getName()]);
+        $view->create('group/update', $data, 'group_update');
+        $view->create('group/update_sidebar', $data, 'sidebar');
+        $view->nest_view_named('template', 'sidebar', 'sidebar');
+        $view->nest_view_named('template', 'group_update', 'body');
+    }
+
+    public function _update() {
+        IoC::$response->header('content-type', 'application/json');
+        return $result = IoC::$backend->run('group/group_update', ['group_info' => $_POST]);
+    }
     public function create() {
         $view = &IoC::$view;
         $this->set_template();

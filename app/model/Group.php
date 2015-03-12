@@ -8,6 +8,7 @@
 namespace Model;
 
 
+use Sm\Core\Abstraction\IoC;
 use Sm\Core\Abstraction\ModelAbstraction;
 use Sm\Core\Abstraction\ModelInterface;
 
@@ -69,7 +70,14 @@ class Group extends ModelAbstraction implements ModelInterface{
         return $this->groups;
     }
 
-
+    public static function create_alias($name, User $user) {
+        //todo replace with regexp
+        $group_alias = str_replace(',', '', $name);
+        $group_alias .= '_' . $user->getId();
+        IoC::$filter->std($group_alias);
+        IoC::$filter->url($group_alias);
+        return ($group_alias);
+    }
 
     /** Set the $this->users variable to be an array of User objects
      * @return $this

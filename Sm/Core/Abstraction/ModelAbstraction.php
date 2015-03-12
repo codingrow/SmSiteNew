@@ -102,6 +102,14 @@ abstract class ModelAbstraction {
         $this->_changed[$property] = $this->$property;
         return $this;
     }
+
+    public function get($property) {
+        return $this->$property;
+    }
+
+    public function has_been_changed() {
+        return !empty($this->_changed);
+    }
     public static function getStringKey() {
         return static::$string_key;
     }

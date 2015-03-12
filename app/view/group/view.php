@@ -27,28 +27,6 @@ use Sm\html\HTML;
                 no_edit = false
             }
         });
-
-        /** DELETE A MEMBER FROM THE GROUP **/
-        $('#members').on('click', '.edit-user.delete', function (e) {
-            e.preventDefault();
-            var id;
-            //member ID stored in data attribute of section that holds the tile
-            var parent_section = $(this).parents('section').get(0);
-            id = $(parent_section).data().id;
-            $.ajax({
-                url: "<?= MAIN_URL ?>group/_del_user",
-                data: 'user_id=' + id + '&group_id=' + '<?=$group->getId()?>',
-                type: 'POST',
-                complete: function (data) {
-                    var response = JSON.parse(data.responseText);
-                    if (response.text == 'true' || response.text == true) {
-                        $("#members").load("<?= MAIN_URL ?>group/_html_user/<?= $group->getAlias()?>");
-                    } else {
-                        alert(response.text)
-                    }
-                }
-            });
-        });
         /** ADD MEMBERS TO THE GROUP. USER ROLES ARE NOT INCLUDED HERE **/
         $('#add_user_form').on('submit', function (e) {
             e.preventDefault();
@@ -122,21 +100,21 @@ use Sm\html\HTML;
     <div id="profile-block" class="clearfix">
         <div id="group-main-info">
             <table>
-                <tr>
-                    <td>Name:</td>
-                    <td><?= $group->getName() ?></td>
-                </tr>
                 <?php if ($founder->getId()): ?>
                     <tr>
                         <td>Founder:</td>
                         <td><?= $founder->getUsername() ?></td>
                     </tr>
                 <?php endif; ?>
+                <tr>
+                    <td>About:</td>
+                    <td><?= $group->getDescription() ?></td>
+                </tr>
             </table>
             <?php if ($role == 1): ?>
                 <div class="edit">
                     <!-- A button to edit the information in the table-->
-                    <a href="#" class="dummy">
+                    <a href="<?= MAIN_URL ?>group/update/<?= $group->getAlias() ?>" class="dummy">
                         <div id="edit-main-info" class="hardcoded">
                             Edit
                         </div>
@@ -148,9 +126,4 @@ use Sm\html\HTML;
     <article id="members" class="clearfix">
         <?= IoC::$view->create('group/html_users', ['group' => $group, 'user' => $user])->content; ?>
     </article>
-    <?php if ($role == 1): ?>
-        <article>
-
-        </article>
-    <?php endif; ?>
 </article>

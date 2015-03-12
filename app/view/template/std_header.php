@@ -11,9 +11,6 @@ if ($user and $user->getProfile() and $url = $user->getProfile()->getUrl()) {
     $image_url = 'http://localhost/SmSiteNew/p/img/S2Low.png';
 }
 ?>
-
-<!--    <button type="submit"><img src="--><? //=MAIN_URL?><!--p/img/searchIcon.png"/></button>  -->
-
 <!-- Header -->
 <div id="header-wrapper">
     <div id="header" class="row container">
@@ -22,13 +19,14 @@ if ($user and $user->getProfile() and $url = $user->getProfile()->getUrl()) {
         <!-- Nav -->
         <nav id="nav">
             <ul>
-
                 <?php if (!$user instanceof User): ?>
                     <li class="item"><a href="<?= MAIN_URL ?>user/signup/">Sign Up</a></li>
                     <li class="item"><a href="<?= MAIN_URL ?>user/login/" id="loginButton">Log In</a></li>
                 <?php else: ?>
                     <li>
                         <a class="item" href="">Links</a>
+                    </li>
+                    <li class="item uAlias"><a href="<?= MAIN_URL ?>me/">Welcome, <span class="uAlias"><?= $user->getUsername() ?></span></a>
                         <ul>
                             <li><a href="<?= MAIN_URL . 'me/#my_groups' ?>">Groups</a>
                                 <ul>
@@ -40,7 +38,6 @@ if ($user and $user->getProfile() and $url = $user->getProfile()->getUrl()) {
                             </li>
                         </ul>
                     </li>
-                    <li class="item uAlias"><a href="<?= MAIN_URL ?>me/">Welcome, <span class="uAlias"><?= $user->getUsername() ?></span></a></li>
                     <li class="item logout"><a href="<?= MAIN_URL ?>logout/" id="logoutButton">Log Out</a></li>
                 <?php endif; ?>
             </ul>

@@ -32,11 +32,7 @@ $func = function ($args) {
         }
         $type = isset($args['type']) ? $args['type'] : 1;
         $name_before = $name;
-        $name = str_replace(' ', '_', $name);
-        $name = str_replace('\'', '', $name);
-        $name = str_replace('"', '', $name);
-        $group_alias = str_replace(',', '', $name);
-        $group_alias .= '_' . $user->getId();
+        $group_alias = Group::create_alias($name, $user);
         if (!Group::exists($group_alias)) {
             $group = new Group();
             $group_settings = ['name' => $name_before, 'type' => $type, 'alias' => $group_alias, 'founder_id' => $user->getId(), 'description' => isset($args['description']) ? $args['description'] : ''];

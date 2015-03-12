@@ -6,6 +6,7 @@
  */
 
 
+use Sm\Core\Abstraction\IoC;
 use Sm\Core\App;
 use Sm\Core\Autoload;
 use Sm\Core\Backend;
@@ -67,6 +68,8 @@ foreach ($routing as $route) {
 }
 Sm\Core\Abstraction\IoC::$view->create('home');
 Sm\Core\Abstraction\IoC::$route->uri_match(URI::get_uri_string());
+
+IoC::$filter->std($_POST);
 
 session_cache_limiter('none');
 header('Cache-control: max-age=' . (60 * 60 * 24 * 365));
