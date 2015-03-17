@@ -46,11 +46,12 @@ class Image extends ModelAbstraction implements ModelInterface{
         return getimagesize($this->_url);
     }
 
-
+    //todo make this into an actual thing?
     public function initUrl() {
-        $directory  = isset($this->directory) ? 'p/img/pic/' . $this->directory . '/' : '';
-        $picture = isset($this->server_name) ? $this->server_name : 'p/img/telephasic/pic05.jpg';
-        $this->_url  = IoC::$uri->url($directory . $picture);
+//        $directory  = isset($this->directory) ? 'p/img/pic/' . $this->directory . '/' : '';
+//        $picture = isset($this->server_name) ? $this->server_name : 'p/img/telephasic/pic05.jpg';
+//        $this->_url  = IoC::$uri->url($directory . $picture);
+        $this->_url = 'http://ventureosity.com/wp-content/uploads/2014/10/malala-yousafzai-ftr.jpg';
     }
 
     public static function addImage($name, $server_name, $path, $caption = '') {

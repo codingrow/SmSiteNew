@@ -6,8 +6,10 @@
  */
 use Model\UserGroupMap;
 
-function message($message) {
-    return ['text' => $message];
+if(!function_exists('message')) {
+    function message($message, $id = 0, $user_name = 'Unknown User') {
+        return ['text' => $message, 'id'=>$id, 'username'=>$user_name];
+    }
 }
 
 $func = function ($args) {
@@ -26,7 +28,7 @@ $func = function ($args) {
 
     $ug_map = new UserGroupMap('group', 'user');
     foreach ($user_add as $user_id) {
-        $ug_map->addRow($user_id, $group_id, 2);
+        $ug_map->addRow($user_id, $group_id, 5);
     }
 
     return message(true);

@@ -13,8 +13,53 @@ use Sm\html\HTML;
     <?= HTML::inc_js('jquery.min') ?>
     <?= HTML::inc_js('jquery.dropotron.min') ?>
     <script>
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
         (function ($) {
             $(function () {
+                $('.if-js').show();
+                var small_size = false;
+                var resize = function () {
+                    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                    if (!small_size && w < 900) {
+                        var elem = $('#main .distributer');
+                        elem.removeClass('distributer');
+                        elem.addClass('distributer-inactive');
+                        small_size = true;
+                    } else if (small_size && w >= 900) {
+                        var elem = $('#main .distributer-inactive');
+                        elem.removeClass('distributer-inactive');
+                        elem.addClass('distributer');
+                        small_size = false;
+                    }
+                };
+                // Advanced test for touch events
+                if(isMobile.any()){
+                    var elem = $('#main .distributer');
+                    elem.removeClass('distributer');
+                    elem.addClass('distributer-inactive');
+                    small_size = true;
+                }
+                window.onresize = resize;
+                window.onload = resize;
                 // Dropdowns.
                 $('#nav').find('> ul').dropotron({
                     mode: 'fade',
@@ -22,14 +67,12 @@ use Sm\html\HTML;
                     alignment: 'center',
                     noOpenerFade: true
                 });
-
             });
         })(jQuery);
     </script>
 </head>
 <body class="right-sidebar">
 {{nest_header}}
-
 <!-- Main -->
 <div class="wrapper">
     <div id="main" class="row">

@@ -20,10 +20,12 @@ class groupController extends BaseController {
 
     public function view($group = 0) {
         $g = Group::find($group)->findGroups()->findEntity()->findUsers();
-
+        /** @var User $founder */
         $founder = User::find($g->getFounderId());
         /** @var User $user */
         $user = IoC::$session->get('user');
+        $user = $user instanceof User ? $user : new User();
+
         $group_users = $g->getUsers();
         $role = 2;
         if ($user != false && array_key_exists($user->getUsername(), $group_users)) {
@@ -85,11 +87,30 @@ class groupController extends BaseController {
     }
 
     public function _html_user($group) {
-        $group = Group::find($group)->findGroups()->findEntity()->findUsers();
+        if(!$group instanceof Group) {
+            $group = Group::find($group)->findGroups()->findEntity()->findUsers();
+        }
         /** @var User $user */
         $user = IoC::$session->get('user');
+        $user = $user instanceof User ? $user : new User();
+
+        $founder = User::find($group->getFounderId());
+        $group_users = $group->getUsers();
+        $role = 2;
+        if ($user->getId() != false && array_key_exists($user->getUsername(), $group_users)) {
+            $role = $group_users[$user->getUsername()]->getGroupContext()['role_id'];
+        }
+
+        $data = [
+            'user'=>$user,
+            'group'=>$group,
+            'role'=>$role,
+            'founder'=>$founder,
+            'group_users'=>$group_users
+        ];
+
         $view = &IoC::$view;
-        return $view->create('group/html_users', ['group' => $group, 'user' => $user])->content;
+        return $view->create('group/html_users', $data)->content;
     }
 
     public function _add_user() {
@@ -99,7 +120,35 @@ class groupController extends BaseController {
 
     public function _del_user() {
         IoC::$response->header('content-type', 'application/json');
-        return IoC::$backend->run('group/remove_user', $_POST);
+        $user_ids = isset($_POST['user_id']) ? $_POST['user_id'] : null;
+        $group_id = isset($_POST['group_id']) ? $_POST['group_id'] : 0;
+        $arr = [];
+        if(is_array($user_ids)){
+            foreach($user_ids as $user){
+                $arr[] = IoC::$backend->run('group/remove_user', ['user_id'=>$user, 'group_id'=>$group_id]);
+            }
+        }elseif($user_ids != null){
+            $arr[] = IoC::$backend->run('group/remove_user', $_POST);
+        }
+        return $arr;
+
+//        return IoC::$backend->run('group/remove_user', $_POST);
+    }
+
+    public function _upd_user() {
+        IoC::$response->header('content-type', 'application/json');
+        $user_ids = isset($_POST['user_id']) ? $_POST['user_id'] : null;
+        $group_id = isset($_POST['group_id']) ? $_POST['group_id'] : 0;
+        $role_id = isset($_POST['role_id']) ? $_POST['role_id'] : '';
+        $arr = [];
+        if(is_array($user_ids)){
+            foreach($user_ids as $user){
+                $arr[] = IoC::$backend->run('group/group_user_update', ['user_id'=>$user, 'group_id'=>$group_id, 'user_info'=>['role_id'=>$role_id]]);
+            }
+        }elseif($user_ids != null){
+            $arr[] = IoC::$backend->run('group/group_user_update', ['user_id'=>$user_ids, 'group_id'=>$group_id, 'user_info'=>['role_id'=>$role_id]]);
+        }
+        return $arr;
     }
 
     public function _members($group = 0) {

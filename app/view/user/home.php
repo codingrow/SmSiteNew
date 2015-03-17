@@ -1,77 +1,37 @@
 <?php
 use Model\User;
-use Sm\Core\Abstraction\IoC;
-use Sm\Database\PDO\Sql;
-use Sm\Database\Schema;
 use Sm\html\HTML;
 
 /**
  * @var User $user
  */
-if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
-    IoC::$response->redirect('user/login');
-}
 ?>
 <article class=" module " id="content">
     <header>
         <h2 class="h title">{{title}}</h2>
         {{secondary_title}}
     </header>
-    <div id="profile-block" class="clearfix">
-        <div id="profile-pic">
-            <?= HTML::img($user->getProfile()->getUrl(), 'User Profile', [], true) ?>
-        </div>
-        <div id="profile-main-info">
-            <table>
-                <tr>
-                    <td>Name:</td>
-                    <td><?= $user->getFirstName() . ' ' . $user->getLastName() ?></td>
-                </tr>
-                <tr>
-                    <td>Username:</td>
-                    <td><?= $user->getUsername() ?></td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td class=""><?= $user->getPrimaryEmail() ?></td>
-                </tr>
-            </table>
-            <div>
-                <!-- A button to edit the information in the table-->
-                <a href="<?= MAIN_URL ?>user/update" class="dummy">
-                    <div id="edit-main-info" class="hardcoded">
-                        edit
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+
     <article>
         Groups:
         <?php $user_groups = $user->findGroups()->getGroups(); ?>
-        <div id="my_groups" class="tile-box clearfix">
+        <div id="my_groups" class="clearfix">
             <?php foreach ($user_groups as $value): ?>
-                <div class="tile clearfix">
-                    <a href="<?= MAIN_URL ?>group/view/<?= $value->getAlias() ?>">
-                        <div class="tile-holder clearfix">
-                            <?= HTML::img('telephasic/pic04.jpg') ?>
-                        </div>
-                        <div class="text">
-                            <?= $value->getName() ?>
-                        </div>
-                    </a>
-            </div>
+                <section class="tile clearfix" data-id="<?= $value->getId() ?>">
+                    <div class="text clearfix">
+                        <a href="<?= MAIN_URL ?>group/view/<?= $value->getAlias() ?>" class="clearfix">
+                            <div class="snippet"><?= $value->getName() ?></div>
+                        </a>
+                    </div>
+                </section>
             <?php endforeach; ?>
-            <div class="tile clearfix">
-                <a href="<?= MAIN_URL ?>group/create/">
-                    <div class="tile-holder clearfix">
-                        <?= HTML::img('telephasic/pic04.jpg') ?>
-                    </div>
-                    <div class="text">
-                        ADD GROUP
-                    </div>
-                </a>
-            </div>
+            <section class="tile clearfix">
+                <div class="text clearfix">
+                    <a class="clearfix" href="<?= MAIN_URL ?>group/create/">
+                        <div class="snippet">~Add Group</div>
+                    </a>
+                </div>
+            </section>
         </div>
     </article>
 </article>

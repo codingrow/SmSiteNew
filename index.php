@@ -30,7 +30,7 @@ define('BASE_PATH', __DIR__ . '/');
 define('SCRIPT_PATH', BASE_PATH . 'app/scripts/');
 define('USER_PATH', dirname(__DIR__) . '/SmSiteNewUser/');
 define('VIEW_PATH', __DIR__ . '/app/view/');
-define('MAIN_URL', 'http://localhost/SmSiteNew/');
+define('MAIN_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/SmSiteNew/');
 define('PACKAGE_URL', MAIN_URL . 'packages/');
 
 define('RESOURCE_URL', MAIN_URL . 'p/');
@@ -61,8 +61,7 @@ App::boot();
 
 
 App::add_hook('pre_controller', function () { });
-$routing = [['/p/{_method}/{file}', 'public@@css', ['{file}' => '[a-zA-Z0-9_.-]+']], ['/user/{_method}', 'user@index', []], ['/group/{_method}', 'group@index', []], ['/manage/{_method}', 'manage@index', []], ['/base/{_method}', 'Base@index', []], ['/employees/{_method}', 'employees@index', []], ['/logout', 'user@logout', []], ['/user/view/{view}', 'user@view', ['{view}' => '[A-z]+']], ['/me', 'user@me', []], ['/msg/{message}/{code}', 'response@controller', ['{message}' => '[\d]+']], ['/home', 'Base@index', []], ['/test/{_method}', 'test@index', []], ['/signup/', 'user@signup', []]
-];
+$routing = [['/p/{_method}/{file}', 'public@@css', ['{file}' => '[a-zA-Z0-9_.-]+']], ['/user/{_method}', 'user@index', []], ['/group/{_method}', 'group@index', []], ['/manage/{_method}', 'manage@index', []], ['/base/{_method}', 'Base@index', []], ['/employees/{_method}', 'employees@index', []], ['/logout', 'user@logout', []], ['/user/view/{view}', 'user@view', ['{view}' => '[A-z]+']], ['/me', 'user@me', []], ['/msg/{message}/{code}', 'response@controller', ['{message}' => '[\d]+']], ['/home', 'Base@index', []], ['/test/{_method}', 'test@index', []], ['/signup/', 'user@signup', []]];
 foreach ($routing as $route) {
     Sm\Core\Abstraction\IoC::$route->add_route($route[0], $route[1], $route[2]);
 }

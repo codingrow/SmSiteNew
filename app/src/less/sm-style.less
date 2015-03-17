@@ -7,13 +7,22 @@
 @tileColor: #ccc;
 @themeColor: #cdd2d9;
 @textColor: #52575c;
+@url: 'http://localhost/SmSiteNew/public/img/';
 .hardcoded {
   border-bottom: thin solid #f35858 !important;
 }
 
-.hidden {
+.hidden, .if-js {
   display: none;
 }
+
+.me{
+	&.tile{
+	  //TO BE CHANGED
+	  background: mix(@tileColor, gold, 80%);
+	}
+}
+
 
 .xdebug-var-dump {
   font-size: 9pt;
@@ -59,15 +68,13 @@
   padding: 10px;
   text-align: center;
   width: 50%;
-  background: #cdd2d9;
+  background: @tileColor;
   border-right: thin solid #636b73;
   img {
 	height: 100%;
 	max-width: 100%;
+	display: none;
 	border: thin solid #636b73;
-	-webkit-box-shadow: 0px 0px 3px #636b73;
-	-moz-box-shadow: 0px 0px 3px #636b73;
-	box-shadow: 3px 3px 2px 0px #636b73;
   }
 }
 
@@ -119,27 +126,27 @@
 
 .edit-user {
   height: 100%;
-  width: 30px;
-  font-size: 10px;
+  width: 35px;
+  font-size: 12px;
   text-align: center;
   overflow-y: hidden;
-  color: #ffffff;
   position: absolute;
   top: 0;
   right: 0;
   div {
-	width: 30px;
+	color: #ffffff;
+	width: 100%;
 	margin: 0;
 	background: darken(@tileColor, 20%);
 	padding: 0;
 	float: right;
 	cursor: pointer;
 	display: block;
-  }
-  .edit {
-	background: blue;
-	margin: 0;
-	padding: 0;
+	&:hover, &.selected{
+	  color: darken(@textColor, 10%);
+	  font-weight: bold;
+	  background: #ffffff;
+	}
   }
 }
 
@@ -147,8 +154,12 @@
   width: 300px;
 }
 
-.user-tile {
-  width: 30%;
+.on-tile-sel{
+  border-top: thin solid @themeColor;
+}
+
+.tile {
+  width: 31%;
   background: @tileColor;
   position: relative;
   float: left;
@@ -166,8 +177,12 @@
 	height: 100%;
 	width: 100%;
 	font-weight: 100;
+	line-height: 1.4em;
+
 	.snippet {
+	  padding-left: 10px;
 	  display: block;
+
 	}
   }
   em {
@@ -175,32 +190,11 @@
   }
 }
 
-.tile {
-  background: #cdd2d9;
-  width: 48%;
-  min-width: 230px;
-  float: left;
-  margin: 1%;
-  height: 89px;
-  a {
-	.text {
-	  height: 100%;
-	  font-size: 1em;
-	  float: right;
-	  line-height: 1.2em;
-	  width: 70%;
-	  font-weight: bold;
-	  clear: none;
-	  margin: .35em;
-	}
-  }
-}
-
-.tile:hover, .user-tile a:hover {
+.tile a:hover {
   background: darken(@tileColor, 7%);
 }
 
-.tile a, .user-tile a {
+.tile a{
   height: 100%;
   margin: 0;
 }
@@ -275,7 +269,6 @@ a {
   -ms-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
   &:hover {
-	color: #883232;
 	border-bottom-color: rgba(255, 255, 255, 0);
   }
   &.image {
@@ -329,7 +322,7 @@ p, ul, ol, dl, table {
   border-collapse: collapse;
   overflow-x: hidden;
   &.features {
-	background: url("http://localhost/SmSiteNew/public/img/Spread6FinalBlur.png");
+	background: url("@{url}Spread6FinalBlur.png");
 	background-size: cover;
 	* {
 	  text-align: center;
@@ -553,14 +546,14 @@ form input[type="email"],
 form input[type="password"],
 form select,
 form textarea {
-  -webkit-appearance: none;
+//  -webkit-appearance: none;
   display: block;
   background: #f6f6ec;
   border: solid 1px #9da7b0;
-  border-radius: 0.35em;
+//  border-radius: 0.35em;
   width: 100%;
   line-height: 1.5em;
-  padding: 0.75em;
+  padding: 10px;
   -moz-transition: background-color 0.25s ease-in-out;
   -webkit-transition: background-color 0.25s ease-in-out;
   -o-transition: background-color 0.25s ease-in-out;
@@ -630,23 +623,31 @@ button,
 
 input[type="button"]:hover,
 input[type="button"]:focus,
+input[type="button"].selected,
 input[type="submit"]:hover,
 input[type="submit"]:focus,
+input[type="submit"].selected,
 input[type="reset"]:hover,
 input[type="reset"]:focus,
+input[type="reset"].selected,
 button:hover,
 button:focus,
+button.selected,
 .button:hover,
+.button.selected,
 .button:focus {
-  color: #9da7b0;
-  border: thin dashed #9da7b0;
-  border-radius: 0;
-  border-radius: 0;
+//  color: #9da7b0;
+  color: @textColor;
+  background: lighten(@tileColor, 10%);
+  border: thin solid #9da7b0;
+//  border-radius: 0;
+  border-radius: 1em;
 }
 
 .full-children {
   & > * {
 	min-width: 100%;
+	max-width: 100%;
   }
 }
 
@@ -709,7 +710,7 @@ button:focus,
 	  top: 0;
 	  z-index: 1;
 	  box-shadow: inset 0 0 0 1px #e8e8e8;
-	  background: #f6f8fb url('http://localhost/SmSiteNew/public/img/telephasic/image-wrapper.svg');
+	  background: #f6f8fb url('@{url}telephasic/image-wrapper.svg');
 	}
   }
 }
@@ -722,8 +723,8 @@ button:focus,
   position: relative;
   padding: 0 0 .75em 0;
   background-color: #f08c89;
-  background-image: url('http://localhost/SmSiteNew/public/img/sp2bwBlur.png');
-  background-image: url('http://localhost/SmSiteNew/public/img/telephasic/header.svg'), url('http://localhost/SmSiteNew/public/img/sp2bwBlur.png');
+  background-image: url('@{url}sp2bwBlur.png');
+  background-image: url('@{url}telephasic/header.svg'), url('@{url}sp2bwBlur.png');
   background-size: 100% 620%, cover;
   background-repeat: repeat, no-repeat, no-repeat;
   -webkit-box-shadow: inset 2px -5px 20px -5px #424b5a;
@@ -750,7 +751,7 @@ button:focus,
 
 #promo-wrapper {
   position: relative;
-  background-image: url('http://localhost/SmSiteNew/public/img/telephasic/overlay.png'), url('http://localhost/SmSiteNew/public/img/telephasic/promo.jpg');
+  background-image: url('@{url}telephasic/overlay.png'), url('@{url}telephasic/promo.jpg');
   background-size: 192px 192px, cover;
   background-position: top left, center center;
   color: #fff;
@@ -759,7 +760,7 @@ button:focus,
 }
 
 #banner-wrapper {
-  background: url("http://localhost/SmSiteNew/public/img/stripe_4.png");
+  background: url("@{url}stripe_4.png");
 }
 
 #footer-wrapper {
@@ -768,7 +769,7 @@ button:focus,
   position: relative;
   padding: 1.5em 0 0em 0;
   background: #d2d7dc;
-  background-image: url('http://localhost/SmSiteNew/public/img/telephasic/overlay.png'), url('http://localhost/SmSiteNew/public/img/telephasic/footer.svg'), url('http://localhost/SmSiteNew/public/img/untouched/david_spade.jpg');
+  background-image: url('@{url}telephasic/overlay.png'), url('@{url}telephasic/footer.svg'), url('@{url}untouched/david_spade.jpg');
   background-size: 128px 128px, 100% 100%, cover;
 }
 
@@ -927,7 +928,7 @@ button:focus,
 	&:hover {
 	  border-color: rgba(255, 255, 255, 0.75);
 	  background-color: rgba(255, 255, 255, 0.15);
-	  color: #fff;
+//	  color: #fff;
 	}
   }
   a {
@@ -962,7 +963,7 @@ button:focus,
 	&:hover {
 	  border-color: rgba(255, 255, 255, 0.75);
 	  background-color: rgba(255, 255, 255, 0.15);
-	  color: #fff;
+//	  color: #fff;
 	}
   }
 }
@@ -971,7 +972,7 @@ button:focus,
 }
 
 .content {
-  max-width: 70%;
+  max-width: 100%;
   & > * {
 	clear: both;
 	max-width: 100%;
@@ -986,23 +987,7 @@ button:focus,
   padding: 10px;
 }
 
-#sidebar {
-  max-width: 30%;
-  & > section {
-	margin-top: 1em;
-	margin-bottom: 1.5em;
-  }
-  section {
-	&:first-child {
-	  margin-top: 0;
-	  padding-top: 0;
-	}
-  }
-}
 
-#sidebar button, #sidebar .button {
-  margin-top: .75em;
-}
 
 #footer {
   position: relative;
@@ -1033,6 +1018,29 @@ button:focus,
   clear: both;
   height: 0;
 }
+#sidebar {
+  & > section {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+  }
+  section {
+	&:first-child {
+	  margin-top: 0;
+	  padding-top: 0;
+	}
+  }
+  button, .button{
+	margin-top: .75em;
+  }
+}
+.addendum{
+  border-top: thin dotted #ccc;
+}
+.distributer-inactive{
+	#sidebar{
+	  width: 100%;
+	}
+}
 
 .distributer {
   display: table;
@@ -1044,6 +1052,9 @@ button:focus,
   align-items: flex-start;
   & > * {
 	padding: 0 0 0 40px;
+  }
+  #sidebar{
+	max-width: 30%;
   }
 }
 
@@ -1063,7 +1074,7 @@ button:focus,
   -moz-box-shadow: 2px 2px 2px 1px darken(@contentBackground, 20%);
   padding: 0;
   & > header {
-	background: #797979;
+	background: #4a4a4a;
 
 	border-bottom: thin solid #636b73;
 	padding-bottom: 10px;

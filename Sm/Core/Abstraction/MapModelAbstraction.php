@@ -18,15 +18,31 @@ abstract class MapModelAbstraction extends ModelAbstraction{
             'user_id'=>'Model\User'
         ];
     protected $_key_to_search   = 'user';
+    protected $id_to_edit = 0;
     protected $_key_to_return   = 'group';
 
     function __construct($_key_to_search = '', $_key_to_return = '') {
         if($_key_to_search){
             $this->_key_to_search = $_key_to_search;
+            $this->id_to_edit = $_key_to_search.'_id';
         }
         if($_key_to_search){
             $this->_key_to_return = $_key_to_return;
         }
+    }
+
+    public function setId($id) {
+        $this->id = $id;
+        return $this;
+    }
+
+
+    public function save() {
+        SqlModel::query_table(static::$table_name, function(SqlModel $t){
+            $t->update($this->_changed)->where("{$this->id_to_edit} = {$this->id}");
+        });
+        $this->_changed = [];
+        return $this;
     }
     /**
      * @param $type

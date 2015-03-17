@@ -5,61 +5,49 @@
  * Time: 6:26 PM
  */
 use Model\Group;
+use Model\Role;
 use Model\User;
 
 /** @var Group $group */
 /** @var User $user */
+/** @var User[] $group_users */
 
-$founder = User::find($group->getFounderId());
-$group_users = $group->getUsers();
-$role = 2;
-if ($user != false && array_key_exists($user->getUsername(), $group_users)) {
-    $role = $group_users[$user->getUsername()]->getGroupContext()['role_id'];
-}
+$uig_context = $uig_id = $me_class = $uig_username = $uig_first_name = $uig_last_name = $uig_role = null;
 ?>
 
-    <script>
-        $(function () {
-            /** DELETE A MEMBER FROM THE GROUP **/
-            $('#members').on('click', '.edit-user.delete', function (e) {
-                e.preventDefault();
-                var id;
-                //member ID stored in data attribute of section that holds the tile
-                var parent_section = $(this).parents('section').get(0);
-                id = $(parent_section).data().id;
-                $.ajax({
-                    url: "<?= MAIN_URL ?>group/_del_user",
-                    data: 'user_id=' + id + '&group_id=' + '<?=$group->getId()?>',
-                    type: 'POST',
-                    complete: function (data) {
-                        var response = JSON.parse(data.responseText);
-                        if (response.text == 'true' || response.text == true) {
-                            $("#members").load("<?= MAIN_URL ?>group/_html_user/<?= $group->getAlias()?>");
-                        } else {
-                            alert(response.text)
-                        }
-                    }
-                });
-            });
-        })
-    </script>
-<?php foreach ($group_users as $user_in_group): ?>
-    <section class="user-tile clearfix" data-id="<?= $user_in_group->getId() ?>">
+
+<?php foreach($group_users as $user_in_group):
+    $uig_context = $user_in_group->getGroupContext();
+    $uig_id = $user_in_group->getId();
+    $me_class = $uig_id == $user->getId() ? 'me' : '';
+    $uig_username = $user_in_group->getUsername();
+    $uig_first_name = $user_in_group->getFirstName();
+    $uig_last_name = $user_in_group->getLastName();
+    $uig_role = isset($uig_context['role_id']) ? $uig_context['role_id'] : 2;
+    ?>
+    <section class="tile <?= $me_class ?> clearfix" data-id="<?= $uig_id ?>">
         <div class="text clearfix">
-            <a href="<?= MAIN_URL ?>user/view/<?= $user_in_group->getUsername() ?>" class="clearfix">
-                <div class="snippet"><?= $user_in_group->getFirstName() ?>&nbsp;<?= $user_in_group->getLastName() ?></div>
-                <div class="snippet"><em><?= $user_in_group->getUsername() ?></em></div>
-                <?php if ($role == 1): ?>
-                    <div class="edit edit-user clearfix">
-                        <div class="editing-select">
-                            Select
-                        </div>
-                        <div class="editing-edit">
-                            Edit
-                        </div>
-                    </div>
-                <?php endif; ?>
+            <a href="<?= MAIN_URL . 'user/view/' . $uig_username ?>" class="clearfix">
+                <div class="snippet">
+                    <?= $uig_username ?>
+                </div>
+                <div class="snippet">
+                    <em><?= $uig_first_name . ' ' . $uig_last_name ?></em>
+                </div>
+                <div class="snippet">
+                    <em><?= Role::getCorrelating($uig_role) ?></em>
+                </div>
             </a>
+            <?php if ($role == 1): ?>
+                <div class="edit edit-user clearfix">
+                    <div class="editing-select">
+                        Select
+                    </div>
+                    <div class="editing-edit">
+                        Edit
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 <?php endforeach; ?>

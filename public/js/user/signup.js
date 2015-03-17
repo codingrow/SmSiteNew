@@ -22,7 +22,7 @@ $(function(){
                     }
                 }
                 if (hasError === false) {
-                    window.location = 'http://localhost/SmSiteNew/me';
+                    window.location = $('#logo a').href();
                 }
             }
         });

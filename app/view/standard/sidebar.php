@@ -1,5 +1,5 @@
 <?php use Sm\html\HTML; ?>
-<article id="sidebar" class="distributed do_50">
+<article id="sidebar" class="distributed">
     <section class="module">
         <a href="#" class="image featured"><?= HTML::img('telephasic/pic07.jpg') ?></a>
     </section>

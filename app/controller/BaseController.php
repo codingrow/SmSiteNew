@@ -30,10 +30,11 @@ class BaseController extends Controller {
     function index() {
         $view = &IoC::$view;
         $view->setViewData(['title' => 'Home']);
-        if (IoC::$session->get("user") !== false) {
+        $data = [];
+        if ($user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
             $this->set_template();
-
-            $view->create('user/home', [], 'home_page');
+            $data['user'] = $user;
+            $view->create('user/home', $data, 'home_page');
         } else {
             $this->set_template();
 

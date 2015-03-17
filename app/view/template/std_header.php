@@ -4,11 +4,10 @@ use Sm\Core\Abstraction\IoC;
 
 /** @var User $user */
 $user = IoC::$session->get('user');
-
 if ($user and $user->getProfile() and $url = $user->getProfile()->getUrl()) {
     $image_url = $url;
 } else {
-    $image_url = 'http://localhost/SmSiteNew/p/img/S2Low.png';
+    $image_url = RESOURCE_URL.'img/S2Low.png';
 }
 ?>
 <!-- Header -->

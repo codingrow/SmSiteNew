@@ -15,12 +15,17 @@ class UserGroupMap extends \Sm\Core\Abstraction\MapModelAbstraction implements M
     protected $id                   = 0;
     protected $user_id              = 0;
     protected $group_id             = 0;
+    protected $role_id;
     protected $_search_from         = '';
     static protected $_maps          =
         [
             'user_id'=>'Model\User',
             'group_id'=>'Model\Group'
         ];
+
+    public function setRole($role_id){
+        return $this->set('role_id', $role_id);
+    }
     static function addRow($user_id, $group_id, $type){
         return SqlModel::query_table(static::$table_name, function(SqlModel $t) use ($user_id, $group_id, $type){
             $t->insert(['user_id', 'group_id', 'role_id'], [$user_id, $group_id, $type]);
@@ -35,4 +40,7 @@ class UserGroupMap extends \Sm\Core\Abstraction\MapModelAbstraction implements M
         });
     }
 
+    public static function getUUAbilities($ug_context_doer, $receiver_ug_context) {
+
+    }
 }

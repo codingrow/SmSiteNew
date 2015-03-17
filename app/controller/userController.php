@@ -115,7 +115,7 @@ class userController extends BaseController {
         $view->nest_view_named('template', 'update', 'body');
     }
 
-    public function view($username) {
+    public function view($username = 'me') {
         $view = &IoC::$view;
         /** @var User $user */
         $user = IoC::$session->get('user');
@@ -123,7 +123,7 @@ class userController extends BaseController {
         if (empty($available_users = $user->getAvailableUsersSql())) {
             $user->findAvailableUsers();
         }
-        if ($username == 'me' || ($user instanceof User and $user->getUsername() == $username)) {
+        if ($username == 'me' || ($user->getUsername() == $username)) {
             return $this->me();
         }
         $found = false;
@@ -141,6 +141,7 @@ class userController extends BaseController {
             $this->set_template();
             $view->setViewData($view_data);
             $view->create('user/view', $view_variables, 'view');
+
             $view->nest_view_named('template', 'view', 'body');
             return null;
         }
@@ -153,9 +154,14 @@ class userController extends BaseController {
         if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
             IoC::$response->redirect(IoC::$uri->url('user/login'));
         }
-        $view_1 = $view->create('modules/poll', [], 'poll');
-        $view->setViewData(['title' => 'Welcome, ' . $user->getUsername(), 'secondary_title' => 'My Profile', '{{nest_sidebar}}' => $view_1->get_content()]);
-        $view->create('user/home', [], 'me');
+
+        $data = [
+            'user'=>$user
+        ];
+        $view->create('user/user_view_sidebar', $data, 'sidebar');
+        $view->nest_view_named('template', 'sidebar', 'sidebar');
+        $view->setViewData(['title' => 'Welcome, ' . $user->getUsername(), 'secondary_title' => 'My Profile']);
+        $view->create('user/home', $data    , 'me');
         $view->nest_view_named('template', 'me', 'body');
         return null;
     }

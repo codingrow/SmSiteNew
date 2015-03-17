@@ -5,17 +5,23 @@
  * Time: 11:06 PM
  */
 ?>
-<?php use Sm\html\HTML; ?>
-<article id="sidebar" class="distributed do_50">
+<?php
+
+use Model\Role;
+
+$all_roles = Role::getAllTypes()
+
+?>
+<article id="sidebar" class="distributed">
     <?php if ($role == 1): ?>
-    <section class="module full-children">
-        <header>
-            <h3 class="h title toggle-edit">STOP EDITING</h3>
-        </header>
-    </section>
+        <section class="module full-children if-js  ">
+            <header>
+                <h3 class="h title toggle-edit">STOP EDITING</h3>
+            </header>
+        </section>
     <?php endif; ?>
     <?php if ($role == 1): ?>
-        <section class="module edit">
+        <section class="module edit if-js">
             <section class="full-children">
                 <form action="<?= MAIN_URL ?>group/_add_user" id="add_user_form" method="post" class="full-children">
                     <input type="hidden" value="<?= $group->getId() ?>" name="group_id"/>
@@ -28,7 +34,23 @@
                     </label>
                     <button class="floater">Add</button>
                 </form>
-
+            </section>
+            <section class="edit-select-decision half-children clearfix lr-float-children on-tile-sel">
+                <button data-action="" class="floater edit-users">EDIT</button>
+                <button data-action="" class="floater delete-users">DELETE</button>
+            </section>
+            <section class="full-children addendum hidden" id="user_edit_addendum">
+                <form action="" id="" class="full-children">
+                    <label for="users_role_edit">Change Role
+                        <select name="users_role_edit" id="users_role_edit">
+                            <option disabled selected> -- select a role --</option>
+                            <?php foreach ($all_roles as $role_id => $correlating_role): ?>
+                                <option value="<?= $role_id ?>"><?= $correlating_role ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </label>
+                    <button>Commit changes</button>
+                </form>
             </section>
         </section>
     <?php endif; ?>

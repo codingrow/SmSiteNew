@@ -11,10 +11,16 @@ namespace Sm\Core;
 class URI {
     static protected $uri_string;
     static $remove = 'SmSiteNew';
+    static $ip = '172.16.61.246';
     static function get_uri_string(){
         $uri = function(){
             $tmp = trim($_SERVER['REQUEST_URI'], '/');
-            return substr($tmp, strpos($tmp, static::$remove) + strlen(static::$remove)+1);
+//            if(strpos($tmp, static::$ip) !== -1){
+//                $remove = static::$ip;
+//            }else{
+                $remove = static::$remove;
+//            }
+            return substr($tmp, strpos($tmp, $remove) + strlen($remove)+1);
         };
         return isset(static::$uri_string) ? static::$uri_string : static::$uri_string = $uri();
     }
