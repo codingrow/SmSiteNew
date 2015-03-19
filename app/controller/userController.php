@@ -20,9 +20,28 @@ class userController extends BaseController {
     }
 
     public function _create_group() {
-        return IoC::$backend->run('group_creation', $_POST);
+        return IoC::$backend->run('group/group_creation', $_POST);
     }
 
+    /**
+     * @param string $user
+     * @return string
+     */
+    public function _html_groups($user = '') {
+            if(!$user) {
+                $user = User::find(IoC::$session->get('user_id'));
+            }else{
+                $user = User::find($user);
+            }
+
+            $data = [
+                'user'=>$user,
+                'user_groups'=>$user->findGroups()->getGroups()
+            ];
+
+            $view = &IoC::$view;
+            return $view->create('user/html_groups', $data)->content;
+    }
     public function _login() {
         IoC::$filter->std($_POST);
         $result = IoC::$backend->run('login', $_POST);
@@ -31,12 +50,9 @@ class userController extends BaseController {
             return json_encode($result);
         } else {
             /** @var User $user */
-            if ($user = IoC::$session->get('user')) {
-                $user->findGroups();
-                $user->findAvailableUsers();
-                $user->findSettings();
-                $user->findProfile();
-            }
+                $user = User::find(IoC::$session->get('user_id'));
+                $user->findGroups()->findAvailableUsers();
+            $user->findSettings()->findProfile();
             IoC::$response->redirect(IoC::$uri->url('home'));
         }
         return '';
@@ -103,8 +119,9 @@ class userController extends BaseController {
     }
 
     public function update() {
-        $user = IoC::$session->get('user');
-        if (!$user) {
+        $user = User::find(IoC::$session->get('user_id'));
+
+        if (!$user->getId()) {
             IoC::$response->redirect(IoC::$uri->url('user/login'));
         }
 
@@ -117,9 +134,8 @@ class userController extends BaseController {
 
     public function view($username = 'me') {
         $view = &IoC::$view;
-        /** @var User $user */
-        $user = IoC::$session->get('user');
-        $user = $user ?: new User();
+        $user = User::find(IoC::$session->get('user_id'));
+
         if (empty($available_users = $user->getAvailableUsersSql())) {
             $user->findAvailableUsers();
         }
@@ -151,7 +167,8 @@ class userController extends BaseController {
     public function me() {
         $view = &IoC::$view;
         $this->set_template();
-        if (!$user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
+        $user = User::find(IoC::$session->get('user_id'));
+        if (!$user->getId()) {
             IoC::$response->redirect(IoC::$uri->url('user/login'));
         }
 

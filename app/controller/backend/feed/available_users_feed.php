@@ -8,8 +8,7 @@ use Model\User;
 use Sm\Core\Abstraction\IoC;
 
 $func = function () {
-    /** @var User $user */
-    $user = IoC::$session->get('user');
+    $user = User::find(IoC::$session->get('user_id'));
 
     $arr = ['test1', 'test2', 'test3', 'test4'];
     if ($user != false && !empty($group_arr = $user->getAvailableUsersSql())) {

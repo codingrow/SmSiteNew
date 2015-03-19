@@ -5,6 +5,7 @@
  * Time: 1:35 AM
  */
 use Model\Group;
+use Model\User;
 use Sm\Core\Abstraction\IoC;
 
 $func = function ($args) {
@@ -16,7 +17,9 @@ $func = function ($args) {
     $group_id = isset($group_info['group_id']) ? $group_info['group_id'] : 0;
 
     $group = Group::find($group_id);
-    $user = IoC::$session->get('user');
+
+    $user = User::find(IoC::$session->get('user_id'));
+
     if ($group->getId()) {
 
         if (isset($group_info['name'])):

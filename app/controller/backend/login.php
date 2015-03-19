@@ -29,11 +29,6 @@ $func = function($args) {
     if(!empty($problem_arr)) return $problem_arr;
 
     IoC::$session->start();
-    $user->findGroups();
-    if ($groups_arr = $user->getGroups()) {
-        $group = array_shift($groups_arr);
-        IoC::$session->set('group', $group);
-    }
-    IoC::$session->set('user', $user);
+    IoC::$session->set('user_id', $user_id);
     return true;
 };

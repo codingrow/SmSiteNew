@@ -7,6 +7,7 @@
 
 namespace Controller;
 
+use Model\User;
 use Sm\Core\Abstraction\IoC;
 use Sm\Core\Backend;
 use Sm\Core\Controller;
@@ -31,7 +32,9 @@ class BaseController extends Controller {
         $view = &IoC::$view;
         $view->setViewData(['title' => 'Home']);
         $data = [];
-        if ($user = \Sm\Core\Abstraction\IoC::$session->get("user")) {
+
+        if ($user_id = \Sm\Core\Abstraction\IoC::$session->get("user_id")) {
+            $user = User::find($user_id);
             $this->set_template();
             $data['user'] = $user;
             $view->create('user/home', $data, 'home_page');

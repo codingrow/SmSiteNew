@@ -15,7 +15,7 @@ $func = function($args){
             'first_name', 'last_name', 'primary_email'
         ];
     $user_info = isset($args['user_info']) ? $args['user_info'] : [];
-    $user = IoC::$session->get('user');
+    $user = User::find(IoC::$session->get('user_id'));
     if($user){
         if (isset($user_info['primary_email']) and $user_info['primary_email'] !== $user->getPrimaryEmail()) {
             if (User::exists($user_info['primary_email'], 'primary_email')) {

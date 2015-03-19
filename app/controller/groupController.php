@@ -19,19 +19,19 @@ class groupController extends BaseController {
     }
 
     public function view($group = 0) {
-        $g = Group::find($group)->findGroups()->findEntity()->findUsers();
+        $g = Group::find($group)->findUsers();
         /** @var User $founder */
         $founder = User::find($g->getFounderId());
-        /** @var User $user */
-        $user = IoC::$session->get('user');
+        $user = User::find(IoC::$session->get('user_id'));
         $user = $user instanceof User ? $user : new User();
 
         $group_users = $g->getUsers();
-        $role = 2;
-        if ($user != false && array_key_exists($user->getUsername(), $group_users)) {
-            $role = $group_users[$user->getUsername()]->getGroupContext()['role_id'];
-        }
+        $username = $user->getUsername();
 
+        $role = 5;
+        if ($user != false && array_key_exists($username, $group_users)) {
+            $role = $group_users[$username]->getGroupMapping($g->getAlias())->getRoleId();
+        }
         $data = ['group' => $g, 'user' => $user, 'founder' => $founder, 'role' => $role, 'group_users' => $group_users];
 
         $view = &IoC::$view;
@@ -49,19 +49,21 @@ class groupController extends BaseController {
     }
 
     public function update($group = 0) {
-        $g = Group::find($group)->findGroups()->findEntity()->findUsers();
+        $g = Group::find($group)->findUsers();
         if (!$g->getId()) {
             IoC::$response->redirect(IoC::$uri->url('home'));
         }
         $founder = User::find($g->getFounderId());
-        /** @var User $user */
-        $user = IoC::$session->get('user');
-        $group_users = $g->getUsers();
-        $role = 2;
-        if ($user != false && array_key_exists($user->getUsername(), $group_users)) {
-            $role = $group_users[$user->getUsername()]->getGroupContext()['role_id'];
-        }
 
+        $user = User::find(IoC::$session->get('user_id'));
+
+        $group_users = $g->getUsers();
+        $username = $user->getUsername();
+
+        $role = 5;
+        if ($user != false && array_key_exists($username, $group_users)) {
+            $role = $group_users[$username]->getGroupMapping($g->getAlias())->getRoleId();
+        }
         $data = ['group' => $g, 'user' => $user, 'founder' => $founder, 'role' => $role, 'group_users' => $group_users];
 
 
@@ -88,17 +90,17 @@ class groupController extends BaseController {
 
     public function _html_user($group) {
         if(!$group instanceof Group) {
-            $group = Group::find($group)->findGroups()->findEntity()->findUsers();
+            $group = Group::find($group)->findUsers();
         }
-        /** @var User $user */
-        $user = IoC::$session->get('user');
-        $user = $user instanceof User ? $user : new User();
+        $user = User::find(IoC::$session->get('user_id'));
 
         $founder = User::find($group->getFounderId());
         $group_users = $group->getUsers();
-        $role = 2;
-        if ($user->getId() != false && array_key_exists($user->getUsername(), $group_users)) {
-            $role = $group_users[$user->getUsername()]->getGroupContext()['role_id'];
+        $username = $user->getUsername();
+
+        $role = 5;
+        if ($user != false && array_key_exists($username, $group_users)) {
+            $role = $group_users[$username]->getGroupMapping($group->getAlias())->getRoleId();
         }
 
         $data = [
@@ -158,19 +160,16 @@ class groupController extends BaseController {
 
     public function _create() {
         IoC::$filter->std($_POST);
-        /** @var User $user */
-        $user = IoC::$session->get('user');
+        $user = User::find(IoC::$session->get('user_id'));
         if (!$user) {
             return false;
         }
         $arr = array_merge($_POST, ['founder_id' => $user->getId()]);
-        $result = IoC::$backend->run('group_creation', $arr);
+        $result = IoC::$backend->run('group/group_creation', $arr);
         if (is_array($result)) {
             IoC::$response->header('content-type', 'application/json');
             return json_encode($result);
         } else {
-
-
             IoC::$response->redirect(IoC::$uri->url('me'));
         }
         return '';

@@ -15,6 +15,11 @@
           <option name="XML_SPACE_INSIDE_EMPTY_TAG" value="true" />
           <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
         </XML>
+        <codeStyleSettings language="LESS">
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
         <codeStyleSettings language="PHP">
           <option name="KEEP_LINE_BREAKS" value="false" />
           <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
@@ -23,6 +28,81 @@
           <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
           <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
           <option name="IF_BRACE_FORCE" value="1" />
+          <arrangement>
+            <groups>
+              <group>
+                <type>GETTERS_AND_SETTERS</type>
+                <order>KEEP</order>
+              </group>
+              <group>
+                <type>DEPENDENT_METHODS</type>
+                <order>DEPTH_FIRST</order>
+              </group>
+              <group>
+                <type>OVERRIDDEN_METHODS</type>
+                <order>KEEP</order>
+              </group>
+            </groups>
+            <rules>
+              <section>
+                <rule>
+                  <match>
+                    <CONST>true</CONST>
+                  </match>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <AND>
+                      <FIELD>true</FIELD>
+                      <modifiers />
+                    </AND>
+                  </match>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <CONSTRUCTOR>true</CONSTRUCTOR>
+                  </match>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <METHOD>true</METHOD>
+                  </match>
+                  <order>BY_NAME</order>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <TRAIT>true</TRAIT>
+                  </match>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <INTERFACE>true</INTERFACE>
+                  </match>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <AND>
+                      <CLASS>true</CLASS>
+                      <visibility />
+                    </AND>
+                  </match>
+                  <order>BY_NAME</order>
+                </rule>
+              </section>
+            </rules>
+          </arrangement>
         </codeStyleSettings>
       </value>
     </option>

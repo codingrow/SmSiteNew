@@ -27,7 +27,7 @@ $func = function ($args) {
         return message('we could not find one of the users you tried to delete');
     }
     /** @var User $this_user */
-    $this_user = IoC::$session->get('user');
+    $this_user = User::find(IoC::$session->get('user_id'));
 
     $user_to_delete = User::find($user_id);
     if ($user_to_delete->getId() == 0) {
@@ -38,7 +38,7 @@ $func = function ($args) {
     $group = Group::find($group_id);
     $group_users = $group->findUsers()->getUsers();
 
-    if (!array_key_exists($this_user->getUsername(), $group->getUsers()) or ($group_users[$this_user->getUsername()]->getGroupContext()['role_id'] != 1 and $this_user->getId() != $user_id)
+    if (!array_key_exists($this_user->getUsername(), $group->getUsers()) or ($group_users[$this_user->getUsername()]->getGroupMapping($group->getAlias())->getRoleId() != 1 and $this_user->getId() != $user_id)
     ) {
         return message("it doesn't look like you are authorized to remove this member", $user_id);
     }
@@ -47,11 +47,11 @@ $func = function ($args) {
     if (!$group_users[$user_to_delete->getUsername()]) {
         return message('this user is already not a part of this group', $user_id, $user_to_delete->getUsername());
     }
-    if ($group_users[$user_to_delete->getUsername()]->getGroupContext()['role_id'] == 1) {
+    if ($group_users[$user_to_delete->getUsername()]->getGroupMapping($group->getAlias())->getRoleId() == 1) {
         $is_another_leader = false;
         foreach ($group_users as $username => $user) {
 
-            if ($username != $user_to_delete->getUsername() and $user->getGroupContext()['role_id'] == 1) {
+            if ($username != $user_to_delete->getUsername() and $user->getGroupMapping($group->getAlias())->getRoleId() == 1) {
                 $is_another_leader = true;
                 break;
             }

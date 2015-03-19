@@ -3,7 +3,7 @@ use Model\User;
 use Sm\Core\Abstraction\IoC;
 
 /** @var User $user */
-$user = IoC::$session->get('user');
+$user = User::find(IoC::$session->get('user_id'));
 if ($user and $user->getProfile() and $url = $user->getProfile()->getUrl()) {
     $image_url = $url;
 } else {
@@ -18,7 +18,7 @@ if ($user and $user->getProfile() and $url = $user->getProfile()->getUrl()) {
         <!-- Nav -->
         <nav id="nav">
             <ul>
-                <?php if (!$user instanceof User): ?>
+                <?php if (!$user->getId()): ?>
                     <li class="item"><a href="<?= MAIN_URL ?>user/signup/">Sign Up</a></li>
                     <li class="item"><a href="<?= MAIN_URL ?>user/login/" id="loginButton">Log In</a></li>
                 <?php else: ?>

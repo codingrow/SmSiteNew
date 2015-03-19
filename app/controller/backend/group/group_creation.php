@@ -15,7 +15,10 @@ $func = function ($args) {
     $group_alias = null;
     $name = null;
     /** @var User $user */
-    $user = &IoC::$session->get('user');
+    $u_id = IoC::$session->get('user_id');
+    $user = User::find($u_id);
+
+
     $user_id = isset($args['user_id']) ? $args['user_id'] : $user ? $user->getId() : null;
     if (!$user_id) {
         $problem_arr['user'] = 'We cannot seem to find this user... Are they still an active member?';

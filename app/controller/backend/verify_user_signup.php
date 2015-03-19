@@ -4,13 +4,9 @@
  * Date: 1/29/2015
  * Time: 1:52 PM
  */
-use Model\Group;
 use Model\Password;
 use Model\User;
-use Model\UserGroupMap;
 use Sm\Core\Abstraction\IoC;
-use Sm\Database\SqlModel;
-use Sm\Storage\Session;
 
 $func = function ($args) {
     $problem_arr = [];
@@ -67,23 +63,6 @@ $func = function ($args) {
     if(!$user_id){
         return false;
     }
-    /*$company_name = '';
-    if (!isset($args['company_name']) || trim($args['company_name']) == '') {
-        $problem_arr['company_name'] = 'Please enter a company name';
-    } else $company_name = $args['company_name'];
-
-    $g = new Group();
-    $g->set(
-        [
-            'name' => $company_name,
-            'founder_id' => $user_id,
-            'alias' => $company_name
-        ])->create();
-    $g_id = $g->getId();
-
-    $g_m = new UserGroupMap();
-    $g_m->addRow($user_id, $g_id, 1);*/
-
     #@todo add some sort of verification that the password was added properly?
     Password::add($user_id, $password);
     $user->make_directories($user->getUsername());

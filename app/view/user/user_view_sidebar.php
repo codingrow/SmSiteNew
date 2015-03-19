@@ -8,8 +8,7 @@
 use Model\User;
 use Sm\Core\Abstraction\IoC;
 use Sm\html\HTML;
-$user = IoC::$session->get('user');
-$user = $user ?: new User();
+$user = User::find(IoC::$session->get('user_id'));
 ?>
 <article id="sidebar" class="distributed">
     <section class="module full-children">

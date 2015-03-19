@@ -16,7 +16,6 @@ class GroupGroupMap extends \Sm\Core\Abstraction\MapModelAbstraction implements 
     protected $id = 0;
     protected $user_id = 0;
     protected $group_id = 0;
-    protected $_search_from = '';
     static protected $_maps = ['primary_group_id' => 'Model\Group', 'secondary_group_id' => 'Model\Group'];
 
     static function addRow($primary_group_id, $secondary_group_id) {

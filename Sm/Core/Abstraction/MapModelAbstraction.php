@@ -17,17 +17,12 @@ abstract class MapModelAbstraction extends ModelAbstraction{
         [
             'user_id'=>'Model\User'
         ];
-    protected $_key_to_search   = 'user';
-    protected $id_to_edit = 0;
-    protected $_key_to_return   = 'group';
+    protected $_id_to_edit = 0;
 
     function __construct($_key_to_search = '', $_key_to_return = '') {
         if($_key_to_search){
             $this->_key_to_search = $_key_to_search;
-            $this->id_to_edit = $_key_to_search.'_id';
-        }
-        if($_key_to_search){
-            $this->_key_to_return = $_key_to_return;
+            $this->_id_to_edit = $_key_to_search.'_id';
         }
     }
 
@@ -39,7 +34,7 @@ abstract class MapModelAbstraction extends ModelAbstraction{
 
     public function save() {
         SqlModel::query_table(static::$table_name, function(SqlModel $t){
-            $t->update($this->_changed)->where("{$this->id_to_edit} = {$this->id}");
+            $t->update($this->_changed)->where("{$this->_id_to_edit} = {$this->id}");
         });
         $this->_changed = [];
         return $this;
@@ -54,24 +49,11 @@ abstract class MapModelAbstraction extends ModelAbstraction{
         return false;
     }
 
-    function mapArr($identifier, $light = false, $mutate_sql = null) {
-        $string_key = $this->_key_to_search . '_id';
-        $type_to_return = $this->_key_to_return . '_id';
-        $result = SqlModel::query_table(static::$table_name, function (SqlModel $t) use ($identifier, $string_key, $mutate_sql) {
-            $t->select('*');
-            if (!is_callable($mutate_sql)) {
-                $column = ':' . $string_key;
-                $where = $string_key . ' = ' . $column;
-                $t->bind([$column => $identifier])->where($where);
-            } else {
-                $mutate_sql($t);
-            }
-        }, 'all');
-        return $result;
-    }
     /**
      * @param int|string $identifier
      * @param            $table
+     * @deprecated
+     * @return array|bool
      */
     function map($identifier, $light = false, $mutate_sql = null){
         $string_key     = $this->_key_to_search.'_id';

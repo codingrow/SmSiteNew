@@ -15,15 +15,14 @@ use Model\User;
 $uig_context = $uig_id = $me_class = $uig_username = $uig_first_name = $uig_last_name = $uig_role = null;
 ?>
 
-
 <?php foreach($group_users as $user_in_group):
-    $uig_context = $user_in_group->getGroupContext();
+    $uig_context = $user_in_group->getGroupMapping($group->getAlias());
     $uig_id = $user_in_group->getId();
     $me_class = $uig_id == $user->getId() ? 'me' : '';
     $uig_username = $user_in_group->getUsername();
     $uig_first_name = $user_in_group->getFirstName();
     $uig_last_name = $user_in_group->getLastName();
-    $uig_role = isset($uig_context['role_id']) ? $uig_context['role_id'] : 2;
+    $uig_role = $uig_context->getRoleId();
     ?>
     <section class="tile <?= $me_class ?> clearfix" data-id="<?= $uig_id ?>">
         <div class="text clearfix">

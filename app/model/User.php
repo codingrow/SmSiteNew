@@ -28,10 +28,8 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
      * @var Image
      */
     public $image;
-    /**
-     * @var array
-     */
-    public $group_context = [];
+
+    protected $group_c = [];
     /**
      * @var int
      */
@@ -174,29 +172,16 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
         return $this->_available_users_sql = SqlModel::make($DBH, $query)->bind([':id' => $id])->run('all');
     }
 
-    /**
-     * @return $this
-     */
     public function findGroups() {
-        $map = new UserGroupMap('user', 'group');
-        $this->groups = $map->map($this->id);
+        $this->groups = $this->map_find(['user','group'], new UserGroupMap());
         return $this;
     }
-
-    public function addImage($name, $server_name, $type = SM_IMAGE_PROFILE, $path = null, $caption = '') {
-        IoC::$filter->file_name($name);
-        Connection::start_transaction();
-        if ($path == null) {
-            $path = 'user/' . $this->username;
-        }
-        $id = Image::addImage($name, $server_name, $path, $caption);
-        if (is_numeric($id)) {
-            UserImageMap::addRow($this->id, $id, $type);
-        }
-        Connection::commit();
-        if ($type == SM_IMAGE_PROFILE) {
-            $this->findProfile();
-        }
+    /**
+     * @param string $group
+     * @return \Model\UserGroupMap
+     */
+    public function getGroupMapping($group) {
+        return isset($this->group_c[$group]) ? $this->group_c[$group] : new UserGroupMap();
     }
 
     public function findProfile() {
@@ -240,13 +225,6 @@ class User extends \Sm\Core\Abstraction\ModelAbstraction implements ModelInterfa
      */
     public function getImage() {
         return $this->image;
-    }
-
-    /**
-     * @return array
-     */
-    public function getGroupContext() {
-        return $this->group_context;
     }
 
     /**

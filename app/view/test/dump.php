@@ -9,7 +9,6 @@ use Sm\Core\Abstraction\IoC;
 
 var_dump($_POST);
 /** @var User $user */
-if ($user = IoC::$session->get('user')) {
-    $user->findAvailableUsers();
-    var_dump($user->getAvailableUsersSql());
-}
+$user = User::find(IoC::$session->get('user_id'));
+$user->findAvailableUsers();
+var_dump($user->getAvailableUsersSql());
